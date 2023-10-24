@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on Shirakii</title><link>blog.shirakii.com/page/</link><description>Recent content in Pages on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Example Person</copyright><lastBuildDate>Sun, 27 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="blog.shirakii.com/page/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>blog.shirakii.com/%E5%85%B3%E4%BA%8E/</link><pubDate>Sun, 27 Aug 2023 00:00:00 +0000</pubDate><guid>blog.shirakii.com/%E5%85%B3%E4%BA%8E/</guid><description>&lt;img src="/blog.shirakii.com/%E5%85%B3%E4%BA%8E/cover.png" alt="Featured image of post 关于" />&lt;h2 id="关于我">关于我&lt;/h2>
+&lt;p>我是Shirakii，基本上每个平台都不喜欢取一样的，取现在这个主要是好念而且不容易重名，也有一点点模仿Shirabii画师的意味&lt;/p>
+&lt;p>测试test3待更新&lt;/p>
+&lt;h2 id="关于博客">关于博客&lt;/h2>
+&lt;p>其实我存的好看的画或者照片竖着的比较多，但不适合当文章封面，所以就看心情每篇文末放一张？&lt;/p>
+&lt;h2 id="博客统计">博客统计&lt;/h2>
+&lt;p>2023.9.14开始统计&lt;/p>
+&lt;img src="https://count.getloli.com/get/@:shirakii?theme=asoul" alt=":shirakii" />
+&lt;h2 id="建站日志">建站日志&lt;/h2>
+&lt;h3 id="很久以前">很久以前&lt;/h3>
+&lt;p>被&lt;a class="link" href="https://www.cyanilux.com/" target="_blank" rel="noopener"
+>Cyanilux&lt;/a>的优雅所折服，按下F12后发现了Hugo这块新天地&lt;/p>
+&lt;h3 id="20238">2023.8&lt;/h3>
+&lt;p>8.13 决心搭建博客，折腾一天成功使用papermod主题发布第一篇文章&lt;/p>
+&lt;p>8.25 发现Stack主题，迁移并熟悉架构，使用github pages托管，action配合Vercel自动部署&lt;/p>
+&lt;p>8.26 解决figure SC与stack的图片预览功能的冲突&lt;/p>
+&lt;p>8.30 购买个人域名 &lt;a class="link" href="https://shirakii.com" target="_blank" rel="noopener"
+>shirakii.com&lt;/a>，舒服了&lt;/p>
+&lt;h3 id="20239">2023.9&lt;/h3>
+&lt;p>9.14 优化界面布局、滚动栏，添加返回按钮、&lt;a class="link" href="https://aplayer.js.org/#/zh-Hans/" target="_blank" rel="noopener"
+>aplayer&lt;/a>、&lt;a class="link" href="https://moe-counter.glitch.me/" target="_blank" rel="noopener"
+>Moe-counter&lt;/a>&lt;/p>
+&lt;p>9.15 引入在线字体，暂定站点名称&lt;code>Novecento&lt;/code>,左侧&lt;code>Ma Shan Zheng&lt;/code>，标题&lt;code>STKaiti&lt;/code>，正文&lt;code>Noto Sans CJK SC&lt;/code>，代码块&lt;code>Consolas&lt;/code>&lt;/p>
+&lt;p>9.19 部署&lt;a class="link" href="https://waline.js.org/" target="_blank" rel="noopener"
+>waline&lt;/a>评论系统&lt;/p>
+&lt;p>9.23 css整体调整&lt;/p>
+&lt;h3 id="202310">2023.10&lt;/h3>
+&lt;p>10.1 字体裁剪完成，正文字体确定为&lt;a class="link" href="https://github.com/lxgw/LxgwWenKai" target="_blank" rel="noopener"
+>霞鹜文楷&lt;/a>&lt;/p>
+&lt;p>10.8 正文字体裁切艰难部署完成&lt;/p>
+&lt;p>10.20 使用&lt;a class="link" href="https://www.cloudflare.com/zh-cn/" target="_blank" rel="noopener"
+>Cloudflare&lt;/a>进行DNS解析&lt;/p>
+&lt;p>10.23 字体服务器&lt;a class="link" href="https://github.com/Siya-33/chinese-fonts-server" target="_blank" rel="noopener"
+>chinese-fonts-server&lt;/a>搭建完成&lt;/p>
+&lt;h2 id="todo">Todo&lt;/h2>
+&lt;ul>
+&lt;li>合适的行内音乐播放器&lt;/li>
+&lt;li>代码块风格以及顶栏名称&lt;/li>
+&lt;li>右侧搜索框常驻&lt;/li>
+&lt;li>更加轻便优雅的访问统计&lt;/li>
+&lt;li>设置卡片categories位置&lt;/li>
+&lt;li>live2d小人&lt;/li>
+&lt;/ul></description></item><item><title>归档</title><link>blog.shirakii.com/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>blog.shirakii.com/archives/</guid><description/></item><item><title>搜索</title><link>blog.shirakii.com/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>blog.shirakii.com/search/</guid><description/></item></channel></rss>

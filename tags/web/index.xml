@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>web on Shirakii</title><link>blog.shirakii.com/tags/web/</link><description>Recent content in web on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Example Person</copyright><lastBuildDate>Thu, 14 Sep 2023 17:18:38 +0800</lastBuildDate><atom:link href="blog.shirakii.com/tags/web/index.xml" rel="self" type="application/rss+xml"/><item><title>R3F蒙版&amp;绿幕推流</title><link>blog.shirakii.com/post/r3f-streaming/</link><pubDate>Thu, 14 Sep 2023 17:18:38 +0800</pubDate><guid>blog.shirakii.com/post/r3f-streaming/</guid><description>&lt;img src="/blog.shirakii.com/post/r3f-streaming/cover.jpg" alt="Featured image of post R3F蒙版&amp;绿幕推流" />&lt;h2 id="前言">前言&lt;/h2>
+&lt;p>上个月从零开始直接上手&lt;code>react three fiber&lt;/code>，跟着同事写了一堆交互，总算弄得差不多了。不会&lt;code>React&lt;/code>，不会&lt;code>TS&lt;/code>，不会&lt;code>three&lt;/code>，真不知道自己怎么过来的。途中也了解到原子化&lt;code>css&lt;/code>，总之收获颇丰。目前是因为需要将渲染画面推流到场景中，故做点经验分享&lt;/p>
+&lt;h2 id="前期准备">前期准备&lt;/h2>
+&lt;p>首先得创建个场景然后播放视频吧，可以参考下面我做的这个案例&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="https://uploads.codesandbox.io/uploads/user/831db286-7f88-4d2e-804a-05751a1066ca/lUPY-thumbnail.jpg" width="80%"/> &lt;figcaption>
+&lt;p>
+&lt;a href="https://codesandbox.io/s/green-screen-streaming-js2vkw">&lt;strong>GreenScreen-Streaming&lt;/strong>&lt;/a>&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>首先做一个&lt;code>VideoMaterial&lt;/code>的function，减少耦合度。当然你也可以写的简单点，这里主要是为了后续添加遮罩的方便。但是存在一定色差，暂时没找到解决方法&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-jsx" data-lang="jsx">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">function&lt;/span> &lt;span class="nx">VideoMaterial&lt;/span>&lt;span class="p">({&lt;/span> &lt;span class="nx">src&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">mask_src&lt;/span> &lt;span class="p">})&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">texture&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">src&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="nx">useVideoTexture&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">src&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="kc">null&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">mask&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">mask_src&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="nx">useVideoTexture&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">mask_src&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="kc">null&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meshPhysicalMaterial&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">color&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="mh">0x000000&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">emissive&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="mh">0xffffff&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">emissiveMap&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="nx">texture&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">alphaMap&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="nx">mask&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">emissiveIntensity&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">opacity&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">transparent&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">toneMapped&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="kc">false&lt;/span>&lt;span class="p">}&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>记得用&lt;code>Suspense&lt;/code>包裹一下，不然会报错,因为渲染的前后关系不对。建议&lt;code>fallback&lt;/code>里给个材质留给加载的时间，这里我放了个&lt;a class="link" href="https://www.vecteezy.com/video/4844745-icon-loading-10-circle-gradient-angle-loop-out-black-background-gradient-animation-for-game-animation-video-and-others" target="_blank" rel="noopener"
+>loading&lt;/a>的动画&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-jsx" data-lang="jsx">&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">mesh&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">planeGeometry&lt;/span> &lt;span class="na">args&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{[&lt;/span>&lt;span class="mf">7.111&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">]}&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">Suspense&lt;/span> &lt;span class="na">fallback&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{&amp;lt;&lt;/span>&lt;span class="nt">VideoMaterial&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;loading.mp4&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;}&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">Suspense&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">VideoMaterial&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;WING IT! - Blender Open Movie.mp4&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">mask_src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#39;mask.mp4&amp;#39;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">Suspense&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">mesh&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这样就可以看到一个带透明通道的视频显示在屏幕上，当然可能用quicktime格式会更快些，但体积大&lt;/p>
+&lt;h2 id="视频流">视频流&lt;/h2>
+&lt;p>有条件的可以现在主机上插个摄像头，先通过API获取到视频流&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-jsx" data-lang="jsx">&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="nx">stream&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">setStream&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">useState&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">useEffect&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kr">async&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">constraints&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">audio&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">false&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">video&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">navigator&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">mediaDevices&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">.&lt;/span>&lt;span class="nx">getUserMedia&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">constraints&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">stream&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">window&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stream&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">stream&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">setStream&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">stream&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">stream&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">navigator&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">mediaDevices&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">enumerateDevices&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">devices&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">devices&lt;/span>&lt;span class="p">)})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">.&lt;/span>&lt;span class="k">catch&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span> &lt;span class="p">[])&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>不出意外的话屏幕上就能出现摄像头的画面了。另外可以在&lt;code>useState&lt;/code>中设置参数来显示加载动画&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="images/1.png#center" width="500px"/>
+&lt;/figure>
+&lt;h2 id="obs虚拟摄像头">OBS虚拟摄像头&lt;/h2>
+&lt;p>但是我们如果想输出各种画面一般都是使用&lt;a class="link" href="https://obsproject.com" target="_blank" rel="noopener"
+>OBS&lt;/a>的虚拟摄像机推流。那么怎么切换摄像机呢？&lt;/p>
+&lt;p>可以看到上述的代码通过使用&lt;code>constraints&lt;/code>来约束使用的摄像头，需要的&lt;code>deviceId&lt;/code>可从&lt;code>console&lt;/code>中获取&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">InputDeviceInfo
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deviceId: &amp;#34;6bd3a42e2bf68c2246a5a9bcffa2e43fab316554f504a6ad5687c5674ea6e5d1&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">groupId: &amp;#34;e8291660abbb766dfaaebafbd6f4d3eb046f00603e3cb4d3c2bcd30673415982&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">kind: &amp;#34;videoinput&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">label: &amp;#34;OBS Virtual Camera&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>于是我们找到OBS虚拟摄像头的信息,填入&lt;code>constraints&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-jsx" data-lang="jsx">&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">constraints&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">audio&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">video&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">deviceId&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">YOUR&lt;/span> &lt;span class="na">OBS&lt;/span> &lt;span class="na">ID&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="绿幕shader">绿幕shader&lt;/h2>
+&lt;p>接下来就剩抠绿幕了。你或许会问为什么不在OBS里直接用色度键去除呢？因为它不支持推流视频带alpha通道，虽然抠的只剩个人但推出去还是个大黑框&lt;/p>
+&lt;p>于是我们就得用到&lt;code>shaderMaterial&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-glsl" data-lang="glsl">&lt;span class="line">&lt;span class="cl">&lt;span class="k">const&lt;/span> &lt;span class="n">vertexShader&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="err">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">varying&lt;/span> &lt;span class="k">vec2&lt;/span> &lt;span class="n">vUv&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">void&lt;/span> &lt;span class="n">main&lt;/span>&lt;span class="p">(&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">vUv&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">uv&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">gl_Position&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">projectionMatrix&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">modelViewMatrix&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="k">vec4&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">position&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mf">1.0&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">export&lt;/span> &lt;span class="k">default&lt;/span> &lt;span class="n">vertexShader&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">const&lt;/span> &lt;span class="n">fragmentShader&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="err">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">uniform&lt;/span> &lt;span class="k">vec3&lt;/span> &lt;span class="n">keyColor&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">uniform&lt;/span> &lt;span class="k">float&lt;/span> &lt;span class="n">similarity&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">uniform&lt;/span> &lt;span class="k">float&lt;/span> &lt;span class="n">smoothness&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">varying&lt;/span> &lt;span class="k">vec2&lt;/span> &lt;span class="n">vUv&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">uniform&lt;/span> &lt;span class="k">sampler2D&lt;/span> &lt;span class="n">map&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">void&lt;/span> &lt;span class="n">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">vec4&lt;/span> &lt;span class="n">videoColor&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">texture2D&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">map&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">vUv&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">float&lt;/span> &lt;span class="n">Y1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mf">0.299&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">keyColor&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">r&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mf">0.587&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">keyColor&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">g&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mf">0.114&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">keyColor&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">float&lt;/span> &lt;span class="n">Cr1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">keyColor&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">r&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">Y1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">float&lt;/span> &lt;span class="n">Cb1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">keyColor&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">b&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">Y1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">float&lt;/span> &lt;span class="n">Y2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mf">0.299&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">videoColor&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">r&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mf">0.587&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">videoColor&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">g&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mf">0.114&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">videoColor&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">float&lt;/span> &lt;span class="n">Cr2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">videoColor&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">r&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">Y2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">float&lt;/span> &lt;span class="n">Cb2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">videoColor&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">b&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">Y2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">float&lt;/span> &lt;span class="n">blend&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">smoothstep&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">similarity&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">similarity&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">smoothness&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">distance&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">vec2&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Cr2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Cb2&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="k">vec2&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Cr1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Cb1&lt;/span>&lt;span class="p">)));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">gl_FragColor&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">vec4&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">videoColor&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">rgb&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">videoColor&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">a&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">blend&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">export&lt;/span> &lt;span class="k">default&lt;/span> &lt;span class="n">fragmentShader&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>App.js&lt;/code>内&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-jsx" data-lang="jsx">&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">streamTexture&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">useVideoTexture&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">stream&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">material&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">THREE&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">ShaderMaterial&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">transparent&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">uniforms&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">map&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">value&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">streamTexture&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">keyColor&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">value&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mf">0.0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">1.0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">0.0&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">similarity&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">value&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mf">0.7&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">smoothness&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">value&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mf">0.0&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">vertexShader&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fragmentShader&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">Suspense&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">mesh&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">position&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{[&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">8&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="p">]}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">scale&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">material&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="nx">material&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">planeGeometry&lt;/span> &lt;span class="na">args&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{[&lt;/span>&lt;span class="mf">7.111&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">]}&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">mesh&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">Suspense&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这里我事先放了一个绿幕视频作为加载动画，只要输入自己的&lt;code>deviceId&lt;/code>就能正常显示了&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="images/alice.gif#center" width="500px"/>
+&lt;/figure>
+&lt;h2 id="后话">后话&lt;/h2>
+&lt;p>至于为什么这里不采用&lt;code>VideoMaterial&lt;/code>另开一个材质函数的写法，而是&lt;code>three.js&lt;/code>的用法，是因为我也不知道为什么会有bug，欢迎在评论区交流&lt;/p>
+&lt;p>最后在实际体验过程中，我需要让这块平面始终朝向摄像机，会的人可能觉得一个&lt;code>useRef&lt;/code>和&lt;code>useFrame&lt;/code>就解决了，但是我拿不到父组件的摄像头信息。后来终于发现可以用&lt;code>useThree&lt;/code>这个hook，直接拿到&lt;code>camera&lt;/code>&lt;/p>
+&lt;h2 id="参考链接">参考链接&lt;/h2>
+&lt;p>&lt;a href="https://codesandbox.io/s/2cemck" rel="nofollow">&lt;img width="20%" src="https://camo.githubusercontent.com/911cd7576d9b11ce2cd235f4513198e18fd29b4653545092ff3ebb8017cfdb4a/68747470733a2f2f636f646573616e64626f782e696f2f6170692f76312f73616e64626f7865732f3263656d636b2f73637265656e73686f742e706e673f7632" alt="Demo" data-canonical-src="https://codesandbox.io/api/v1/sandboxes/2cemck/screenshot.png?v2" style="max-width: 100%;">&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://sbcode.net/threejs/webcam/" target="_blank" rel="noopener"
+>webcam&lt;/a>&lt;/p>
+&lt;div class="video-wrapper">
+&lt;iframe loading="lazy"
+src="https://www.youtube.com/embed/T9F1Wk8DQdg"
+allowfullscreen
+title="YouTube Video"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;h2 id="byebye">Bye~Bye&lt;/h2>
+&lt;figure>
+&lt;img loading="lazy" src="images/2.jpg" width="400"/> &lt;figcaption>
+&lt;p>
+&lt;a href="https://twitter.com/Kerno_kr/status/1697538936015618120">和纱太好看了&lt;br>@Kerno_kr&lt;/a>&lt;/p>
+&lt;/figcaption>
+&lt;/figure></description></item></channel></rss>

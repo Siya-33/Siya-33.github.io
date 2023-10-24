@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Shirakii</title><link>blog.shirakii.com/post/</link><description>Recent content in Posts on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Example Person</copyright><lastBuildDate>Thu, 19 Oct 2023 16:35:44 +0800</lastBuildDate><atom:link href="blog.shirakii.com/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Cloudflare Dns 批量删除</title><link>blog.shirakii.com/post/cloudflare-dns-delete/</link><pubDate>Thu, 19 Oct 2023 16:35:44 +0800</pubDate><guid>blog.shirakii.com/post/cloudflare-dns-delete/</guid><description>&lt;img src="/blog.shirakii.com/post/cloudflare-dns-delete/cover.jpg" alt="Featured image of post Cloudflare Dns 批量删除" />&lt;blockquote>
+&lt;p>由于之前博客为了输入方便一直放在根域名，现在需要将字体部署到子域名下，为了干净整洁些需要将之前的DNS删除。&lt;br>并且不再用vercel部署，采用cloudflare&lt;/p>
+&lt;/blockquote>
+&lt;p>进入&lt;a class="link" href="https://dash.cloudflare.com/profile/api-tokens" target="_blank" rel="noopener"
+>cloudflare&lt;/a>，添加一个编辑区域DNS的&lt;a class="link" href="https://dash.cloudflare.com/profile/api-tokens" target="_blank" rel="noopener"
+>API Token&lt;/a>，并记录下Token。&lt;/p>
+&lt;p>点击进入域名的概述，Zone ID在右侧一列中&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="images/1.jpg" width="60%"/>
+&lt;/figure>
+&lt;p>创建一个powershell脚本(.ps1)，并替换&lt;code>API_TOKEN&lt;/code>和&lt;code>ZONE_ID&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$API_TOKEN&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;&amp;lt;API_TOKEN&amp;gt;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$ZONE_ID&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;&amp;lt;ZONE_ID&amp;gt;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$baseUrl&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;https://api.cloudflare.com/client/v4/zones/&lt;/span>&lt;span class="nv">$ZONE_ID&lt;/span>&lt;span class="s2">/dns_records&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$headers&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="vm">@&lt;/span>&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;Authorization&amp;#39;&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;Bearer &lt;/span>&lt;span class="nv">$API_TOKEN&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;Content-Type&amp;#39;&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;application/json&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$listUrl&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$baseUrl&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="s1">&amp;#39;?per_page=500&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Write-Host&lt;/span> &lt;span class="nv">$listUrl&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$records&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">Invoke-RestMethod&lt;/span> &lt;span class="n">-Uri&lt;/span> &lt;span class="nv">$listUrl&lt;/span> &lt;span class="n">-Method&lt;/span> &lt;span class="s1">&amp;#39;GET&amp;#39;&lt;/span> &lt;span class="n">-Headers&lt;/span> &lt;span class="nv">$headers&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$records&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$records&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="nb">Select-Object&lt;/span> &lt;span class="n">-ExpandProperty&lt;/span> &lt;span class="n">result&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">foreach&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">$record&lt;/span> &lt;span class="k">in&lt;/span> &lt;span class="nv">$records&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">Write-Host&lt;/span> &lt;span class="s2">&amp;#34;Deleting &lt;/span>&lt;span class="p">$(&lt;/span>&lt;span class="nv">$record&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">name&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="s2"> that points to &lt;/span>&lt;span class="p">$(&lt;/span>&lt;span class="nv">$record&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">content&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$deleteUrl&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$baseUrl&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="s1">&amp;#39;/&amp;#39;&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="nv">$record&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">id&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">Invoke-RestMethod&lt;/span> &lt;span class="n">-Uri&lt;/span> &lt;span class="nv">$deleteUrl&lt;/span> &lt;span class="n">-Method&lt;/span> &lt;span class="s1">&amp;#39;DELETE&amp;#39;&lt;/span> &lt;span class="n">-Headers&lt;/span> &lt;span class="nv">$headers&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">Write-Host&lt;/span> &lt;span class="nv">$deleteUrl&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>右键文件以powershell运行&lt;/p>
+&lt;p>由于我有700多条记录，执行两次即可&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="images/2.jpg" width="30%"/> &lt;figcaption>
+&lt;p>
+&lt;a href="https://twitter.com/_Chuzenji_/status/1455128190037356546/photo/1">好有副岛成记的风格&lt;br>@Chuzenji&lt;/a>&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;h2 id="参考">参考&lt;/h2>
+&lt;p>cover:&lt;a class="link" href="https://www.pixiv.net/artworks/92463499" target="_blank" rel="noopener"
+>@mocha&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://community.cloudflare.com/t/bulk-delete-dns-records/421686" target="_blank" rel="noopener"
+>https://community.cloudflare.com/t/bulk-delete-dns-records/421686&lt;/a>&lt;/p></description></item><item><title>几何节点入门纲要</title><link>blog.shirakii.com/post/geometrynode-start/</link><pubDate>Thu, 05 Oct 2023 23:20:26 +0800</pubDate><guid>blog.shirakii.com/post/geometrynode-start/</guid><description>&lt;img src="/blog.shirakii.com/post/geometrynode-start/cover.jpg" alt="Featured image of post 几何节点入门纲要" />&lt;h2 id="前言">前言&lt;/h2>
+&lt;p>我创建这个博客的初衷，有很大一部分是方便记录分享自己实现的一些几何节点效果，因此写一下这篇文章来分享一下我之前学习过程中的一些感悟和经验，希望对你有帮助。&lt;/p>
+&lt;p>感兴趣的话可以看下我的&lt;a class="link" href="https://www.artstation.com/siya_33" target="_blank" rel="noopener"
+>Artstation&lt;/a>或者&lt;a class="link" href="https://space.bilibili.com/333322096" target="_blank" rel="noopener"
+>Bilibili&lt;/a>，里面大概还是有很多相关的内容的，或者你也可以打开&lt;a class="link" href="https://siya33.gumroad.com/" target="_blank" rel="noopener"
+>Gumroad&lt;/a>直接下载去玩玩看。&lt;/p>
+&lt;p>随便举两个例子&lt;/p>
+&lt;!-- &lt;figure>
+&lt;img loading="lazy" src="images/1.gif" width="500px"/>
+&lt;/figure>
+&lt;figure>
+&lt;img loading="lazy" src="images/2.gif" width="500px"/>
+&lt;/figure>
+-->
+&lt;p>&lt;img src="blog.shirakii.com/blog.shirakii.com/post/geometrynode-start/images/1.gif"
+width="600"
+height="600"
+srcset="blog.shirakii.com/blog.shirakii.com/post/geometrynode-start/images/1_huf25c1ee0db477ccf296c37027c4eed86_1678127_480x0_resize_box_1.gif 480w, blog.shirakii.com/blog.shirakii.com/post/geometrynode-start/images/1_huf25c1ee0db477ccf296c37027c4eed86_1678127_1024x0_resize_box_1.gif 1024w"
+loading="lazy"
+alt="MG"
+class="gallery-image"
+data-flex-grow="100"
+data-flex-basis="240px"
+> &lt;img src="blog.shirakii.com/blog.shirakii.com/post/geometrynode-start/images/2.gif"
+width="768"
+height="432"
+srcset="blog.shirakii.com/blog.shirakii.com/post/geometrynode-start/images/2_hu89a4b51c60e7827f7b7f3141a020edcf_5143909_480x0_resize_box_1.gif 480w, blog.shirakii.com/blog.shirakii.com/post/geometrynode-start/images/2_hu89a4b51c60e7827f7b7f3141a020edcf_5143909_1024x0_resize_box_1.gif 1024w"
+loading="lazy"
+alt="Fireworks"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+>&lt;/p>
+&lt;h2 id="用途">用途&lt;/h2>
+&lt;p>我们之所以用几何节点制作效果当然是因为它有很多好处。程序化节点式的工作流让你能够轻松快捷地调整最终效果，而不是又从零到一地画一幅画，并且我们能精确地操控每一个参数供我们使用。也能够将工作流中常使用的效果打包为节点组，高效地嵌套使用。&lt;/p>
+&lt;h2 id="学习方法">学习方法&lt;/h2>
+&lt;p>其实最快的学习方式就是看到一个好看的效果，直接上手去实现。做的过程中会慢慢地了解制作思路，遇到理解不了的节点就去翻翻文档或解释的视频。&lt;/p>
+&lt;p>国内的话强烈建议可以看看&lt;a class="link" href="https://space.bilibili.com/373134990" target="_blank" rel="noopener"
+>峰峰居士&lt;/a>和&lt;a class="link" href="https://space.bilibili.com/17548972" target="_blank" rel="noopener"
+>darkstarrd&lt;/a>的视频，之后尤其要了解一下几何节点中的&lt;strong>几何流&lt;/strong>和&lt;strong>函数流&lt;/strong>思想。&lt;/p>
+&lt;p>至于版本我建议使用3.4之后的版本，很多冗余的节点都被修改了，3.3也行，大差不差。&lt;/p>
+&lt;p>其实最重要的是多看别人开阔眼界，过程中了解一些自己之前没怎么用到的节点和思路。看到一个大佬的推文或教程之后，根据相关推荐发现一个又一个新大陆。入门之后可以尝试用各种节点包加速工作流，我了解到的部分内容放在相关资源里。&lt;/p>
+&lt;h2 id="必要插件">必要插件&lt;/h2>
+&lt;p>内置插件Node Wrangler，有点基础的话应该都开启了，善用&lt;code>Ctrl Shift LMB&lt;/code>预览值和其他基础操作&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/williamchange/node_tabber" target="_blank" rel="noopener"
+>node_tabber&lt;/a>，使用houdini的方式搜索节点。对我来说相当重要的插件，再用不用&lt;code>Shift A&lt;/code>多点几步了，拯救时间的利器&lt;/p>
+&lt;p>效果如下，快速查找节点&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="images/3.jpg" width="80%"/>
+&lt;/figure>
+&lt;h2 id="相关资源">相关资源&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>推荐博主&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>入门&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://www.youtube.com/@JoeyCarlino" target="_blank" rel="noopener"
+>Joey Carlino&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.youtube.com/@sinasinaie" target="_blank" rel="noopener"
+>Sina Sinaie&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.youtube.com/c/CrossMindStudio" target="_blank" rel="noopener"
+>CrossmindStudio&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.youtube.com/@JohnnyMatthews" target="_blank" rel="noopener"
+>Johnny Matthews&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.youtube.com/c/Khamurai" target="_blank" rel="noopener"
+>Khamurai&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>进阶&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://twitter.com/Bbbn192" target="_blank" rel="noopener"
+>Cartesian Caramel&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://twitter.com/cmzw_" target="_blank" rel="noopener"
+>Celestialmaze&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://twitter.com/erindale_xyz" target="_blank" rel="noopener"
+>Erindale&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://twitter.com/HotdogNugget" target="_blank" rel="noopener"
+>HotdogNugget&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Toolkit&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://bradley-animations.gumroad.com/l/jSyDM" target="_blank" rel="noopener"
+>Bradley Node Preset&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://erindale.gumroad.com/l/erintools" target="_blank" rel="noopener"
+>Erindale Toolkit&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://blendermarket.com/products/geometry-nodes-groups" target="_blank" rel="noopener"
+>Higgsas Nodes&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="结语">结语&lt;/h2>
+&lt;p>总之在学习中开拓自己的思路是最重要的，没有几何节点实现不了的效果，创意是无限的&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="images/4.jpg" width="60%"/> &lt;figcaption>
+&lt;p>
+&lt;a href="https://twitter.com/jiehananana/status/1685683840768262144">&lt;/br>Lily&amp;amp;Buttercups&lt;/a>&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;h2 id="参考与鸣谢">参考与鸣谢&lt;/h2>
+&lt;p>&lt;strong>cover:&lt;/strong> &lt;a class="link" href="https://twitter.com/Dino_illus/status/1702099616081052049" target="_blank" rel="noopener"
+>@Dino&lt;/a>&lt;/p></description></item><item><title>R3F蒙版&amp;绿幕推流</title><link>blog.shirakii.com/post/r3f-streaming/</link><pubDate>Thu, 14 Sep 2023 17:18:38 +0800</pubDate><guid>blog.shirakii.com/post/r3f-streaming/</guid><description>&lt;img src="/blog.shirakii.com/post/r3f-streaming/cover.jpg" alt="Featured image of post R3F蒙版&amp;绿幕推流" />&lt;h2 id="前言">前言&lt;/h2>
+&lt;p>上个月从零开始直接上手&lt;code>react three fiber&lt;/code>，跟着同事写了一堆交互，总算弄得差不多了。不会&lt;code>React&lt;/code>，不会&lt;code>TS&lt;/code>，不会&lt;code>three&lt;/code>，真不知道自己怎么过来的。途中也了解到原子化&lt;code>css&lt;/code>，总之收获颇丰。目前是因为需要将渲染画面推流到场景中，故做点经验分享&lt;/p>
+&lt;h2 id="前期准备">前期准备&lt;/h2>
+&lt;p>首先得创建个场景然后播放视频吧，可以参考下面我做的这个案例&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="https://uploads.codesandbox.io/uploads/user/831db286-7f88-4d2e-804a-05751a1066ca/lUPY-thumbnail.jpg" width="80%"/> &lt;figcaption>
+&lt;p>
+&lt;a href="https://codesandbox.io/s/green-screen-streaming-js2vkw">&lt;strong>GreenScreen-Streaming&lt;/strong>&lt;/a>&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>首先做一个&lt;code>VideoMaterial&lt;/code>的function，减少耦合度。当然你也可以写的简单点，这里主要是为了后续添加遮罩的方便。但是存在一定色差，暂时没找到解决方法&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-jsx" data-lang="jsx">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">function&lt;/span> &lt;span class="nx">VideoMaterial&lt;/span>&lt;span class="p">({&lt;/span> &lt;span class="nx">src&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">mask_src&lt;/span> &lt;span class="p">})&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">texture&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">src&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="nx">useVideoTexture&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">src&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="kc">null&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">mask&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">mask_src&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="nx">useVideoTexture&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">mask_src&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="kc">null&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meshPhysicalMaterial&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">color&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="mh">0x000000&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">emissive&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="mh">0xffffff&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">emissiveMap&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="nx">texture&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">alphaMap&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="nx">mask&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">emissiveIntensity&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">opacity&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">transparent&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">toneMapped&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="kc">false&lt;/span>&lt;span class="p">}&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>记得用&lt;code>Suspense&lt;/code>包裹一下，不然会报错,因为渲染的前后关系不对。建议&lt;code>fallback&lt;/code>里给个材质留给加载的时间，这里我放了个&lt;a class="link" href="https://www.vecteezy.com/video/4844745-icon-loading-10-circle-gradient-angle-loop-out-black-background-gradient-animation-for-game-animation-video-and-others" target="_blank" rel="noopener"
+>loading&lt;/a>的动画&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-jsx" data-lang="jsx">&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">mesh&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">planeGeometry&lt;/span> &lt;span class="na">args&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{[&lt;/span>&lt;span class="mf">7.111&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">]}&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">Suspense&lt;/span> &lt;span class="na">fallback&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{&amp;lt;&lt;/span>&lt;span class="nt">VideoMaterial&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;loading.mp4&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;}&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">Suspense&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">VideoMaterial&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;WING IT! - Blender Open Movie.mp4&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">mask_src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#39;mask.mp4&amp;#39;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">Suspense&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">mesh&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这样就可以看到一个带透明通道的视频显示在屏幕上，当然可能用quicktime格式会更快些，但体积大&lt;/p>
+&lt;h2 id="视频流">视频流&lt;/h2>
+&lt;p>有条件的可以现在主机上插个摄像头，先通过API获取到视频流&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-jsx" data-lang="jsx">&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="nx">stream&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">setStream&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">useState&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">useEffect&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kr">async&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">constraints&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">audio&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">false&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">video&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">navigator&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">mediaDevices&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">.&lt;/span>&lt;span class="nx">getUserMedia&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">constraints&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">stream&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">window&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stream&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">stream&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">setStream&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">stream&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">stream&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">navigator&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">mediaDevices&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">enumerateDevices&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">devices&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">devices&lt;/span>&lt;span class="p">)})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">.&lt;/span>&lt;span class="k">catch&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span> &lt;span class="p">[])&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>不出意外的话屏幕上就能出现摄像头的画面了。另外可以在&lt;code>useState&lt;/code>中设置参数来显示加载动画&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="images/1.png#center" width="500px"/>
+&lt;/figure>
+&lt;h2 id="obs虚拟摄像头">OBS虚拟摄像头&lt;/h2>
+&lt;p>但是我们如果想输出各种画面一般都是使用&lt;a class="link" href="https://obsproject.com" target="_blank" rel="noopener"
+>OBS&lt;/a>的虚拟摄像机推流。那么怎么切换摄像机呢？&lt;/p>
+&lt;p>可以看到上述的代码通过使用&lt;code>constraints&lt;/code>来约束使用的摄像头，需要的&lt;code>deviceId&lt;/code>可从&lt;code>console&lt;/code>中获取&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">InputDeviceInfo
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deviceId: &amp;#34;6bd3a42e2bf68c2246a5a9bcffa2e43fab316554f504a6ad5687c5674ea6e5d1&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">groupId: &amp;#34;e8291660abbb766dfaaebafbd6f4d3eb046f00603e3cb4d3c2bcd30673415982&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">kind: &amp;#34;videoinput&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">label: &amp;#34;OBS Virtual Camera&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>于是我们找到OBS虚拟摄像头的信息,填入&lt;code>constraints&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-jsx" data-lang="jsx">&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">constraints&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">audio&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">video&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">deviceId&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">YOUR&lt;/span> &lt;span class="na">OBS&lt;/span> &lt;span class="na">ID&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="绿幕shader">绿幕shader&lt;/h2>
+&lt;p>接下来就剩抠绿幕了。你或许会问为什么不在OBS里直接用色度键去除呢？因为它不支持推流视频带alpha通道，虽然抠的只剩个人但推出去还是个大黑框&lt;/p>
+&lt;p>于是我们就得用到&lt;code>shaderMaterial&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-glsl" data-lang="glsl">&lt;span class="line">&lt;span class="cl">&lt;span class="k">const&lt;/span> &lt;span class="n">vertexShader&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="err">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">varying&lt;/span> &lt;span class="k">vec2&lt;/span> &lt;span class="n">vUv&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">void&lt;/span> &lt;span class="n">main&lt;/span>&lt;span class="p">(&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">vUv&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">uv&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">gl_Position&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">projectionMatrix&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">modelViewMatrix&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="k">vec4&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">position&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mf">1.0&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">export&lt;/span> &lt;span class="k">default&lt;/span> &lt;span class="n">vertexShader&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">const&lt;/span> &lt;span class="n">fragmentShader&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="err">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">uniform&lt;/span> &lt;span class="k">vec3&lt;/span> &lt;span class="n">keyColor&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">uniform&lt;/span> &lt;span class="k">float&lt;/span> &lt;span class="n">similarity&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">uniform&lt;/span> &lt;span class="k">float&lt;/span> &lt;span class="n">smoothness&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">varying&lt;/span> &lt;span class="k">vec2&lt;/span> &lt;span class="n">vUv&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">uniform&lt;/span> &lt;span class="k">sampler2D&lt;/span> &lt;span class="n">map&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">void&lt;/span> &lt;span class="n">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">vec4&lt;/span> &lt;span class="n">videoColor&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">texture2D&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">map&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">vUv&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">float&lt;/span> &lt;span class="n">Y1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mf">0.299&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">keyColor&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">r&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mf">0.587&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">keyColor&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">g&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mf">0.114&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">keyColor&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">float&lt;/span> &lt;span class="n">Cr1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">keyColor&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">r&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">Y1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">float&lt;/span> &lt;span class="n">Cb1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">keyColor&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">b&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">Y1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">float&lt;/span> &lt;span class="n">Y2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mf">0.299&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">videoColor&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">r&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mf">0.587&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">videoColor&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">g&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mf">0.114&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">videoColor&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">float&lt;/span> &lt;span class="n">Cr2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">videoColor&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">r&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">Y2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">float&lt;/span> &lt;span class="n">Cb2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">videoColor&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">b&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">Y2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">float&lt;/span> &lt;span class="n">blend&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">smoothstep&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">similarity&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">similarity&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">smoothness&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">distance&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">vec2&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Cr2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Cb2&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="k">vec2&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Cr1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Cb1&lt;/span>&lt;span class="p">)));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">gl_FragColor&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">vec4&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">videoColor&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">rgb&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">videoColor&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">a&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">blend&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">export&lt;/span> &lt;span class="k">default&lt;/span> &lt;span class="n">fragmentShader&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>App.js&lt;/code>内&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-jsx" data-lang="jsx">&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">streamTexture&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">useVideoTexture&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">stream&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">material&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">THREE&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">ShaderMaterial&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">transparent&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">uniforms&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">map&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">value&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">streamTexture&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">keyColor&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">value&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mf">0.0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">1.0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">0.0&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">similarity&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">value&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mf">0.7&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">smoothness&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">value&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mf">0.0&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">vertexShader&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fragmentShader&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">Suspense&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">mesh&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">position&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{[&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">8&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="p">]}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">scale&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">material&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="nx">material&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">planeGeometry&lt;/span> &lt;span class="na">args&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{[&lt;/span>&lt;span class="mf">7.111&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">]}&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">mesh&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">Suspense&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这里我事先放了一个绿幕视频作为加载动画，只要输入自己的&lt;code>deviceId&lt;/code>就能正常显示了&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="images/alice.gif#center" width="500px"/>
+&lt;/figure>
+&lt;h2 id="后话">后话&lt;/h2>
+&lt;p>至于为什么这里不采用&lt;code>VideoMaterial&lt;/code>另开一个材质函数的写法，而是&lt;code>three.js&lt;/code>的用法，是因为我也不知道为什么会有bug，欢迎在评论区交流&lt;/p>
+&lt;p>最后在实际体验过程中，我需要让这块平面始终朝向摄像机，会的人可能觉得一个&lt;code>useRef&lt;/code>和&lt;code>useFrame&lt;/code>就解决了，但是我拿不到父组件的摄像头信息。后来终于发现可以用&lt;code>useThree&lt;/code>这个hook，直接拿到&lt;code>camera&lt;/code>&lt;/p>
+&lt;h2 id="参考链接">参考链接&lt;/h2>
+&lt;p>&lt;a href="https://codesandbox.io/s/2cemck" rel="nofollow">&lt;img width="20%" src="https://camo.githubusercontent.com/911cd7576d9b11ce2cd235f4513198e18fd29b4653545092ff3ebb8017cfdb4a/68747470733a2f2f636f646573616e64626f782e696f2f6170692f76312f73616e64626f7865732f3263656d636b2f73637265656e73686f742e706e673f7632" alt="Demo" data-canonical-src="https://codesandbox.io/api/v1/sandboxes/2cemck/screenshot.png?v2" style="max-width: 100%;">&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://sbcode.net/threejs/webcam/" target="_blank" rel="noopener"
+>webcam&lt;/a>&lt;/p>
+&lt;div class="video-wrapper">
+&lt;iframe loading="lazy"
+src="https://www.youtube.com/embed/T9F1Wk8DQdg"
+allowfullscreen
+title="YouTube Video"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;h2 id="byebye">Bye~Bye&lt;/h2>
+&lt;figure>
+&lt;img loading="lazy" src="images/2.jpg" width="400"/> &lt;figcaption>
+&lt;p>
+&lt;a href="https://twitter.com/Kerno_kr/status/1697538936015618120">和纱太好看了&lt;br>@Kerno_kr&lt;/a>&lt;/p>
+&lt;/figcaption>
+&lt;/figure></description></item><item><title>Hugo中使用图片的一些心得</title><link>blog.shirakii.com/post/hugo-image/</link><pubDate>Sun, 20 Aug 2023 23:03:03 +0800</pubDate><guid>blog.shirakii.com/post/hugo-image/</guid><description>&lt;img src="/blog.shirakii.com/post/hugo-image/cover.jpg" alt="Featured image of post Hugo中使用图片的一些心得" />&lt;p>研究了一会儿hugo中怎样使用图片，顺便做个记录。&lt;/p>
+&lt;p>最高效正确的方法应该就是使用&lt;a class="link" href="https://gohugo.io/getting-started/configuration-markup/#markdown-render-hooks" target="_blank" rel="noopener"
+>Markdown render hooks&lt;/a>，即可通过以下的markdown形式快速地调整图片大小&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">![Petrified Forest](a.jpg?w=500)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">![Bryce Canyon](images/b.jpg?h=200&amp;amp;f=webp)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">![Zion](images/c.jpg?w=150&amp;amp;h=150&amp;amp;m=fill&amp;amp;q=50&amp;amp;f=png&amp;amp;i=my-id&amp;amp;c=my-class)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">![Hugo logo](https://gohugo.io/img/hugo-logo.png?w=200)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>但是我太懒还没学会，最简单的应该就是用html自带的img标签，但不知道为什么我这无法显示，如果这样的话我目前发现有两种解决办法&lt;/p>
+&lt;p>在theme的css中添加需要的样式，我使用的papermod主题默认在post-single文件中&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">post-content&lt;/span> &lt;span class="nt">img&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="nt">src&lt;/span>&lt;span class="o">*=&lt;/span>&lt;span class="s2">&amp;#34;#minipic&amp;#34;&lt;/span>&lt;span class="o">]&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">max-width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">200&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">block&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">//&lt;/span>&lt;span class="nt">使用&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">![&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="o">](../&lt;/span>&lt;span class="nt">1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nc">png&lt;/span>&lt;span class="p">#&lt;/span>&lt;span class="nn">minipic&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>也可以把标签加在alt中，但这样局限性很大，最多定义几种常用大小。&lt;/p>
+&lt;p>另外一种方法就是使用shortcodes，类似于组件，官方已经写好了一个figure&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">{{去掉#&amp;lt; figure src=&amp;#34;../1.png#center&amp;#34; width=250px &amp;gt;}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>除此之外还有的需求尤其是移动端就是要能够放大图片，于是我在这个&lt;a class="link" href="https://github.com/adityatelange/hugo-PaperMod/issues/384" target="_blank" rel="noopener"
+>&lt;strong>issue&lt;/strong>&lt;/a>下找到了答案&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># render-image.html
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{- if and (ne .Page.Kind &amp;#34;section&amp;#34;) (.Page.Section ) }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!-- Generate a unique id for each image --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{- $random := (substr (md5 .Destination) 0 5) }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">input&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;checkbox&amp;#34;&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;zoomCheck-{{$random}}&amp;#34;&lt;/span> &lt;span class="na">hidden&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">label&lt;/span> &lt;span class="na">for&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;zoomCheck-{{$random}}&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">img&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;zoomCheck&amp;#34;&lt;/span> &lt;span class="na">loading&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;lazy&amp;#34;&lt;/span> &lt;span class="na">decoding&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;async&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ .Destination | safeURL }}&amp;#34;&lt;/span> &lt;span class="na">alt&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ .Text }}&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">{{&lt;/span> &lt;span class="na">with&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">Title&lt;/span>&lt;span class="err">}}&lt;/span> &lt;span class="na">title&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ . }}&amp;#34;&lt;/span> &lt;span class="err">{{&lt;/span> &lt;span class="na">end&lt;/span> &lt;span class="err">}}&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">label&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{- else }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">img&lt;/span> &lt;span class="na">loading&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;lazy&amp;#34;&lt;/span> &lt;span class="na">decoding&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;async&amp;#34;&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ .Destination | safeURL }}&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">alt&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ .Text }}&amp;#34;&lt;/span> &lt;span class="err">{{&lt;/span> &lt;span class="na">with&lt;/span> &lt;span class="err">.&lt;/span>&lt;span class="na">Title&lt;/span>&lt;span class="err">}}&lt;/span> &lt;span class="na">title&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ . }}&amp;#34;&lt;/span> &lt;span class="err">{{&lt;/span> &lt;span class="na">end&lt;/span> &lt;span class="err">}}&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{- end }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># extend_footer.html
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js&amp;#34;&lt;/span> &lt;span class="na">integrity&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;sha512-N9IJRoc3LaP3NDoiGkcPa4gG94kapGpaA5Zq9/Dr04uf5TbLFU5q0o8AbRhLKUUlp8QFS2u7S+Yti0U7QtuZvQ==&amp;#34;&lt;/span> &lt;span class="na">crossorigin&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;anonymous&amp;#34;&lt;/span> &lt;span class="na">referrerpolicy&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;no-referrer&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">images&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">from&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">querySelectorAll&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;.post-content img&amp;#34;&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">images&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">img&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">mediumZoom&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">img&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">margin&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">20&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="cm">/* The space outside the zoomed image */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">scrollOffset&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">40&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="cm">/* The number of pixels to scroll to close the zoom */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">container&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="cm">/* The viewport to render the zoom in */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">template&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="cm">/* The template element to display on zoom */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">background&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;rgba(0, 0, 0, 0.8)&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- https://ionic.io/ionicons --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;module&amp;#34;&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">nomodule&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在以上两个文件中添加代码后就可以愉快缩放了，剩下的效果自由发挥。&lt;/p>
+&lt;p>目前我更换主题后，要看具体情况更改（比如主题自带对image的处理），&lt;code>querySelectorAll&lt;/code>后的内容可通过F12定位css的具体位置。&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="images/footer.jpg" width="40%"/> &lt;figcaption>
+&lt;p>
+&lt;a href="https://twitter.com/96yottea/status/1684885713232502786">突然想看排球了&lt;br>@96yottea&lt;/a>&lt;/p>
+&lt;/figcaption>
+&lt;/figure></description></item><item><title>年轻人的第一台主机</title><link>blog.shirakii.com/post/my-first-post/</link><pubDate>Sun, 13 Aug 2023 22:19:17 +0800</pubDate><guid>blog.shirakii.com/post/my-first-post/</guid><description>&lt;img src="/blog.shirakii.com/post/my-first-post/cover.jpg" alt="Featured image of post 年轻人的第一台主机" />&lt;p>其实很早就想搭一个技术博客了，但是一直感觉无从弄起而且耗费精力，直到我看到了&lt;a class="link" href="https://www.cyanilux.com/" target="_blank" rel="noopener"
+>Cyanilux&lt;/a>这个网站，了解到了hugo，况且我也刚组了台主机，就将这作为纪念吧。&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="images/1.png#center" width="40%"/>
+&lt;/figure>
+&lt;p>配置方面我觉得已经完全够用好多年了，颜值也是无比的高，就是用着这堪堪50%cuda数量的4080有些许难受。原先有考虑尝试背插方案，但由于兼容的主板和机箱太少，最后放弃了。&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="images/2.jpg#center" width="60%"/>
+&lt;/figure>
+&lt;p>虽然是第一次装机，但是现在互联网上优质的教程太多了，完全可以自给自足，强烈推荐&lt;a class="link" href="https://www.bilibili.com/video/av818609247?" target="_blank" rel="noopener"
+>硬件茶谈&lt;/a>或者装机猿的相声。&lt;/p>
+&lt;p>说实话看视频是一点不难，但是实际上手会多出一堆需要考虑的问题，尤其是走线之类的。我第一次就把散热器装歪了90度，还有一堆ARGB风扇的连接线，直接把我猪脑烧过载了😅本来用的是送的三个风扇，结果由于没集线器和线缆长度问题，后来搞了3个乔思伯积木风扇，是真的方便。&lt;/p>
+&lt;p>实际操作时，插那个CPU的供电线简直反人类，主板24pin供电尽量一次怼进去。至于理线那又是一个痛苦折磨的过程，我这没旋转桌子，趴在地上前后翻腾了一下午，腰酸背痛。&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="images/3.jpg#center" width="60%"/>
+&lt;/figure>
+&lt;p>之后就是把显卡插进去，哎呦那个槽是真难对准。满心欢喜地开机，所有东西都在转，结果第一次居然显示屏不亮，我折腾了半天都没有成功，在床上躺到三点实在睡不着，再爬起来试试。由于我装了fc140的散热器，内存条是被挡住的挺麻烦，最后果然是内存条没插紧，两侧合上的卡扣欺骗了我😭。最后终于进BIOS了&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="images/4.jpg#center" width="60%"/>
+&lt;/figure>
+&lt;p>刚开始识别不到固态也奇了怪了，总之之后就是装系统，我是用了rufus来装，之前steamdeck用过就继续用了。当然可能PE更方便实用些。&lt;/p>
+&lt;p>最后就是装各种驱动，无尽地迁移工程、安装软件了。Valorant能稳定5、600帧实在太爽啦&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="images/5.jpg#center" width="60%"/>
+&lt;/figure>
+&lt;p>纪念这历史性的一刻&lt;/p>
+&lt;!-- &lt;figure>
+&lt;img loading="lazy" src="images/7.jpg" width="400"/>
+&lt;/figure>
+&lt;figure>
+&lt;img loading="lazy" src="images/6.jpg" width="400"/>
+&lt;/figure>
+-->
+&lt;p>&lt;img src="blog.shirakii.com/blog.shirakii.com/post/my-first-post/images/7.jpg"
+width="3648"
+height="2736"
+srcset="blog.shirakii.com/blog.shirakii.com/post/my-first-post/images/7_hueb4a9929bd86433b934f80a1572ac64d_2093190_480x0_resize_q75_box.jpg 480w, blog.shirakii.com/blog.shirakii.com/post/my-first-post/images/7_hueb4a9929bd86433b934f80a1572ac64d_2093190_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="320px"
+> &lt;img src="blog.shirakii.com/blog.shirakii.com/post/my-first-post/images/6.jpg"
+width="2560"
+height="1440"
+srcset="blog.shirakii.com/blog.shirakii.com/post/my-first-post/images/6_hua03765d1d870dde5e568a52270357eaa_372114_480x0_resize_q75_box.jpg 480w, blog.shirakii.com/blog.shirakii.com/post/my-first-post/images/6_hua03765d1d870dde5e568a52270357eaa_372114_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+>&lt;/p>
+&lt;h2>感恩父母&lt;/h2>
+&lt;h1 id="后记">后记&lt;/h1>
+&lt;blockquote>
+&lt;p>前几天由于windows擅自更新的缘故，后来直接无限进入自动修复的重启界面，还原点没用、卸载更新没用，连插u盘进PE系统都蓝屏，最后无奈重装系统。&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="一定要禁用更新啊">一定要禁用更新啊&lt;/h1>
+&lt;figure>
+&lt;img loading="lazy" src="images/footer.jpg" width="400"/> &lt;figcaption>
+&lt;p>
+&lt;a href="https://twitter.com/Dino_illus/status/1675066447502929921">@Dino_illus&lt;/a>&lt;/p>
+&lt;/figcaption>
+&lt;/figure></description></item></channel></rss>
