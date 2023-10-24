@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>生活 on Shirakii</title><link>blog.shirakii.com/categories/%E7%94%9F%E6%B4%BB/</link><description>Recent content in 生活 on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Example Person</copyright><lastBuildDate>Sun, 13 Aug 2023 22:19:17 +0800</lastBuildDate><atom:link href="blog.shirakii.com/categories/%E7%94%9F%E6%B4%BB/index.xml" rel="self" type="application/rss+xml"/><item><title>年轻人的第一台主机</title><link>blog.shirakii.com/post/my-first-post/</link><pubDate>Sun, 13 Aug 2023 22:19:17 +0800</pubDate><guid>blog.shirakii.com/post/my-first-post/</guid><description>&lt;img src="/blog.shirakii.com/post/my-first-post/cover.jpg" alt="Featured image of post 年轻人的第一台主机" />&lt;p>其实很早就想搭一个技术博客了，但是一直感觉无从弄起而且耗费精力，直到我看到了&lt;a class="link" href="https://www.cyanilux.com/" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>生活 on Shirakii</title><link>/categories/%E7%94%9F%E6%B4%BB/</link><description>Recent content in 生活 on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Example Person</copyright><lastBuildDate>Sun, 13 Aug 2023 22:19:17 +0800</lastBuildDate><atom:link href="/categories/%E7%94%9F%E6%B4%BB/index.xml" rel="self" type="application/rss+xml"/><item><title>年轻人的第一台主机</title><link>/post/my-first-post/</link><pubDate>Sun, 13 Aug 2023 22:19:17 +0800</pubDate><guid>/post/my-first-post/</guid><description>&lt;img src="/post/my-first-post/cover.jpg" alt="Featured image of post 年轻人的第一台主机" />&lt;p>其实很早就想搭一个技术博客了，但是一直感觉无从弄起而且耗费精力，直到我看到了&lt;a class="link" href="https://www.cyanilux.com/" target="_blank" rel="noopener"
 >Cyanilux&lt;/a>这个网站，了解到了hugo，况且我也刚组了台主机，就将这作为纪念吧。&lt;/p>
 &lt;figure>
 &lt;img loading="lazy" src="images/1.png#center" width="40%"/>
@@ -31,18 +31,18 @@
 &lt;img loading="lazy" src="images/6.jpg" width="400"/>
 &lt;/figure>
 -->
-&lt;p>&lt;img src="blog.shirakii.com/blog.shirakii.com/post/my-first-post/images/7.jpg"
+&lt;p>&lt;img src="/post/my-first-post/images/7.jpg"
 width="3648"
 height="2736"
-srcset="blog.shirakii.com/blog.shirakii.com/post/my-first-post/images/7_hueb4a9929bd86433b934f80a1572ac64d_2093190_480x0_resize_q75_box.jpg 480w, blog.shirakii.com/blog.shirakii.com/post/my-first-post/images/7_hueb4a9929bd86433b934f80a1572ac64d_2093190_1024x0_resize_q75_box.jpg 1024w"
+srcset="/post/my-first-post/images/7_hueb4a9929bd86433b934f80a1572ac64d_2093190_480x0_resize_q75_box.jpg 480w, /post/my-first-post/images/7_hueb4a9929bd86433b934f80a1572ac64d_2093190_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="133"
 data-flex-basis="320px"
-> &lt;img src="blog.shirakii.com/blog.shirakii.com/post/my-first-post/images/6.jpg"
+> &lt;img src="/post/my-first-post/images/6.jpg"
 width="2560"
 height="1440"
-srcset="blog.shirakii.com/blog.shirakii.com/post/my-first-post/images/6_hua03765d1d870dde5e568a52270357eaa_372114_480x0_resize_q75_box.jpg 480w, blog.shirakii.com/blog.shirakii.com/post/my-first-post/images/6_hua03765d1d870dde5e568a52270357eaa_372114_1024x0_resize_q75_box.jpg 1024w"
+srcset="/post/my-first-post/images/6_hua03765d1d870dde5e568a52270357eaa_372114_480x0_resize_q75_box.jpg 480w, /post/my-first-post/images/6_hua03765d1d870dde5e568a52270357eaa_372114_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="177"

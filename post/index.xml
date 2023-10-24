@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Shirakii</title><link>blog.shirakii.com/post/</link><description>Recent content in Posts on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Example Person</copyright><lastBuildDate>Thu, 19 Oct 2023 16:35:44 +0800</lastBuildDate><atom:link href="blog.shirakii.com/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Cloudflare Dns 批量删除</title><link>blog.shirakii.com/post/cloudflare-dns-delete/</link><pubDate>Thu, 19 Oct 2023 16:35:44 +0800</pubDate><guid>blog.shirakii.com/post/cloudflare-dns-delete/</guid><description>&lt;img src="/blog.shirakii.com/post/cloudflare-dns-delete/cover.jpg" alt="Featured image of post Cloudflare Dns 批量删除" />&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Shirakii</title><link>/post/</link><description>Recent content in Posts on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Example Person</copyright><lastBuildDate>Thu, 19 Oct 2023 16:35:44 +0800</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Cloudflare Dns 批量删除</title><link>/post/cloudflare-dns-delete/</link><pubDate>Thu, 19 Oct 2023 16:35:44 +0800</pubDate><guid>/post/cloudflare-dns-delete/</guid><description>&lt;img src="/post/cloudflare-dns-delete/cover.jpg" alt="Featured image of post Cloudflare Dns 批量删除" />&lt;blockquote>
 &lt;p>由于之前博客为了输入方便一直放在根域名，现在需要将字体部署到子域名下，为了干净整洁些需要将之前的DNS删除。&lt;br>并且不再用vercel部署，采用cloudflare&lt;/p>
 &lt;/blockquote>
 &lt;p>进入&lt;a class="link" href="https://dash.cloudflare.com/profile/api-tokens" target="_blank" rel="noopener"
@@ -71,7 +71,7 @@
 &lt;p>cover:&lt;a class="link" href="https://www.pixiv.net/artworks/92463499" target="_blank" rel="noopener"
 >@mocha&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://community.cloudflare.com/t/bulk-delete-dns-records/421686" target="_blank" rel="noopener"
->https://community.cloudflare.com/t/bulk-delete-dns-records/421686&lt;/a>&lt;/p></description></item><item><title>几何节点入门纲要</title><link>blog.shirakii.com/post/geometrynode-start/</link><pubDate>Thu, 05 Oct 2023 23:20:26 +0800</pubDate><guid>blog.shirakii.com/post/geometrynode-start/</guid><description>&lt;img src="/blog.shirakii.com/post/geometrynode-start/cover.jpg" alt="Featured image of post 几何节点入门纲要" />&lt;h2 id="前言">前言&lt;/h2>
+>https://community.cloudflare.com/t/bulk-delete-dns-records/421686&lt;/a>&lt;/p></description></item><item><title>几何节点入门纲要</title><link>/post/geometrynode-start/</link><pubDate>Thu, 05 Oct 2023 23:20:26 +0800</pubDate><guid>/post/geometrynode-start/</guid><description>&lt;img src="/post/geometrynode-start/cover.jpg" alt="Featured image of post 几何节点入门纲要" />&lt;h2 id="前言">前言&lt;/h2>
 &lt;p>我创建这个博客的初衷，有很大一部分是方便记录分享自己实现的一些几何节点效果，因此写一下这篇文章来分享一下我之前学习过程中的一些感悟和经验，希望对你有帮助。&lt;/p>
 &lt;p>感兴趣的话可以看下我的&lt;a class="link" href="https://www.artstation.com/siya_33" target="_blank" rel="noopener"
 >Artstation&lt;/a>或者&lt;a class="link" href="https://space.bilibili.com/333322096" target="_blank" rel="noopener"
@@ -85,19 +85,19 @@
 &lt;img loading="lazy" src="images/2.gif" width="500px"/>
 &lt;/figure>
 -->
-&lt;p>&lt;img src="blog.shirakii.com/blog.shirakii.com/post/geometrynode-start/images/1.gif"
+&lt;p>&lt;img src="/post/geometrynode-start/images/1.gif"
 width="600"
 height="600"
-srcset="blog.shirakii.com/blog.shirakii.com/post/geometrynode-start/images/1_huf25c1ee0db477ccf296c37027c4eed86_1678127_480x0_resize_box_1.gif 480w, blog.shirakii.com/blog.shirakii.com/post/geometrynode-start/images/1_huf25c1ee0db477ccf296c37027c4eed86_1678127_1024x0_resize_box_1.gif 1024w"
+srcset="/post/geometrynode-start/images/1_huf25c1ee0db477ccf296c37027c4eed86_1678127_480x0_resize_box_1.gif 480w, /post/geometrynode-start/images/1_huf25c1ee0db477ccf296c37027c4eed86_1678127_1024x0_resize_box_1.gif 1024w"
 loading="lazy"
 alt="MG"
 class="gallery-image"
 data-flex-grow="100"
 data-flex-basis="240px"
-> &lt;img src="blog.shirakii.com/blog.shirakii.com/post/geometrynode-start/images/2.gif"
+> &lt;img src="/post/geometrynode-start/images/2.gif"
 width="768"
 height="432"
-srcset="blog.shirakii.com/blog.shirakii.com/post/geometrynode-start/images/2_hu89a4b51c60e7827f7b7f3141a020edcf_5143909_480x0_resize_box_1.gif 480w, blog.shirakii.com/blog.shirakii.com/post/geometrynode-start/images/2_hu89a4b51c60e7827f7b7f3141a020edcf_5143909_1024x0_resize_box_1.gif 1024w"
+srcset="/post/geometrynode-start/images/2_hu89a4b51c60e7827f7b7f3141a020edcf_5143909_480x0_resize_box_1.gif 480w, /post/geometrynode-start/images/2_hu89a4b51c60e7827f7b7f3141a020edcf_5143909_1024x0_resize_box_1.gif 1024w"
 loading="lazy"
 alt="Fireworks"
 class="gallery-image"
@@ -178,7 +178,7 @@ data-flex-basis="426px"
 &lt;/figure>
 &lt;h2 id="参考与鸣谢">参考与鸣谢&lt;/h2>
 &lt;p>&lt;strong>cover:&lt;/strong> &lt;a class="link" href="https://twitter.com/Dino_illus/status/1702099616081052049" target="_blank" rel="noopener"
->@Dino&lt;/a>&lt;/p></description></item><item><title>R3F蒙版&amp;绿幕推流</title><link>blog.shirakii.com/post/r3f-streaming/</link><pubDate>Thu, 14 Sep 2023 17:18:38 +0800</pubDate><guid>blog.shirakii.com/post/r3f-streaming/</guid><description>&lt;img src="/blog.shirakii.com/post/r3f-streaming/cover.jpg" alt="Featured image of post R3F蒙版&amp;绿幕推流" />&lt;h2 id="前言">前言&lt;/h2>
+>@Dino&lt;/a>&lt;/p></description></item><item><title>R3F蒙版&amp;绿幕推流</title><link>/post/r3f-streaming/</link><pubDate>Thu, 14 Sep 2023 17:18:38 +0800</pubDate><guid>/post/r3f-streaming/</guid><description>&lt;img src="/post/r3f-streaming/cover.jpg" alt="Featured image of post R3F蒙版&amp;绿幕推流" />&lt;h2 id="前言">前言&lt;/h2>
 &lt;p>上个月从零开始直接上手&lt;code>react three fiber&lt;/code>，跟着同事写了一堆交互，总算弄得差不多了。不会&lt;code>React&lt;/code>，不会&lt;code>TS&lt;/code>，不会&lt;code>three&lt;/code>，真不知道自己怎么过来的。途中也了解到原子化&lt;code>css&lt;/code>，总之收获颇丰。目前是因为需要将渲染画面推流到场景中，故做点经验分享&lt;/p>
 &lt;h2 id="前期准备">前期准备&lt;/h2>
 &lt;p>首先得创建个场景然后播放视频吧，可以参考下面我做的这个案例&lt;/p>
@@ -498,7 +498,7 @@ title="YouTube Video"
 &lt;p>
 &lt;a href="https://twitter.com/Kerno_kr/status/1697538936015618120">和纱太好看了&lt;br>@Kerno_kr&lt;/a>&lt;/p>
 &lt;/figcaption>
-&lt;/figure></description></item><item><title>Hugo中使用图片的一些心得</title><link>blog.shirakii.com/post/hugo-image/</link><pubDate>Sun, 20 Aug 2023 23:03:03 +0800</pubDate><guid>blog.shirakii.com/post/hugo-image/</guid><description>&lt;img src="/blog.shirakii.com/post/hugo-image/cover.jpg" alt="Featured image of post Hugo中使用图片的一些心得" />&lt;p>研究了一会儿hugo中怎样使用图片，顺便做个记录。&lt;/p>
+&lt;/figure></description></item><item><title>Hugo中使用图片的一些心得</title><link>/post/hugo-image/</link><pubDate>Sun, 20 Aug 2023 23:03:03 +0800</pubDate><guid>/post/hugo-image/</guid><description>&lt;img src="/post/hugo-image/cover.jpg" alt="Featured image of post Hugo中使用图片的一些心得" />&lt;p>研究了一会儿hugo中怎样使用图片，顺便做个记录。&lt;/p>
 &lt;p>最高效正确的方法应该就是使用&lt;a class="link" href="https://gohugo.io/getting-started/configuration-markup/#markdown-render-hooks" target="_blank" rel="noopener"
 >Markdown render hooks&lt;/a>，即可通过以下的markdown形式快速地调整图片大小&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -640,7 +640,7 @@ title="YouTube Video"
 &lt;p>
 &lt;a href="https://twitter.com/96yottea/status/1684885713232502786">突然想看排球了&lt;br>@96yottea&lt;/a>&lt;/p>
 &lt;/figcaption>
-&lt;/figure></description></item><item><title>年轻人的第一台主机</title><link>blog.shirakii.com/post/my-first-post/</link><pubDate>Sun, 13 Aug 2023 22:19:17 +0800</pubDate><guid>blog.shirakii.com/post/my-first-post/</guid><description>&lt;img src="/blog.shirakii.com/post/my-first-post/cover.jpg" alt="Featured image of post 年轻人的第一台主机" />&lt;p>其实很早就想搭一个技术博客了，但是一直感觉无从弄起而且耗费精力，直到我看到了&lt;a class="link" href="https://www.cyanilux.com/" target="_blank" rel="noopener"
+&lt;/figure></description></item><item><title>年轻人的第一台主机</title><link>/post/my-first-post/</link><pubDate>Sun, 13 Aug 2023 22:19:17 +0800</pubDate><guid>/post/my-first-post/</guid><description>&lt;img src="/post/my-first-post/cover.jpg" alt="Featured image of post 年轻人的第一台主机" />&lt;p>其实很早就想搭一个技术博客了，但是一直感觉无从弄起而且耗费精力，直到我看到了&lt;a class="link" href="https://www.cyanilux.com/" target="_blank" rel="noopener"
 >Cyanilux&lt;/a>这个网站，了解到了hugo，况且我也刚组了台主机，就将这作为纪念吧。&lt;/p>
 &lt;figure>
 &lt;img loading="lazy" src="images/1.png#center" width="40%"/>
@@ -673,18 +673,18 @@ title="YouTube Video"
 &lt;img loading="lazy" src="images/6.jpg" width="400"/>
 &lt;/figure>
 -->
-&lt;p>&lt;img src="blog.shirakii.com/blog.shirakii.com/post/my-first-post/images/7.jpg"
+&lt;p>&lt;img src="/post/my-first-post/images/7.jpg"
 width="3648"
 height="2736"
-srcset="blog.shirakii.com/blog.shirakii.com/post/my-first-post/images/7_hueb4a9929bd86433b934f80a1572ac64d_2093190_480x0_resize_q75_box.jpg 480w, blog.shirakii.com/blog.shirakii.com/post/my-first-post/images/7_hueb4a9929bd86433b934f80a1572ac64d_2093190_1024x0_resize_q75_box.jpg 1024w"
+srcset="/post/my-first-post/images/7_hueb4a9929bd86433b934f80a1572ac64d_2093190_480x0_resize_q75_box.jpg 480w, /post/my-first-post/images/7_hueb4a9929bd86433b934f80a1572ac64d_2093190_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="133"
 data-flex-basis="320px"
-> &lt;img src="blog.shirakii.com/blog.shirakii.com/post/my-first-post/images/6.jpg"
+> &lt;img src="/post/my-first-post/images/6.jpg"
 width="2560"
 height="1440"
-srcset="blog.shirakii.com/blog.shirakii.com/post/my-first-post/images/6_hua03765d1d870dde5e568a52270357eaa_372114_480x0_resize_q75_box.jpg 480w, blog.shirakii.com/blog.shirakii.com/post/my-first-post/images/6_hua03765d1d870dde5e568a52270357eaa_372114_1024x0_resize_q75_box.jpg 1024w"
+srcset="/post/my-first-post/images/6_hua03765d1d870dde5e568a52270357eaa_372114_480x0_resize_q75_box.jpg 480w, /post/my-first-post/images/6_hua03765d1d870dde5e568a52270357eaa_372114_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="177"
