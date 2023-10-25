@@ -1,4 +1,75 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>web on Shirakii</title><link>/tags/web/</link><description>Recent content in web on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Example Person</copyright><lastBuildDate>Thu, 14 Sep 2023 17:18:38 +0800</lastBuildDate><atom:link href="/tags/web/index.xml" rel="self" type="application/rss+xml"/><item><title>R3F蒙版&amp;绿幕推流</title><link>/post/r3f-streaming/</link><pubDate>Thu, 14 Sep 2023 17:18:38 +0800</pubDate><guid>/post/r3f-streaming/</guid><description>&lt;img src="/post/r3f-streaming/cover.jpg" alt="Featured image of post R3F蒙版&amp;绿幕推流" />&lt;h2 id="前言">前言&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>web on Shirakii</title><link>/tags/web/</link><description>Recent content in web on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><lastBuildDate>Thu, 19 Oct 2023 16:35:44 +0800</lastBuildDate><atom:link href="/tags/web/index.xml" rel="self" type="application/rss+xml"/><item><title>Cloudflare Dns 批量删除</title><link>/post/cloudflare-dns-delete/</link><pubDate>Thu, 19 Oct 2023 16:35:44 +0800</pubDate><guid>/post/cloudflare-dns-delete/</guid><description>&lt;img src="/post/cloudflare-dns-delete/cover.jpg" alt="Featured image of post Cloudflare Dns 批量删除" />&lt;blockquote>
+&lt;p>由于之前博客为了输入方便一直放在根域名，现在需要将字体部署到子域名下，为了干净整洁些需要将之前的DNS删除。&lt;br>并且不再用vercel部署，采用cloudflare&lt;/p>
+&lt;/blockquote>
+&lt;p>进入&lt;a class="link" href="https://dash.cloudflare.com/profile/api-tokens" target="_blank" rel="noopener"
+>cloudflare&lt;/a>，添加一个编辑区域DNS的&lt;a class="link" href="https://dash.cloudflare.com/profile/api-tokens" target="_blank" rel="noopener"
+>API Token&lt;/a>，并记录下Token。&lt;/p>
+&lt;p>点击进入域名的概述，Zone ID在右侧一列中&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="images/1.jpg" width="60%"/>
+&lt;/figure>
+&lt;p>创建一个powershell脚本(.ps1)，并替换&lt;code>API_TOKEN&lt;/code>和&lt;code>ZONE_ID&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$API_TOKEN&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;&amp;lt;API_TOKEN&amp;gt;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$ZONE_ID&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;&amp;lt;ZONE_ID&amp;gt;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$baseUrl&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;https://api.cloudflare.com/client/v4/zones/&lt;/span>&lt;span class="nv">$ZONE_ID&lt;/span>&lt;span class="s2">/dns_records&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$headers&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="vm">@&lt;/span>&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;Authorization&amp;#39;&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;Bearer &lt;/span>&lt;span class="nv">$API_TOKEN&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;Content-Type&amp;#39;&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;application/json&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$listUrl&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$baseUrl&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="s1">&amp;#39;?per_page=500&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Write-Host&lt;/span> &lt;span class="nv">$listUrl&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$records&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">Invoke-RestMethod&lt;/span> &lt;span class="n">-Uri&lt;/span> &lt;span class="nv">$listUrl&lt;/span> &lt;span class="n">-Method&lt;/span> &lt;span class="s1">&amp;#39;GET&amp;#39;&lt;/span> &lt;span class="n">-Headers&lt;/span> &lt;span class="nv">$headers&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$records&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$records&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="nb">Select-Object&lt;/span> &lt;span class="n">-ExpandProperty&lt;/span> &lt;span class="n">result&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">foreach&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">$record&lt;/span> &lt;span class="k">in&lt;/span> &lt;span class="nv">$records&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">Write-Host&lt;/span> &lt;span class="s2">&amp;#34;Deleting &lt;/span>&lt;span class="p">$(&lt;/span>&lt;span class="nv">$record&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">name&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="s2"> that points to &lt;/span>&lt;span class="p">$(&lt;/span>&lt;span class="nv">$record&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">content&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$deleteUrl&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$baseUrl&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="s1">&amp;#39;/&amp;#39;&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="nv">$record&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">id&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">Invoke-RestMethod&lt;/span> &lt;span class="n">-Uri&lt;/span> &lt;span class="nv">$deleteUrl&lt;/span> &lt;span class="n">-Method&lt;/span> &lt;span class="s1">&amp;#39;DELETE&amp;#39;&lt;/span> &lt;span class="n">-Headers&lt;/span> &lt;span class="nv">$headers&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">Write-Host&lt;/span> &lt;span class="nv">$deleteUrl&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>右键文件以powershell运行。由于我有700多条记录，执行两次即可&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="images/2.jpg" width="30%"/> &lt;figcaption>
+&lt;p>
+&lt;a href="https://twitter.com/_Chuzenji_/status/1455128190037356546/photo/1">好有副岛成记的风格&lt;br>@Chuzenji&lt;/a>&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;h2 id="参考">参考&lt;/h2>
+&lt;p>cover:&lt;a class="link" href="https://www.pixiv.net/artworks/92463499" target="_blank" rel="noopener"
+>@mocha&lt;/a>&lt;br>&lt;a class="link" href="https://community.cloudflare.com/t/bulk-delete-dns-records/421686" target="_blank" rel="noopener"
+>Bulk delete DNS records&lt;/a>&lt;/p></description></item><item><title>R3F蒙版&amp;绿幕推流</title><link>/post/r3f-streaming/</link><pubDate>Thu, 14 Sep 2023 17:18:38 +0800</pubDate><guid>/post/r3f-streaming/</guid><description>&lt;img src="/post/r3f-streaming/cover.jpg" alt="Featured image of post R3F蒙版&amp;绿幕推流" />&lt;h2 id="前言">前言&lt;/h2>
 &lt;p>上个月从零开始直接上手&lt;code>react three fiber&lt;/code>，跟着同事写了一堆交互，总算弄得差不多了。不会&lt;code>React&lt;/code>，不会&lt;code>TS&lt;/code>，不会&lt;code>three&lt;/code>，真不知道自己怎么过来的。途中也了解到原子化&lt;code>css&lt;/code>，总之收获颇丰。目前是因为需要将渲染画面推流到场景中，故做点经验分享&lt;/p>
 &lt;h2 id="前期准备">前期准备&lt;/h2>
 &lt;p>首先得创建个场景然后播放视频吧，可以参考下面我做的这个案例&lt;/p>

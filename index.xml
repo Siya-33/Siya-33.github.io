@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shirakii</title><link>/</link><description>Recent content on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Example Person</copyright><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Cloudflare Dns 批量删除</title><link>/post/cloudflare-dns-delete/</link><pubDate>Thu, 19 Oct 2023 16:35:44 +0800</pubDate><guid>/post/cloudflare-dns-delete/</guid><description>&lt;img src="/post/cloudflare-dns-delete/cover.jpg" alt="Featured image of post Cloudflare Dns 批量删除" />&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shirakii</title><link>/</link><description>Recent content on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Cloudflare Dns 批量删除</title><link>/post/cloudflare-dns-delete/</link><pubDate>Thu, 19 Oct 2023 16:35:44 +0800</pubDate><guid>/post/cloudflare-dns-delete/</guid><description>&lt;img src="/post/cloudflare-dns-delete/cover.jpg" alt="Featured image of post Cloudflare Dns 批量删除" />&lt;blockquote>
 &lt;p>由于之前博客为了输入方便一直放在根域名，现在需要将字体部署到子域名下，为了干净整洁些需要将之前的DNS删除。&lt;br>并且不再用vercel部署，采用cloudflare&lt;/p>
 &lt;/blockquote>
 &lt;p>进入&lt;a class="link" href="https://dash.cloudflare.com/profile/api-tokens" target="_blank" rel="noopener"
@@ -59,8 +59,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>右键文件以powershell运行&lt;/p>
-&lt;p>由于我有700多条记录，执行两次即可&lt;/p>
+&lt;/div>&lt;p>右键文件以powershell运行。由于我有700多条记录，执行两次即可&lt;/p>
 &lt;figure>
 &lt;img loading="lazy" src="images/2.jpg" width="30%"/> &lt;figcaption>
 &lt;p>
@@ -69,9 +68,8 @@
 &lt;/figure>
 &lt;h2 id="参考">参考&lt;/h2>
 &lt;p>cover:&lt;a class="link" href="https://www.pixiv.net/artworks/92463499" target="_blank" rel="noopener"
->@mocha&lt;/a>&lt;/p>
-&lt;p>&lt;a class="link" href="https://community.cloudflare.com/t/bulk-delete-dns-records/421686" target="_blank" rel="noopener"
->https://community.cloudflare.com/t/bulk-delete-dns-records/421686&lt;/a>&lt;/p></description></item><item><title>几何节点入门纲要</title><link>/post/geometrynode-start/</link><pubDate>Thu, 05 Oct 2023 23:20:26 +0800</pubDate><guid>/post/geometrynode-start/</guid><description>&lt;img src="/post/geometrynode-start/cover.jpg" alt="Featured image of post 几何节点入门纲要" />&lt;h2 id="前言">前言&lt;/h2>
+>@mocha&lt;/a>&lt;br>&lt;a class="link" href="https://community.cloudflare.com/t/bulk-delete-dns-records/421686" target="_blank" rel="noopener"
+>Bulk delete DNS records&lt;/a>&lt;/p></description></item><item><title>几何节点入门纲要</title><link>/post/geometrynode-start/</link><pubDate>Thu, 05 Oct 2023 23:20:26 +0800</pubDate><guid>/post/geometrynode-start/</guid><description>&lt;img src="/post/geometrynode-start/cover.jpg" alt="Featured image of post 几何节点入门纲要" />&lt;h2 id="前言">前言&lt;/h2>
 &lt;p>我创建这个博客的初衷，有很大一部分是方便记录分享自己实现的一些几何节点效果，因此写一下这篇文章来分享一下我之前学习过程中的一些感悟和经验，希望对你有帮助。&lt;/p>
 &lt;p>感兴趣的话可以看下我的&lt;a class="link" href="https://www.artstation.com/siya_33" target="_blank" rel="noopener"
 >Artstation&lt;/a>或者&lt;a class="link" href="https://space.bilibili.com/333322096" target="_blank" rel="noopener"
