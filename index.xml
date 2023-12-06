@@ -516,13 +516,18 @@ title="YouTube Video"
 &lt;h3 id="很久以前">很久以前&lt;/h3>
 &lt;p>被&lt;a class="link" href="https://www.cyanilux.com/" target="_blank" rel="noopener"
 >Cyanilux&lt;/a>的优雅所折服，按下F12后发现了Hugo这块新天地&lt;/p>
-&lt;h3 id="20238">2023.8&lt;/h3>
+&lt;h3 id="2023">2023&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>2023.8&lt;/p>
 &lt;p>8.13 决心搭建博客，折腾一天成功使用papermod主题发布第一篇文章&lt;/p>
 &lt;p>8.25 发现Stack主题，迁移并熟悉架构，使用github pages托管，action配合Vercel自动部署&lt;/p>
 &lt;p>8.26 解决figure SC与stack的图片预览功能的冲突&lt;/p>
 &lt;p>8.30 购买个人域名 &lt;a class="link" href="https://shirakii.com" target="_blank" rel="noopener"
 >shirakii.com&lt;/a>，舒服了&lt;/p>
-&lt;h3 id="20239">2023.9&lt;/h3>
+&lt;/li>
+&lt;li>
+&lt;p>2023.9&lt;/p>
 &lt;p>9.14 优化界面布局、滚动栏，添加返回按钮、&lt;a class="link" href="https://aplayer.js.org/#/zh-Hans/" target="_blank" rel="noopener"
 >aplayer&lt;/a>、&lt;a class="link" href="https://moe-counter.glitch.me/" target="_blank" rel="noopener"
 >Moe-counter&lt;/a>&lt;/p>
@@ -530,7 +535,9 @@ title="YouTube Video"
 &lt;p>9.19 部署&lt;a class="link" href="https://waline.js.org/" target="_blank" rel="noopener"
 >waline&lt;/a>评论系统&lt;/p>
 &lt;p>9.23 css整体调整&lt;/p>
-&lt;h3 id="202310">2023.10&lt;/h3>
+&lt;/li>
+&lt;li>
+&lt;p>2023.10&lt;/p>
 &lt;p>10.1 字体裁剪完成，正文字体确定为&lt;a class="link" href="https://github.com/lxgw/LxgwWenKai" target="_blank" rel="noopener"
 >霞鹜文楷&lt;/a>&lt;/p>
 &lt;p>10.8 正文字体裁切艰难部署完成&lt;/p>
@@ -538,6 +545,13 @@ title="YouTube Video"
 >Cloudflare&lt;/a>进行DNS解析&lt;/p>
 &lt;p>10.23 字体服务器&lt;a class="link" href="https://github.com/Siya-33/chinese-fonts-server" target="_blank" rel="noopener"
 >chinese-fonts-server&lt;/a>搭建完成&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>2023.12&lt;/p>
+&lt;p>12.7 主要静态资源使用&lt;a class="link" href="https://www.jsdelivr.com/" target="_blank" rel="noopener"
+>jsDelivr&lt;/a>进行CDN加速&lt;/p>
+&lt;/li>
+&lt;/ul>
 &lt;h2 id="todo">Todo&lt;/h2>
 &lt;ul>
 &lt;li>合适的行内音乐播放器&lt;/li>
@@ -546,6 +560,7 @@ title="YouTube Video"
 &lt;li>更加轻便优雅的访问统计&lt;/li>
 &lt;li>设置卡片categories位置&lt;/li>
 &lt;li>live2d小人&lt;/li>
+&lt;li>鼠标指针及移动特效&lt;/li>
 &lt;/ul></description></item><item><title>Hugo中使用图片的一些心得</title><link>/post/hugo-image/</link><pubDate>Sun, 20 Aug 2023 23:03:03 +0800</pubDate><guid>/post/hugo-image/</guid><description>&lt;img src="/post/hugo-image/cover.jpg" alt="Featured image of post Hugo中使用图片的一些心得" />&lt;p>研究了一会儿hugo中怎样使用图片，顺便做个记录。&lt;/p>
 &lt;p>最高效正确的方法应该就是使用&lt;a class="link" href="https://gohugo.io/getting-started/configuration-markup/#markdown-render-hooks" target="_blank" rel="noopener"
 >Markdown render hooks&lt;/a>，即可通过以下的markdown形式快速地调整图片大小&lt;/p>
