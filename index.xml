@@ -1,4 +1,220 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shirakii</title><link>/</link><description>Recent content on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Cloudflare Dns 批量删除</title><link>/post/cloudflare-dns-delete/</link><pubDate>Thu, 19 Oct 2023 16:35:44 +0800</pubDate><guid>/post/cloudflare-dns-delete/</guid><description>&lt;img src="/post/cloudflare-dns-delete/cover.jpg" alt="Featured image of post Cloudflare Dns 批量删除" />&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shirakii</title><link>/</link><description>Recent content on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>SafeHouse Breakdown</title><link>/post/safehouse-breakdown/</link><pubDate>Sun, 07 Jan 2024 20:26:37 +0800</pubDate><guid>/post/safehouse-breakdown/</guid><description>&lt;img src="/post/safehouse-breakdown/cover.jpg" alt="Featured image of post SafeHouse Breakdown" />&lt;blockquote>
+&lt;p>做些工程的Breakdown顺便积累些知识吧，主要记录下比较有学习价值的内容，刚开始还是先从基础点的着手&lt;/p>
+&lt;/blockquote>
+&lt;a1 href="https://www.artstation.com/artwork/g2an6Z" target="_blank">
+&lt;div class="zhengti">
+&lt;a href="https://www.artstation.com/artwork/g2an6Z" target="_blank">
+&lt;div class="wenzi">
+&lt;div class="linkk">
+&lt;div class="namee">Safe House&lt;/div>&lt;div class="descc">LEARTES &amp;amp; DEKOGON STUDIOS REAL-TIME ENVIRONMENT ART CHALLENGE&lt;/div>&lt;/div>
+&lt;/a>&lt;div class="linktext">https://www.artstation.com/artwork/g2an6Z&lt;/div>
+&lt;/div>
+&lt;div class="daimg">&lt;img class="link-card-img" loading="lazy" src="cover.jpg" alt="" /> &lt;/div>
+&lt;/div>
+&lt;/a1>
+&lt;style>
+a1 {
+display: flex;
+flex-direction: column;
+}
+.zhengti {
+margin: auto;
+padding-top: 4%;
+padding-right: 4%;
+padding-bottom: 4%;
+padding-left: 4%;
+width: 100%;
+display: flex;
+align-items: left;
+flex-direction: row;
+border: 1px solid #e5e7eb;
+border-radius: 20px;
+background-color: #ffffff;
+transition: border 0.3s ease-in-out;
+box-shadow: 2px 4px 16px rgba(0, 0, 0, .05);
+transition: .3s ease-in-out;
+&amp;:hover {
+transform: scale(1.1);
+box-shadow: 0 0 7px 4px rgba(60,60,60,.6);
+}
+}
+.wenzi {
+display: flex;
+align-items: left;
+flex-direction: column;
+flex: 2;
+}
+.zhengti:hover {
+transform: scale(1.03);
+box-shadow: 2px 4px 16px rgba(0, 0, 0, .05);
+}
+.linkk {
+display: flex;
+flex-direction: column;
+}
+.iconn {
+display: flex;
+align-items: center;
+}
+.iconn1 {
+width: 1.2em;
+height: 1.2em;
+margin-right: 0.5em;
+margin-bottom: 0.2em;
+}
+.namee {
+font-size: 2.7rem;
+font-weight: 600;
+margin-bottom: 0.5rem;
+color: var(--card-text-color-main);
+}
+.descc {
+font-size: 1.3rem;
+color: #9ca3af;
+margin-bottom: 0.5rem;
+}
+.linktext {
+font-size: 0.9rem;
+color: #9ca3af;
+}
+.link-card-icoon {
+width: 16px;
+height: 16px;
+margin-right: 0.5rem;
+}
+.daimg {
+display: flex;
+flex-direction: row;
+flex: 1;
+align-self: right;
+}
+.link-card-img {
+display: block;
+height: auto;
+max-height: 200px;
+width: 100%;
+object-fit: cover;
+max-width: 50%;
+margin-right: 2px;
+border-radius: 0.25rem;
+}
+a1:hover {
+background-color: var(--color-zoom-bg);
+border: 1px solid var(--theme);
+}
+@media (max-width:900px) {
+a1 {
+max-height: 25em;
+overflow-y: auto;
+padding-right: 4%;
+}
+.zhengti {
+display: flex;
+flex-direction: column;
+}
+}
+[data-scheme="dark"] {
+.zhengti {
+background-color: #161b22;
+border: 1px solid #30363d;
+}
+.descc {
+color: #9ca3af;
+}
+.linktext {
+color: #9ca3af;
+}
+}
+&lt;/style>
+&lt;p>先学习下timelaps&lt;/p>
+&lt;div class="video-wrapper">
+&lt;video
+controls
+loop
+muted
+src="videos/progress-clip.mp4"
+autoplay
+>
+&lt;p>
+Your browser doesn't support HTML5 video. Here is a
+&lt;a href="videos/progress-clip.mp4">link to the video&lt;/a> instead.
+&lt;/p>
+&lt;/video>
+&lt;/div>
+&lt;h2 id="可顶点绘制的布料材质">可顶点绘制的布料材质&lt;/h2>
+&lt;div class="video-wrapper">
+&lt;video
+controls
+loop
+muted
+src="videos/1.webm"
+autoplay
+>
+&lt;p>
+Your browser doesn't support HTML5 video. Here is a
+&lt;a href="videos/1.webm">link to the video&lt;/a> instead.
+&lt;/p>
+&lt;/video>
+&lt;/div>
+&lt;p>主要就是依靠下面这张图&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="images/2.jpg" width="40%"/>
+&lt;/figure>
+&lt;p>R通道绘制alpha，G通道绘制WPO，法线有一个平滑处理(下图可右键打开查看)&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="images/M_cloth.webp" width="60%"/>
+&lt;/figure>
+&lt;div class="video-wrapper">
+&lt;iframe src="https://blueprintue.com/render/4vnpcgl7/"scrolling="no"
+frameborder="no"
+framespacing="0"
+allowfullscreen="true"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;h2 id="管道蓝图">管道蓝图&lt;/h2>
+&lt;p>比较常规的样条线蓝图&lt;/p>
+&lt;div class="video-wrapper">
+&lt;iframe src="https://blueprintue.com/render/eeghxgxf/"scrolling="no"
+frameborder="no"
+framespacing="0"
+allowfullscreen="true"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;p>通过枚举设置管道的头尾&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="images/BP_pipe.webp" width="60%"/>
+&lt;/figure>
+&lt;h2 id="decal蓝图工具">Decal蓝图工具&lt;/h2>
+&lt;p>主要方便UV偏移以快速选中需要的decal，学习蓝图设置动态材质&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="images/M_decal.webp" width="60%"/>
+&lt;/figure>
+&lt;figure>
+&lt;img loading="lazy" src="images/BP_decal.webp" width="60%"/>
+&lt;/figure>
+&lt;h2 id="塑料薄膜">塑料薄膜&lt;/h2>
+&lt;div class="video-wrapper">
+&lt;video
+controls
+loop
+muted
+src="videos/shader-plastic-cover.mp4"
+autoplay
+>
+&lt;p>
+Your browser doesn't support HTML5 video. Here is a
+&lt;a href="videos/shader-plastic-cover.mp4">link to the video&lt;/a> instead.
+&lt;/p>
+&lt;/video>
+&lt;/div>
+&lt;p>了解&lt;code>spiralblur&lt;/code>这个材质函数&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="images/M_plastic.webp" width="60%"/>
+&lt;/figure>
+&lt;h2 id="总结">总结&lt;/h2>
+&lt;p>其实作者最花时间的还是场景中各种小资产的制作，主材质也是相对简单的。从一个基础的构图开始，最后添加上了各种安全屋的小物件丰富场景&lt;/p></description></item><item><title>Cloudflare Dns 批量删除</title><link>/post/cloudflare-dns-delete/</link><pubDate>Thu, 19 Oct 2023 16:35:44 +0800</pubDate><guid>/post/cloudflare-dns-delete/</guid><description>&lt;img src="/post/cloudflare-dns-delete/cover.jpg" alt="Featured image of post Cloudflare Dns 批量删除" />&lt;blockquote>
 &lt;p>由于之前博客为了输入方便一直放在根域名，现在需要将字体部署到子域名下，为了干净整洁些需要将之前的DNS删除。&lt;br>并且不再用vercel部署，采用cloudflare&lt;/p>
 &lt;/blockquote>
 &lt;p>进入&lt;a class="link" href="https://dash.cloudflare.com/profile/api-tokens" target="_blank" rel="noopener"
