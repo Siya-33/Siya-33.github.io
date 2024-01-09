@@ -274,7 +274,6 @@ Your browser doesn't support HTML5 video. Here is a
 &lt;p>&lt;img src="/post/geometrynode-start/images/1.gif"
 width="600"
 height="600"
-srcset="/post/geometrynode-start/images/1_huf25c1ee0db477ccf296c37027c4eed86_1678127_480x0_resize_box_1.gif 480w, /post/geometrynode-start/images/1_huf25c1ee0db477ccf296c37027c4eed86_1678127_1024x0_resize_box_1.gif 1024w"
 loading="lazy"
 alt="MG"
 class="gallery-image"
@@ -283,7 +282,6 @@ data-flex-basis="240px"
 > &lt;img src="/post/geometrynode-start/images/2.gif"
 width="768"
 height="432"
-srcset="/post/geometrynode-start/images/2_hu89a4b51c60e7827f7b7f3141a020edcf_5143909_480x0_resize_box_1.gif 480w, /post/geometrynode-start/images/2_hu89a4b51c60e7827f7b7f3141a020edcf_5143909_1024x0_resize_box_1.gif 1024w"
 loading="lazy"
 alt="Fireworks"
 class="gallery-image"
@@ -530,7 +528,7 @@ title="YouTube Video"
 &lt;p>
 &lt;a href="https://twitter.com/Kerno_kr/status/1697538936015618120">和纱太好看了&lt;br>@Kerno_kr&lt;/a>&lt;/p>
 &lt;/figcaption>
-&lt;/figure></description></item><item><title>关于</title><link>/%E5%85%B3%E4%BA%8E/</link><pubDate>Sun, 27 Aug 2023 00:00:00 +0000</pubDate><guid>/%E5%85%B3%E4%BA%8E/</guid><description>&lt;img src="/%E5%85%B3%E4%BA%8E/cover.png" alt="Featured image of post 关于" />&lt;h2 id="关于我">关于我&lt;/h2>
+&lt;/figure></description></item><item><title>关于</title><link>/%E5%85%B3%E4%BA%8E/</link><pubDate>Sun, 27 Aug 2023 00:00:00 +0000</pubDate><guid>/%E5%85%B3%E4%BA%8E/</guid><description>&lt;img src="https://pic.imgdb.cn/item/659d902a871b83018aebaec2.webp" alt="Featured image of post 关于" />&lt;h2 id="关于我">关于我&lt;/h2>
 &lt;p>网名Shirakii，基本上每个平台都不喜欢取一样的，现在这个主要是好念而且不容易重名，也有一点点模仿Shirabii画师的意味。软件工程专业，大学AI相关的基础课程学得多一些，目前热衷CG行业&lt;/p>
 &lt;p>然后罗列下一些比较重要的技术栈，像speedtree，gaea，八猴这种比较细的就不放进去了。&lt;br>从比较熟悉、略懂、想学三种等级排序&lt;/p>
 &lt;ul>
@@ -585,9 +583,16 @@ title="YouTube Video"
 &lt;p>12.7 主要静态资源使用&lt;a class="link" href="https://www.jsdelivr.com/" target="_blank" rel="noopener"
 >jsDelivr&lt;/a>进行CDN加速&lt;/p>
 &lt;/li>
+&lt;li>
+&lt;p>2024.1&lt;/p>
+&lt;p>1.10 修复代码块bug，图片懒加载，优化国内加载速度&lt;a class="link" href="https://www.staticfile.net/" target="_blank" rel="noopener"
+>七牛云CDN&lt;/a>&lt;/p>
+&lt;/li>
 &lt;/ul>
 &lt;h2 id="todo">Todo&lt;/h2>
 &lt;ul>
+&lt;li>动态logo&lt;/li>
+&lt;li>分层画廊&lt;/li>
 &lt;li>合适的行内音乐播放器&lt;/li>
 &lt;li>代码块风格以及顶栏名称&lt;/li>
 &lt;li>右侧搜索框常驻&lt;/li>
@@ -698,7 +703,6 @@ title="YouTube Video"
 &lt;p>&lt;img src="/post/my-first-post/images/7.jpg"
 width="3648"
 height="2736"
-srcset="/post/my-first-post/images/7_hueb4a9929bd86433b934f80a1572ac64d_2093190_480x0_resize_q75_box.jpg 480w, /post/my-first-post/images/7_hueb4a9929bd86433b934f80a1572ac64d_2093190_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="133"
@@ -706,7 +710,6 @@ data-flex-basis="320px"
 > &lt;img src="/post/my-first-post/images/6.jpg"
 width="2560"
 height="1440"
-srcset="/post/my-first-post/images/6_hua03765d1d870dde5e568a52270357eaa_372114_480x0_resize_q75_box.jpg 480w, /post/my-first-post/images/6_hua03765d1d870dde5e568a52270357eaa_372114_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="177"
@@ -723,4 +726,4 @@ data-flex-basis="426px"
 &lt;p>
 &lt;a href="https://twitter.com/Dino_illus/status/1675066447502929921">@Dino_illus&lt;/a>&lt;/p>
 &lt;/figcaption>
-&lt;/figure></description></item><item><title>归档</title><link>/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>/archives/</guid><description/></item><item><title>Archives</title><link>/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/archives/</guid><description/></item><item><title>搜索</title><link>/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/search/</guid><description/></item></channel></rss>
+&lt;/figure></description></item><item><title>归档</title><link>/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>/archives/</guid><description/></item><item><title/><link>/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/</guid><description/></item><item><title/><link>/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/</guid><description/></item><item><title>Archives</title><link>/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/archives/</guid><description/></item><item><title>搜索</title><link>/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/search/</guid><description/></item></channel></rss>
