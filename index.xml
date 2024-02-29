@@ -47,7 +47,116 @@ data-flex-basis="267px"
 &lt;p>其实还是有痛点的，比如你调整好的height level再重新打开还是还原为默认值，不过做完之后影响不大，就是Adobe咋这么懒，这个材质的设置值就不能保存在项目文件中吗🤔&lt;/p>
 &lt;h2 id="致谢">致谢&lt;/h2>
 &lt;p>Cover: &lt;a class="link" href="https://twitter.com/MEINOSS/status/1762061242599174281" target="_blank" rel="noopener"
->MEInoss&lt;/a>&lt;/p></description></item><item><title>SafeHouse Breakdown</title><link>/post/safehouse-breakdown/</link><pubDate>Sun, 07 Jan 2024 20:26:37 +0800</pubDate><guid>/post/safehouse-breakdown/</guid><description>&lt;img src="/post/safehouse-breakdown/cover.jpg" alt="Featured image of post SafeHouse Breakdown" />&lt;blockquote>
+>MEInoss&lt;/a>&lt;/p></description></item><item><title>摄影小白入坑记录</title><link>/post/new-to-photography/</link><pubDate>Tue, 06 Feb 2024 14:38:59 +0800</pubDate><guid>/post/new-to-photography/</guid><description>&lt;img src="/post/new-to-photography/cover.webp" alt="Featured image of post 摄影小白入坑记录" />&lt;blockquote>
+&lt;p>用了半年的G7X3，但是一英寸的卡片机甚至比不上新换的小米14了。&lt;br>
+为了更高的可玩性和记录生活，入手了α7C II 和适马28-70&lt;br>
+这个&lt;a class="link" href="#%e8%87%b4%e8%b0%a2" >封面&lt;/a>蛮青春洋溢的就选了，画得真好😭😭&lt;/p>
+&lt;/blockquote>
+&lt;details>
+&lt;summary>购机往事碎碎念&lt;/summary>
+说实话这机子是真难原价买到，官网订阅通知都是秒没，全是能够加入购物车但是没法结账。结果那天没货1h后，我没事瞎点了一下居然有货，而且能买好几台，当然倒狗是不会当的，咬咬牙直接拿下
+&lt;/details>
+&lt;p>这机子对于目前的我来说近乎于完美无缺，尽管没有ZV-E1的动态增强防抖，但我并不怎么拍视频，够用就行&lt;/p>
+&lt;p>&lt;strong>本篇主要记录自用的一些设置和思考，想到哪写到哪，至于参数什么的都能自己去了解。&lt;/strong>&lt;/p>
+&lt;h2 id="自定义键设置">自定义键设置&lt;/h2>
+&lt;p>首先是拍照模式下自定义键的设置，理由之后再讲，c1设置为&lt;a class="link" href="#%e5%af%b9%e7%84%a6%e6%a8%a1%e5%bc%8f" >对焦模式&lt;/a>，c2即删除键设置为触摸操作选择&lt;/p>
+&lt;p>AF-ON键设置为放大对焦，大轮盘设置为&lt;a class="link" href="#%e5%88%9b%e6%84%8f%e5%a4%96%e8%a7%82" >创意外观&lt;/a>，录制键为对焦区域&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="images/1.webp" width="60%"/>
+&lt;/figure>
+&lt;p>另外就是菜单界面的收藏设置，我目前只收藏了这些，需要的只需在选项处按下收藏键即可添加&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="images/2.webp" width="60%"/>
+&lt;/figure>
+&lt;!--
+&lt;link rel="stylesheet" href="https://cdn.staticfile.net/aplayer/1.10.1/APlayer.min.css">
+&lt;style type="text/css">.dark-theme .aplayer{background:#212121}.dark-theme .aplayer.aplayer-withlist .aplayer-info{border-bottom-color:#5c5c5c}.dark-theme .aplayer.aplayer-fixed .aplayer-list{border-color:#5c5c5c}.dark-theme .aplayer .aplayer-body{background-color:#212121}.dark-theme .aplayer .aplayer-info{border-top-color:#212121}.dark-theme .aplayer .aplayer-info .aplayer-music .aplayer-title{color:#fff}.dark-theme .aplayer .aplayer-info .aplayer-music .aplayer-author{color:#fff}.dark-theme .aplayer .aplayer-info .aplayer-controller .aplayer-time{color:#eee}.dark-theme .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon path{fill:#eee}.dark-theme .aplayer .aplayer-list{background-color:#212121}.dark-theme .aplayer .aplayer-list::-webkit-scrollbar-thumb{background-color:#999}.dark-theme .aplayer .aplayer-list::-webkit-scrollbar-thumb:hover{background-color:#bbb}.dark-theme .aplayer .aplayer-list li{color:#fff;border-top-color:#666}.dark-theme .aplayer .aplayer-list li:hover{background:#4e4e4e}.dark-theme .aplayer .aplayer-list li.aplayer-list-light{background:#6c6c6c}.dark-theme .aplayer .aplayer-list li .aplayer-list-index{color:#ddd}.dark-theme .aplayer .aplayer-list li .aplayer-list-author{color:#ddd}.dark-theme .aplayer .aplayer-lrc{text-shadow:-1px -1px 0 #666}.dark-theme .aplayer .aplayer-lrc:before{background:-moz-linear-gradient(top, #212121 0%, rgba(33,33,33,0) 100%);background:-webkit-linear-gradient(top, #212121 0%, rgba(33,33,33,0) 100%);background:linear-gradient(to bottom, #212121 0%, rgba(33,33,33,0) 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#212121', endColorstr='#00212121',GradientType=0 )}.dark-theme .aplayer .aplayer-lrc:after{background:-moz-linear-gradient(top, rgba(33,33,33,0) 0%, rgba(33,33,33,0.8) 100%);background:-webkit-linear-gradient(top, rgba(33,33,33,0) 0%, rgba(33,33,33,0.8) 100%);background:linear-gradient(to bottom, rgba(33,33,33,0) 0%, rgba(33,33,33,0.8) 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#00212121', endColorstr='#cc212121',GradientType=0 )}.dark-theme .aplayer .aplayer-lrc p{color:#fff}.dark-theme .aplayer .aplayer-miniswitcher{background:#484848}.dark-theme .aplayer .aplayer-miniswitcher .aplayer-icon path{fill:#eee}&lt;/style>
+&lt;script src="https://cdn.staticfile.net/aplayer/1.10.1/APlayer.min.js">&lt;/script>
+&lt;script src="https://cdn.staticfile.net/meting/2.0.1/Meting.min.js">&lt;/script>&lt;meting-js auto="https://music.163.com/#/song?id=2028618026" theme="#2980b9">&lt;/meting-js> -->
+&lt;h2 id="知识点">知识点&lt;/h2>
+&lt;h3 id="对焦模式">对焦模式&lt;/h3>
+&lt;p>一般有五种，AF代表&lt;code>Auto Focus&lt;/code>，MF代表&lt;code>Manual Focus&lt;/code>&lt;/p>
+&lt;p>建议观看&lt;a class="link" href="https://www.bilibili.com/video/BV15w411A7Mk/" target="_blank" rel="noopener"
+>视频&lt;/a>快速了解&lt;/p>
+&lt;div class="video-wrapper">
+&lt;iframe src="https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;bvid=BV15w411A7Mk&amp;autoplay=0"
+scrolling="no"
+frameborder="no"
+framespacing="0"
+allowfullscreen="true"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;p>我粗浅的总结如下&lt;/p>
+&lt;ul>
+&lt;li>AF-S (Single) ———— 半按快门单次对焦&lt;/li>
+&lt;li>AF-C (Continous) ———— 连续对焦移动主体&lt;/li>
+&lt;li>AF-A (Automatic) ———— S和C的智能结合&lt;/li>
+&lt;li>DMF (Direct) ———— 单次对焦后手动对焦&lt;/li>
+&lt;li>MF ———— 手动对焦&lt;/li>
+&lt;/ul>
+&lt;p>最常用的就是AF-C和DMF，需要完全可控时MF。由于A7C2引入了AI识别技术，并且能够更改识别类型，因此实际使用过程中AF-C追焦的体验相当好&lt;/p>
+&lt;p>顺便简单带过一下对焦区域，一般就是广域、区、点对焦和跟踪等等。由于技术的发展现在的对焦已经相当迅速傻瓜，前几种顾名思义，主要说一下跟踪的使用场景。你可以先识别到主体，再进行构图，但是其实大部分情况下你手点下触摸屏也能达到同样的效果&lt;/p>
+&lt;h3 id="创意外观">创意外观&lt;/h3>
+&lt;p>创意外观作为A7M4后才有的功能当然是十分好用，即一个调色预设，可以去看下官方的&lt;a class="link" href="https://helpguide.sony.net/ilc/2110/v1/zh-cn/contents/TP1000651009.html" target="_blank" rel="noopener"
+>帮助指南&lt;/a>简单理解下，这个&lt;a class="link" href="https://www.bilibili.com/video/av468110520" target="_blank" rel="noopener"
+>B站视频&lt;/a>讲得也很好，浅显易懂&lt;/p>
+&lt;div class="video-wrapper">
+&lt;iframe src="https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;aid=468110520&amp;autoplay=0"
+scrolling="no"
+frameborder="no"
+framespacing="0"
+allowfullscreen="true"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;p>偷一下视频底下的评论总结&lt;/p>
+&lt;ul>
+&lt;li>PT：肖像模式，对比度偏低，画面色彩相对标准柔和很多。整体画面偏洋红。&lt;/li>
+&lt;li>NT：饱和度偏低，略带发挥的效果，适合淡雅场景。适合后期进行微调，不适合鲜艳场景。&lt;/li>
+&lt;li>VV，VV2：饱和度偏高，适合花花草草。vv2比vv更加的锐利和明亮。&lt;/li>
+&lt;li>FL：对比度强，高光容易溢出，明亮对比比较强烈。蓝偏青，绿偏深，橙黄偏淡，色相稍微偏黄，整体胶片质感比较强烈。画面含蓝绿色是最优解。&lt;/li>
+&lt;li>IN：比NT更灰，阳光充足的情况下会有明亮的感觉，饱和度对比度偏低。黄色橙色偏深，绿色偏黄，画面偏暖。适合时尚风格和情绪片。红色偏淡且色相偏橙。较为吃光。&lt;/li>
+&lt;li>SH：极大提亮画面，适合拍大光比，整体画面较柔和。会发灰，特别是暗部多的场景。&lt;/li>
+&lt;/ul>
+&lt;p>其实理解一下英文就知道这些是什么作用了，Portrait、Netural、Vivid、Film、Ins、Soften Highlight&lt;/p>
+&lt;h2 id="镜头">镜头&lt;/h2>
+&lt;p>镜头方面为了适合A7C2的体积我选择的是适马28-70mmF2.8，其实也可以选择24-70，因为貌似新批次都不大会进灰了。富哥选2070G也蛮好的，不过在旅游完之后再让我选的话，我一定咬咬牙上腾龙28-200.旅游的时候有个长焦实在太爽了，广角不够直接手机拍也不错的。&lt;/p>
+&lt;p>选择28-70主要有几个原因，具体评测可以看这个&lt;a class="link" href="https://www.bilibili.com/video/BV1cB4y1D7YZ/" target="_blank" rel="noopener"
+>B站视频&lt;/a>，讲得蛮好。&lt;/p>
+&lt;ul>
+&lt;li>体积小重量轻&lt;/li>
+&lt;li>变焦环阻尼舒适&lt;/li>
+&lt;li>锐化不错&lt;/li>
+&lt;li>准齐焦&lt;/li>
+&lt;/ul>
+&lt;p>另外值得注意的是长焦锐化没广角端好，据有关不可靠数据测试在F4时锐度最好&lt;/p>
+&lt;p>至于广角端如果不嫌麻烦可以换极具性价比的唯卓仕AF20mm F2.8&lt;/p>
+&lt;h2 id="配件">配件&lt;/h2>
+&lt;ul>
+&lt;li>小隼Maglink快拆腕带&lt;/li>
+&lt;li>小隼Maglink快拆肩带&lt;/li>
+&lt;li>马小路xt 26S&lt;/li>
+&lt;/ul>
+&lt;details>
+&lt;summary>碎碎念&lt;/summary>
+&lt;p>另外摄影配件真是个暴利的行业，什么肩带、摄影包技术含量没多高，卖的死贵，比如pd、pgy。我都买不起，只能买买相对良心点的小隼啦。一块斯莫格的兔笼、L版也贵的离谱。&lt;/p>
+&lt;p>拿pgy刚出不久的那个&lt;a class="link" href="https://www.bilibili.com/video/BV18N4y1H7gj/" target="_blank" rel="noopener"
+>闪传卡盒&lt;/a>为例，乍一看很好，实则处处搞阉割。不能双卡读取，没有tf读卡器，599的东西还只是个10Gbps的usb3gen2x1，还不如去搞根4.0的线战未来&lt;/p>
+&lt;/details>
+&lt;p>我说实话还是多给自己的背包扩展扩展&lt;a class="link" href="https://shop446272619.taobao.com/" target="_blank" rel="noopener"
+>FidLock&lt;/a>的磁扣来的实在&lt;/p>
+&lt;h2 id="视频">视频&lt;/h2>
+&lt;p>A7C2有了7轴防抖后可能手持拍拍简单的视频还真可以，我也稍微学了下log拍摄和机内lut，就是感觉新手在不同环境下调参数好累，目前感觉拍log的时候曝光补偿在+0.7比较不错。就是我实在太懒了啊啊啊啊啊啊啊啊，这么多素材还要剪和统一调色对我来说太花时间了，哎😔&lt;/p>
+&lt;h2 id="后记">后记&lt;/h2>
+&lt;p>对于只是想出门随便拍拍的真的最好上腾龙28-200，我还是看他二代啥时候出再换吧。最近两月的照片都处理好了，但是视频遥遥无期，看我啥时候有空把春节玩的写出来吧&lt;/p>
+&lt;h2 id="致谢">致谢&lt;/h2>
+&lt;p>Cover: &lt;a class="link" href="https://www.pixiv.net/artworks/99091304" target="_blank" rel="noopener"
+>Li Flag&lt;/a>&lt;/br>
+&lt;a class="link" href="https://helpguide.sony.net/ilc/2110/v1/zh-cn/contents/TP1000651009.html" target="_blank" rel="noopener"
+>Sony帮助指南&lt;/a>&lt;/br>
+&lt;a class="link" href="https://docs.qq.com/sheet/DYmdCUU1mdEt2Y1NX?tab=BB08J2" target="_blank" rel="noopener"
+>Sony Alpha Blog镜头锐度测试&lt;/a>&lt;/p></description></item><item><title>SafeHouse Breakdown</title><link>/post/safehouse-breakdown/</link><pubDate>Sun, 07 Jan 2024 20:26:37 +0800</pubDate><guid>/post/safehouse-breakdown/</guid><description>&lt;img src="/post/safehouse-breakdown/cover.jpg" alt="Featured image of post SafeHouse Breakdown" />&lt;blockquote>
 &lt;p>做些工程的Breakdown顺便积累些知识吧，主要记录下比较有学习价值的内容，刚开始还是先从基础点的着手&lt;/p>
 &lt;/blockquote>
 &lt;a1 href="https://www.artstation.com/artwork/g2an6Z" target="_blank">
