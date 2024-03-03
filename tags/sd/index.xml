@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SD on Shirakii</title><link>/tags/sd/</link><description>Recent content in SD on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><lastBuildDate>Wed, 28 Feb 2024 19:54:52 +0800</lastBuildDate><atom:link href="/tags/sd/index.xml" rel="self" type="application/rss+xml"/><item><title>如何在Substance Designer中设置Tessellation Factor的初始值</title><link>/post/sd/</link><pubDate>Wed, 28 Feb 2024 19:54:52 +0800</pubDate><guid>/post/sd/</guid><description>&lt;img src="/post/sd/cover.webp" alt="Featured image of post 如何在Substance Designer中设置Tessellation Factor的初始值" />&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SD on Shirakii</title><link>/tags/sd/</link><description>Recent content in SD on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><lastBuildDate>Wed, 28 Feb 2024 19:54:52 +0800</lastBuildDate><atom:link href="/tags/sd/index.xml" rel="self" type="application/rss+xml"/><item><title>如何在Substance Designer中设置Tessellation Factor的初始值</title><link>/post/sd-tessellation/</link><pubDate>Wed, 28 Feb 2024 19:54:52 +0800</pubDate><guid>/post/sd-tessellation/</guid><description>&lt;img src="/post/sd-tessellation/cover.webp" alt="Featured image of post 如何在Substance Designer中设置Tessellation Factor的初始值" />&lt;blockquote>
 &lt;p>我最初找到的官方答复是这个&lt;a class="link" href="https://community.adobe.com/t5/substance-3d-designer-discussions/tessellation-setting-for-project/td-p/12140575" target="_blank" rel="noopener"
 >Tessellation Setting for Project&lt;/a>，但是这个问题实在太影响使用体验了。&lt;/br> 比如你每次打开一个做到一半的项目，细分设置总会重置，都要多点那么几下回到以前的状态。其实我之前解决过一次，但忘记记录了，这次在家里的电脑上正好复刻一下。&lt;/p>
 &lt;/blockquote>
@@ -27,7 +27,7 @@ text-shadow:0px 0px 0px var(--card-text-color-main)
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;uniform&lt;/span> &lt;span class="na">name=&lt;/span>&lt;span class="s">&amp;#34;scalarZeroValue&amp;#34;&lt;/span> &lt;span class="na">guiName=&lt;/span>&lt;span class="s">&amp;#34;Height Level&amp;#34;&lt;/span> &lt;span class="na">guiGroup=&lt;/span>&lt;span class="s">&amp;#34;Height&amp;#34;&lt;/span> &lt;span class="na">usage=&lt;/span>&lt;span class="s">&amp;#34;heightLevel&amp;#34;&lt;/span> &lt;span class="na">guiWidget=&lt;/span>&lt;span class="s">&amp;#34;slider&amp;#34;&lt;/span> &lt;span class="na">default=&lt;/span>&lt;span class="s">&amp;#34;0.5&amp;#34;&lt;/span> &lt;span class="na">min=&lt;/span>&lt;span class="s">&amp;#34;0&amp;#34;&lt;/span> &lt;span class="na">max=&lt;/span>&lt;span class="s">&amp;#34;1&amp;#34;&lt;/span> &lt;span class="na">guiMin=&lt;/span>&lt;span class="s">&amp;#34;0&amp;#34;&lt;/span> &lt;span class="na">guiMax=&lt;/span>&lt;span class="s">&amp;#34;1&amp;#34;&lt;/span> &lt;span class="na">guiStep=&lt;/span>&lt;span class="s">&amp;#34;0.1&amp;#34;&lt;/span> &lt;span class="nt">/&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;uniform&lt;/span> &lt;span class="na">name=&lt;/span>&lt;span class="s">&amp;#34;tessellationFactor&amp;#34;&lt;/span> &lt;span class="na">guiName=&lt;/span>&lt;span class="s">&amp;#34;Tessellation Factor&amp;#34;&lt;/span> &lt;span class="na">guiGroup=&lt;/span>&lt;span class="s">&amp;#34;Height&amp;#34;&lt;/span> &lt;span class="na">guiWidget=&lt;/span>&lt;span class="s">&amp;#34;slider&amp;#34;&lt;/span> &lt;span class="na">default=&lt;/span>&lt;span class="s">&amp;#34;1&amp;#34;&lt;/span> &lt;span class="na">min=&lt;/span>&lt;span class="s">&amp;#34;1&amp;#34;&lt;/span> &lt;span class="na">max=&lt;/span>&lt;span class="s">&amp;#34;64&amp;#34;&lt;/span> &lt;span class="na">guiMin=&lt;/span>&lt;span class="s">&amp;#34;1&amp;#34;&lt;/span> &lt;span class="na">guiMax=&lt;/span>&lt;span class="s">&amp;#34;16&amp;#34;&lt;/span> &lt;span class="na">guiStep=&lt;/span>&lt;span class="s">&amp;#34;1&amp;#34;&lt;/span> &lt;span class="nt">/&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>打开后看前几行基本就知道个大概了，&lt;code>Height Level&lt;/code>、&lt;code>Tessellation Factor&lt;/code>什么的基本都可以设置，所以我就改成&lt;code>default=&amp;quot;16&amp;quot;&lt;/code>这样了。效果如下图所示&lt;/p>
-&lt;p>&lt;img src="/post/sd/images/1.webp"
+&lt;p>&lt;img src="/post/sd-tessellation/images/1.webp"
 width="698"
 height="626"
 loading="lazy"
@@ -35,7 +35,7 @@ alt="Factor=1"
 class="gallery-image"
 data-flex-grow="111"
 data-flex-basis="267px"
-> &lt;img src="/post/sd/images/2.webp"
+> &lt;img src="/post/sd-tessellation/images/2.webp"
 width="698"
 height="626"
 loading="lazy"
@@ -44,6 +44,17 @@ class="gallery-image"
 data-flex-grow="111"
 data-flex-basis="267px"
 >&lt;/p>
+&lt;details>
+&lt;summary>如果是放在C盘的可能会遇到这种无法保存的情况，只需右键文件夹-属性-安全-用户-编辑，给相应权限即可&lt;/summary>
+&lt;img src="/post/sd-tessellation/images/error.webp#center"
+loading="lazy"
+alt="Alt text"
+>
+&lt;img src="/post/sd-tessellation/images/solution.webp"
+loading="lazy"
+alt="Alt text"
+>
+&lt;/details>
 &lt;p>其实还是有痛点的，比如你调整好的height level再重新打开还是还原为默认值，不过做完之后影响不大，就是Adobe咋这么懒，这个材质的设置值就不能保存在项目文件中吗🤔&lt;/p>
 &lt;h2 id="致谢">致谢&lt;/h2>
 &lt;p>Cover: &lt;a class="link" href="https://twitter.com/MEINOSS/status/1762061242599174281" target="_blank" rel="noopener"
