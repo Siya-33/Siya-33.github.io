@@ -1,4 +1,56 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shirakii</title><link>/</link><description>Recent content on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>如何在Substance Designer中设置Tessellation Factor的初始值</title><link>/post/sd-tessellation/</link><pubDate>Wed, 28 Feb 2024 19:54:52 +0800</pubDate><guid>/post/sd-tessellation/</guid><description>&lt;img src="/post/sd-tessellation/cover.webp" alt="Featured image of post 如何在Substance Designer中设置Tessellation Factor的初始值" />&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shirakii</title><link>/</link><description>Recent content on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>将萌萌计数器部署到 Cloudflare Workers</title><link>/post/moe-counter-cf/</link><pubDate>Tue, 05 Mar 2024 01:44:58 +0800</pubDate><guid>/post/moe-counter-cf/</guid><description>&lt;img src="/post/moe-counter-cf/cover.webp" alt="Featured image of post 将萌萌计数器部署到 Cloudflare Workers" />&lt;p>&lt;strong>本篇仅为&lt;a class="link" href="https://champhoon.xyz/note/moe-counter-cf/" target="_blank" rel="noopener"
+>champhoon&lt;/a>大佬文章在实际部署过程中的补充&lt;/strong>&lt;/p>
+&lt;p>在安装&lt;code>Wrangler-CLI&lt;/code>过程中命令行提示v1版本已经不再维护，目前已经更新至v3，npm项目的地址为&lt;a class="link" href="https://www.npmjs.com/package/wrangler" target="_blank" rel="noopener"
+>wrangler&lt;/a>&lt;/p>
+&lt;p>由于版本更新原文章中许多命令并不适用，具体可参考&lt;a class="link" href="https://developers.cloudflare.com/workers/wrangler/install-and-update/" target="_blank" rel="noopener"
+>官方文档&lt;/a>&lt;/p>
+&lt;p>安装wrangler&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">npm install wrangler --save-dev
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>npx wrangler --version&lt;/code>运行正确即安装成功&lt;/p>
+&lt;p>登录wrangler&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">npx wrangler login
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>需要命令行中显示success，如不行建议开全局代理&lt;/p>
+&lt;p>如果&lt;code>wrangler.toml&lt;/code>你按原文章走流程了也行，只需在第二行加行&lt;code>main = &amp;quot;dist/worker&amp;quot;&lt;/code>&lt;/p>
+&lt;p>后续就和原文章一样，在同样命令前加npx即可，由于我在项目中的pnpm中卡住，一直显示Running postinstall script&amp;hellip;&lt;/p>
+&lt;p>因此我直接在cmd中&lt;code>npm install&lt;/code>webpack和webpack-cli，如果还有其它的也顺手安装，最后部署&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">cd moe-counter-cf
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">npx wrangler deploy
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>如果显示Error fetch failed大概率是因为cloudflare的api在中国大陆被墙了或者你还没登录wrangle，可以开全局代理试试。命令行最后显示&lt;code>Deployment ID&lt;/code>应该就是成功了。&lt;/p>
+&lt;p>最后进入自己的域名&lt;code>counter.example.com&lt;/code>，如果希望demo页正常显示就进入&lt;code>src/routes/index.html&lt;/code>改一下img地址&lt;/p>
+&lt;p>总之终于能国内正常访问网址了好开心，虽然以前的6k浏览量没了😭(水分很大)&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="https://counter.shirakii.com/shirakii:home?theme=asoul"/>
+&lt;/figure>
+&lt;p>再次感谢&lt;a class="link" href="https://champhoon.xyz/note/moe-counter-cf/" target="_blank" rel="noopener"
+>champhoon&lt;/a>和&lt;a class="link" href="https://blog.dsrkafuu.net/" target="_blank" rel="noopener"
+>dsrkafuu&lt;/a>，以及原作者&lt;a class="link" href="https://github.com/journey-ad" target="_blank" rel="noopener"
+>journey-ad&lt;/a>&lt;/p>
+&lt;h1 id="后记">后记&lt;/h1>
+&lt;div class="video-wrapper">
+&lt;video
+loop
+muted
+src="videos/cover.mp4"
+autoplay
+>
+&lt;p>
+Your browser doesn't support HTML5 video. Here is a
+&lt;a href="videos/cover.mp4">link to the video&lt;/a> instead.
+&lt;/p>
+&lt;/video>
+&lt;/div>
+&lt;p>本来想把这个当封面的，结果webp效果好点要7M，考虑到网速还是算了。这个UI入水那下是真的惊艳(好想玩P3R啊啊啊啊，谁送我一个)&lt;/p>
+&lt;p>这里放的是mp4，因为我发现我这个图片放大的js貌似不支持avif，而且avif和wep在加载时会闪烁&lt;br>但是avif格式只需4M，奈何&lt;a class="link" href="https://github.com/gohugoio/hugo/issues/7837" target="_blank" rel="noopener"
+>高质量的原生Go编码器&lt;/a>还没有，放不到封面上&lt;/p>
+&lt;h1 id="致谢">致谢&lt;/h1>
+&lt;p>Cover: &lt;a class="link" href="https://asia.sega.com/p3r/cn/" target="_blank" rel="noopener"
+>P3R&lt;/a>&lt;br>
+&lt;a class="link" href="https://github.com/journey-ad/Moe-Counter" target="_blank" rel="noopener"
+>Moe-Counter&lt;/a>&lt;br>
+&lt;a class="link" href="https://github.com/dsrkafuu/moe-counter-cf" target="_blank" rel="noopener"
+>moe-counter-cf&lt;/a>&lt;br>
+&lt;a class="link" href="https://champhoon.xyz/note/moe-counter-cf/" target="_blank" rel="noopener"
+>将萌萌计数器部署到 Cloudflare Workers&lt;/a>&lt;/p></description></item><item><title>如何在Substance Designer中设置Tessellation Factor的初始值</title><link>/post/sd-tessellation/</link><pubDate>Wed, 28 Feb 2024 19:54:52 +0800</pubDate><guid>/post/sd-tessellation/</guid><description>&lt;img src="/post/sd-tessellation/cover.webp" alt="Featured image of post 如何在Substance Designer中设置Tessellation Factor的初始值" />&lt;blockquote>
 &lt;p>我最初找到的官方答复是这个&lt;a class="link" href="https://community.adobe.com/t5/substance-3d-designer-discussions/tessellation-setting-for-project/td-p/12140575" target="_blank" rel="noopener"
 >Tessellation Setting for Project&lt;/a>，但是这个问题实在太影响使用体验了。&lt;/br> 比如你每次打开一个做到一半的项目，细分设置总会重置，都要多点那么几下回到以前的状态。其实我之前解决过一次，但忘记记录了，这次在家里的电脑上正好复刻一下。&lt;/p>
 &lt;/blockquote>
