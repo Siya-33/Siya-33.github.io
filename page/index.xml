@@ -10,10 +10,12 @@
 &lt;p>其实爱好也蛮多的足球、音乐、画画等等，就是我的logic和电吉他都没什么时间练，还想玩玩3D打印。也会去打打轴，翻译下歌曲或者节目，可惜学会日语遥遥无期。&lt;/p>
 &lt;p>总之希望某天我也能出现在一个知名游戏或者动画电影的片尾感谢名单上吧&lt;/p>
 &lt;h2 id="关于博客">关于博客&lt;/h2>
+&lt;p>写些有价值、能帮到人的文章，偶尔会自娱自乐吐槽一下&lt;/p>
 &lt;p>其实我存的好看的画或者照片竖着的比较多，但不适合当文章封面，所以就看心情每篇文末放一张？&lt;/p>
 &lt;h2 id="博客统计">博客统计&lt;/h2>
-&lt;p>2023.9.14开始统计&lt;/p>
-&lt;img src="https://count.getloli.com/get/@:shirakii?theme=asoul" alt=":shirakii" />
+&lt;p>2023.9.14开始统计至6452&lt;br>
+已重新部署&lt;/p>
+&lt;img src="https://counter.shirakii.com/shirakii:home?theme=asoul" alt=":shirakii" />
 &lt;h2 id="建站日志">建站日志&lt;/h2>
 &lt;h3 id="很久以前">很久以前&lt;/h3>
 &lt;p>被&lt;a class="link" href="https://www.cyanilux.com/" target="_blank" rel="noopener"
@@ -57,6 +59,11 @@
 &lt;p>2024.1&lt;/p>
 &lt;p>1.10 修复代码块bug，图片懒加载，优化国内加载速度&lt;a class="link" href="https://www.staticfile.net/" target="_blank" rel="noopener"
 >七牛云CDN&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>2024.3&lt;/p>
+&lt;p>3.5 部署&lt;a class="link" href="https://shirakii.com/post/moe-counter-cf" target="_blank" rel="noopener"
+>moe-counter-cf&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;h2 id="todo">Todo&lt;/h2>
