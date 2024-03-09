@@ -1,4 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shirakii</title><link>/</link><description>Recent content on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>将萌萌计数器部署到 Cloudflare Workers</title><link>/post/moe-counter-cf/</link><pubDate>Tue, 05 Mar 2024 01:44:58 +0800</pubDate><guid>/post/moe-counter-cf/</guid><description>&lt;img src="/post/moe-counter-cf/cover.webp" alt="Featured image of post 将萌萌计数器部署到 Cloudflare Workers" />&lt;p>&lt;strong>本篇仅为&lt;a class="link" href="https://champhoon.xyz/note/moe-counter-cf/" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shirakii</title><link>/</link><description>Recent content on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>解决Creative Cloud文件同步禁用</title><link>/post/creative-cloud-file-sync-disabled/</link><pubDate>Sat, 09 Mar 2024 05:47:19 +0800</pubDate><guid>/post/creative-cloud-file-sync-disabled/</guid><description>&lt;img src="/post/creative-cloud-file-sync-disabled/cover.webp" alt="Featured image of post 解决Creative Cloud文件同步禁用" />&lt;blockquote>
+&lt;p>记录一下折腾的过程。也纪念一下&lt;a class="link" href="https://twitter.com/DB_official_jp/status/1765935480234016917" target="_blank" rel="noopener"
+>鸟山明老师&lt;/a>，犹记得小时候我哥带我看龙珠的快乐时光，虽然只记得小悟空第一次在月光下变身那集，还有龟仙人一些搞笑桥段。据说是死于急性硬脑膜外出血。&lt;br>妇女节这天也发生了很惊悚的事情，我爸昨天刚好骑电瓶被车撞到了，头着地缝了好几针，还好CT没事，太吓人了。&lt;br>世事无常啊，找个挣钱又有时间陪家人的工作，希望大家都身体健康、快乐地过完一辈子&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="起因">起因&lt;/h2>
+&lt;p>在一次用lightroom处理照片的时候，我想着咋不把raw文件和成片都拖到这个100G的云盘里呢，不用白不用。好家伙，结果直接给我禁用了。但是我其他电脑上的同步还是能够正常使用。&lt;/p>
+&lt;p>&lt;strong>文件同步已禁用，请联系你的IT管理员&lt;/strong>&lt;br>
+&lt;strong>File syncing disabled. Contact your IT administrator for details&lt;/strong>&lt;/p>
+&lt;p>我TM自己就一个个人用户，哪来的IT管理员，看了一下官方的&lt;a class="link" href="https://community.adobe.com/t5/creative-cloud-services-discussions/creative-cloud-quot-file-syncing-disabled-contact-your-it-administrator-for-details-quot/td-p/11044796" target="_blank" rel="noopener"
+>答复&lt;/a>&lt;/p>
+&lt;p>在使用各种干净的卸载清理工具，活动检查器禁用服务等等操作后，均以失败告终(我这台Mac这辈子都没重启这么多次)，甚至电脑里都出现不了&lt;code>Creative Cloud Files&lt;/code>这个文件夹了&lt;/p>
+&lt;h2 id="解决">解决&lt;/h2>
+&lt;p>&lt;strong>使用以下方法前请确保已经备份您的云文件，以避免造成不必要的损失，已上传的文件不会丢失。&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> Library/Application&lt;span class="se">\ &lt;/span>Support/Adobe
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">open .
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Windows下为该路径&lt;code>C:\Users\&amp;lt;用户文件夹&amp;gt;\AppData\Local\Adobe\OOBE&lt;/code>&lt;/p>
+&lt;p>删除整个OOBE文件夹后重启计算机即可&lt;/p>
+&lt;h2 id="致谢">致谢&lt;/h2>
+&lt;p>cover:&lt;a class="link" href="https://twitter.com/Anonamos_701/status/1765954663000818152/photo/1" target="_blank" rel="noopener"
+>@Anonamos_701&lt;/a>&lt;/p></description></item><item><title>将萌萌计数器部署到 Cloudflare Workers</title><link>/post/moe-counter-cf/</link><pubDate>Tue, 05 Mar 2024 01:44:58 +0800</pubDate><guid>/post/moe-counter-cf/</guid><description>&lt;img src="/post/moe-counter-cf/cover.webp" alt="Featured image of post 将萌萌计数器部署到 Cloudflare Workers" />&lt;p>&lt;strong>本篇仅为&lt;a class="link" href="https://champhoon.xyz/note/moe-counter-cf/" target="_blank" rel="noopener"
 >champhoon&lt;/a>大佬文章在实际部署过程中的补充&lt;/strong>&lt;/p>
 &lt;p>在安装&lt;code>Wrangler-CLI&lt;/code>过程中命令行提示v1版本已经不再维护，目前已经更新至v3，npm项目的地址为&lt;a class="link" href="https://www.npmjs.com/package/wrangler" target="_blank" rel="noopener"
 >wrangler&lt;/a>&lt;/p>
