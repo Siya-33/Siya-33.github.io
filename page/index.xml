@@ -1,16 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on Shirakii</title><link>/page/</link><description>Recent content in Pages on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><lastBuildDate>Sun, 27 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="/page/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>/%E5%85%B3%E4%BA%8E/</link><pubDate>Sun, 27 Aug 2023 00:00:00 +0000</pubDate><guid>/%E5%85%B3%E4%BA%8E/</guid><description>&lt;img src="https://pic.imgdb.cn/item/659d902a871b83018aebaec2.webp" alt="Featured image of post 关于" />&lt;h2 id="关于我">关于我&lt;/h2>
-&lt;p>网名Shirakii，基本上每个平台都不喜欢取一样的，现在这个主要是好念而且不容易重名，也有一点点模仿Shirabii画师的意味。软件工程专业，大学AI相关的基础课程学得多一些，目前热衷CG行业&lt;/p>
-&lt;p>然后罗列下一些比较重要的技术栈，像speedtree，gaea，八猴这种比较细的就不放进去了。&lt;br>从比较熟悉、略懂、想学三种等级排序&lt;/p>
+&lt;p>网名Shirakii，软件工程专业，大学AI相关的基础课程学得多一些，目前热衷CG行业，是一名Texture Artist&lt;br>
+目标是用美术更好地辅助游戏传达价值观，以及用程序化的方式节约美术迭代的成本&lt;/p>
+&lt;p>目前可以全职工作&lt;/p>
+&lt;p>罗列下一些比较重要的技术栈，像speedtree，gaea，八猴这种比较细的就不放进去了。&lt;br>从比较熟悉、略懂、想学三种等级排序&lt;/p>
 &lt;ul>
 &lt;li>&lt;img width=32 src='/icon/blender.svg' /> &lt;img width=32 src='/icon/SD.svg' />&lt;/li>
 &lt;li>&lt;img width=32 src='/icon/ue.svg' /> &lt;img width=32 src='/icon/SP.svg' /> &lt;img width=32 src='/icon/zbrush.svg' /> &lt;img width=32 src='/icon/embergen.ico' /> &lt;img width=32 src='/icon/plasticity.ico' />&lt;/li>
 &lt;li>&lt;img width=32 src='/icon/godot.svg' /> &lt;img width=32 src='/icon/houdini.svg' />&lt;/li>
 &lt;/ul>
-&lt;p>平常的话程序化的东西研究的多一些，用节点式的工作流节约生命&lt;/p>
-&lt;p>其实爱好也蛮多的足球、音乐、画画等等，就是我的logic和电吉他都没什么时间练，还想玩玩3D打印。也会去打打轴，翻译下歌曲或者节目，可惜学会日语遥遥无期。&lt;/p>
-&lt;p>总之希望某天我也能出现在一个知名游戏或者动画电影的片尾感谢名单上吧&lt;/p>
+&lt;h3 id="主要技能">主要技能&lt;/h3>
+&lt;ul>
+&lt;li>Blender中除绑定、蒙皮外的所有技能&lt;/li>
+&lt;li>使用Substance Designer、Substance Painter 和 &lt;a class="link" href="https://www.materialmaker.org/" target="_blank" rel="noopener"
+>Material Maker&lt;/a>创建材质&lt;/li>
+&lt;li>UE中的Niagara模块&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.plasticity.xyz/" target="_blank" rel="noopener"
+>Plasticy&lt;/a>曲线建模&lt;/li>
+&lt;li>&lt;a class="link" href="https://jangafx.com/software/embergen/" target="_blank" rel="noopener"
+>EmberGen&lt;/a>流体模拟&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.marvelousdesigner.com/" target="_blank" rel="noopener"
+>Marvelous Designer&lt;/a>中创建布料&lt;/li>
+&lt;/ul>
+&lt;p>您还可以在&lt;a class="link" href="https://www.artstation.com/siya_33" target="_blank" rel="noopener"
+>Artstation&lt;/a>、&lt;a class="link" href="https://space.bilibili.com/333322096" target="_blank" rel="noopener"
+>Bilibili&lt;/a>、&lt;a class="link" href="https://siya33.gumroad.com/" target="_blank" rel="noopener"
+>Gumroad&lt;/a>、&lt;a class="link" href="https://ko-fi.com/shirakii" target="_blank" rel="noopener"
+>Kofi&lt;/a>找到我&lt;/p>
+&lt;p>联系我的最佳方式是通过Gmail——&lt;code>gs857474407@gmail.com&lt;/code>&lt;/p>
+&lt;p>平常的话程序化的东西研究的多一些，用节点式的工作流节约生命.其实爱好也蛮多的足球、音乐、画画等等，就是我的logic和电吉他都没什么时间练，还想玩玩3D打印。也会去打打轴，翻译下歌曲或者节目，可惜学会日语遥遥无期。总之希望某天我也能出现在一个知名游戏或者动画电影的片尾感谢名单上吧&lt;/p>
 &lt;h2 id="关于博客">关于博客&lt;/h2>
-&lt;p>写些有价值、能帮到人的文章，偶尔会自娱自乐吐槽一下&lt;/p>
+&lt;p>写些有价值、能帮到人的文章，偶尔会自娱自乐吐槽一下。如果对你有帮助，我会很开心&lt;/p>
 &lt;p>其实我存的好看的画或者照片竖着的比较多，但不适合当文章封面，所以就看心情每篇文末放一张？&lt;/p>
 &lt;h2 id="博客统计">博客统计&lt;/h2>
 &lt;p>2023.9.14开始统计至6452&lt;br>
@@ -55,6 +74,9 @@
 &lt;p>12.7 主要静态资源使用&lt;a class="link" href="https://www.jsdelivr.com/" target="_blank" rel="noopener"
 >jsDelivr&lt;/a>进行CDN加速&lt;/p>
 &lt;/li>
+&lt;/ul>
+&lt;h3 id="2024">2024&lt;/h3>
+&lt;ul>
 &lt;li>
 &lt;p>2024.1&lt;/p>
 &lt;p>1.10 修复代码块bug，图片懒加载，优化国内加载速度&lt;a class="link" href="https://www.staticfile.net/" target="_blank" rel="noopener"
