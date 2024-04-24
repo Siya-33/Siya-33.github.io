@@ -148,6 +148,8 @@ Honeycam刚好小巧强大，可控性强，能制作高质量的gif/webp动画&
 >ACC卸载&lt;/a>
 &lt;a class="link" href="https://www.adobe.com/apps/all/all-platforms?action=install&amp;amp;source=apps&amp;amp;productId=creative-cloud" target="_blank" rel="noopener"
 >ACC安装&lt;/a>&lt;/p>
+&lt;h2 id="后记">后记&lt;/h2>
+&lt;p>如果只是有些文件未能同步，只需要暂时关闭一下代理软件即可&lt;/p>
 &lt;h2 id="致谢">致谢&lt;/h2>
 &lt;p>cover:&lt;a class="link" href="https://twitter.com/Anonamos_701/status/1765954663000818152/photo/1" target="_blank" rel="noopener"
 >@Anonamos_701&lt;/a>&lt;/p></description></item><item><title>将萌萌计数器部署到 Cloudflare Workers</title><link>/post/moe-counter-cf/</link><pubDate>Tue, 05 Mar 2024 01:44:58 +0800</pubDate><guid>/post/moe-counter-cf/</guid><description>&lt;img src="/post/moe-counter-cf/cover.webp" alt="Featured image of post 将萌萌计数器部署到 Cloudflare Workers" />&lt;p>&lt;strong>本篇仅为&lt;a class="link" href="https://champhoon.xyz/note/moe-counter-cf/" target="_blank" rel="noopener"
