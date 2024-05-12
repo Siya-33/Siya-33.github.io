@@ -28,7 +28,7 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="k">\titleformat&lt;/span>&lt;span class="nb">{&lt;/span>&lt;span class="k">\section&lt;/span>&lt;span class="nb">}{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\CJKfamily&lt;/span>&lt;span class="nb">{&lt;/span>stkaiti&lt;span class="nb">}&lt;/span>&lt;span class="k">\vspace&lt;/span>&lt;span class="nb">{&lt;/span>-4pt&lt;span class="nb">}&lt;/span>&lt;span class="k">\scshape\raggedright\large&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">}{}{&lt;/span>0em&lt;span class="nb">}{}&lt;/span>[&lt;span class="k">\color&lt;/span>&lt;span class="nb">{&lt;/span>black&lt;span class="nb">}&lt;/span>&lt;span class="k">\titlerule&lt;/span> &lt;span class="k">\vspace&lt;/span>&lt;span class="nb">{&lt;/span>-7pt&lt;span class="nb">}&lt;/span>]
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>这样就和正文区分开来了&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>这样就和正文区分开来了，同理可以用在任何一段文字上&lt;code>\CJKfamily{stkaiti}\textbf{xxxx}&lt;/code>&lt;/p>
 &lt;h2 id="英文">英文&lt;/h2>
 &lt;p>另外如果你想精准控制英文的显示效果，可以在对应的段落前添加&lt;code>\fontfamily{lmss}\selectfont&lt;/code>&lt;/p>
 &lt;!-- &lt;figure>
