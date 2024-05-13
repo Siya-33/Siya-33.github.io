@@ -88,7 +88,7 @@ data-flex-basis="998px"
 最近没怎么听歌，这首还不错&lt;br>
 &lt;link rel="stylesheet" href="https://cdn.staticfile.net/aplayer/1.10.1/APlayer.min.css">
 &lt;script src="https://cdn.staticfile.net/aplayer/1.10.1/APlayer.min.js">&lt;/script>
-&lt;script src="https://cdn.staticfile.net/meting/2.0.1/Meting.min.js">&lt;/script>&lt;meting-js auto="https://music.163.com/#/song?id=2116719045" theme="#2980b9" volume="&amp;#39;0.1&amp;#39;">&lt;/meting-js>&lt;/p>
+&lt;script src="https://cdn.staticfile.net/meting/2.0.1/Meting.min.js">&lt;/script>&lt;meting-js auto="https://music.163.com/#/song?id=2116719045" theme="#2980b9"volume="0.15">&lt;/meting-js>&lt;/p>
 &lt;h2 id="致谢">致谢&lt;/h2>
 &lt;p>Cover:&lt;a class="link" href="https://twitter.com/liyuliyuzhou/status/1782053286725771733" target="_blank" rel="noopener"
 >@liyuliyuzhou&lt;/a>&lt;br>
