@@ -82,8 +82,13 @@ data-flex-basis="998px"
 &lt;p>这样几乎所有的坑都踩完了，鬼知道我经历了多少折磨&lt;/p>
 &lt;p>&lt;strong>上述操作未考虑字体版权问题，如涉及出版请仔细辨认&lt;/strong>&lt;/p>
 &lt;hr>
-&lt;p>最近出了个叫&lt;a class="link" href="https://store.steampowered.com/app/813230/ANIMAL_WELL/" target="_blank" rel="noopener"
->ANIMAL WELL&lt;/a>的解谜神作，只有32MB！！！银河城的又一里程碑，没空玩啊。&lt;br>好想去看邓紫棋、老织的演唱会┭┮﹏┭┮，但是这次应该没机会了&lt;/p>
+&lt;p>前几天出了个叫&lt;a class="link" href="https://store.steampowered.com/app/813230/ANIMAL_WELL/" target="_blank" rel="noopener"
+>ANIMAL WELL&lt;/a>的解谜神作，只有32MB！！！银河城的又一里程碑，没空玩啊&lt;br>好想去看邓紫棋、老织的演唱会┭┮﹏┭┮，但是这次应该没机会了&lt;br>
+至于我什么时候把春节广州和五一南京的游记补上，只能说有缘再见:)&lt;br>
+最近没怎么听歌，这首还不错&lt;br>
+&lt;link rel="stylesheet" href="https://cdn.staticfile.net/aplayer/1.10.1/APlayer.min.css">
+&lt;script src="https://cdn.staticfile.net/aplayer/1.10.1/APlayer.min.js">&lt;/script>
+&lt;script src="https://cdn.staticfile.net/meting/2.0.1/Meting.min.js">&lt;/script>&lt;meting-js auto="https://music.163.com/#/song?id=2116719045" theme="#2980b9" volume="&amp;#39;0.1&amp;#39;">&lt;/meting-js>&lt;/p>
 &lt;h2 id="致谢">致谢&lt;/h2>
 &lt;p>Cover:&lt;a class="link" href="https://twitter.com/liyuliyuzhou/status/1782053286725771733" target="_blank" rel="noopener"
 >@liyuliyuzhou&lt;/a>&lt;br>
