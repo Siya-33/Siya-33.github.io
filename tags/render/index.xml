@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Render on Shirakii</title><link>/tags/render/</link><description>Recent content in Render on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><lastBuildDate>Wed, 31 Jul 2024 21:45:00 +0800</lastBuildDate><atom:link href="/tags/render/index.xml" rel="self" type="application/rss+xml"/><item><title>Zbrush渲染基本流程</title><link>/post/zbrush-render/</link><pubDate>Wed, 31 Jul 2024 21:45:00 +0800</pubDate><guid>/post/zbrush-render/</guid><description>&lt;img src="/post/zbrush-render/cover1.webp" alt="Featured image of post Zbrush渲染基本流程" />&lt;blockquote>
+&lt;p>封面有点欺诈是上了材质后的渲染图。姑且记录一下Zbrush渲染的过程，主要参考了&lt;a class="link" href="https://orb.gumroad.com/l/srZiJ" target="_blank" rel="noopener"
+>Orb的渲染教程&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;a1 href="https://www.artstation.com/artwork/dKvxRK" target="_blank">
+&lt;div class="zhengti">
+&lt;a href="https://www.artstation.com/artwork/dKvxRK" target="_blank">
+&lt;div class="wenzi">
+&lt;div class="linkk">
+&lt;div class="namee">Rock Sculpt&lt;/div>&lt;div class="descc">岩石雕刻练习&lt;/div>&lt;/div>
+&lt;/a>&lt;div class="linktext">https://www.artstation.com/artwork/dKvxRK&lt;/div>
+&lt;/div>
+&lt;div class="daimg">&lt;img class="link-card-img" loading="lazy" src="images/rock.webp" alt="" /> &lt;/div>
+&lt;/div>
+&lt;/a1>
+&lt;style>
+a1 {
+display: flex;
+flex-direction: column;
+}
+.zhengti {
+margin: auto;
+padding-top: 4%;
+padding-right: 4%;
+padding-bottom: 4%;
+padding-left: 4%;
+width: 100%;
+display: flex;
+align-items: left;
+flex-direction: row;
+border: 1px solid #e5e7eb;
+border-radius: 20px;
+background-color: #ffffff;
+transition: border 0.3s ease-in-out;
+box-shadow: 2px 4px 16px rgba(0, 0, 0, .05);
+transition: .3s ease-in-out;
+&amp;:hover {
+transform: scale(1.1);
+box-shadow: 0 0 7px 4px rgba(60,60,60,.6);
+}
+}
+.wenzi {
+display: flex;
+align-items: left;
+flex-direction: column;
+flex: 2;
+}
+.zhengti:hover {
+transform: scale(1.03);
+box-shadow: 2px 4px 16px rgba(0, 0, 0, .05);
+}
+.linkk {
+display: flex;
+flex-direction: column;
+}
+.iconn {
+display: flex;
+align-items: center;
+}
+.iconn1 {
+width: 1.2em;
+height: 1.2em;
+margin-right: 0.5em;
+margin-bottom: 0.2em;
+}
+.namee {
+font-size: 2.7rem;
+font-weight: 600;
+margin-bottom: 0.5rem;
+color: var(--card-text-color-main);
+}
+.descc {
+font-size: 1.3rem;
+color: #9ca3af;
+margin-bottom: 0.5rem;
+}
+.linktext {
+font-size: 0.9rem;
+color: #9ca3af;
+}
+.link-card-icoon {
+width: 16px;
+height: 16px;
+margin-right: 0.5rem;
+}
+.daimg {
+display: flex;
+flex-direction: row;
+flex: 1;
+align-self: right;
+}
+.link-card-img {
+display: block;
+height: auto;
+max-height: 200px;
+width: 100%;
+object-fit: cover;
+max-width: 50%;
+margin-right: 2px;
+border-radius: 0.25rem;
+}
+a1:hover {
+background-color: var(--color-zoom-bg);
+border: 1px solid var(--theme);
+}
+@media (max-width:900px) {
+a1 {
+max-height: 25em;
+overflow-y: auto;
+padding-right: 4%;
+}
+.zhengti {
+display: flex;
+flex-direction: column;
+}
+}
+[data-scheme="dark"] {
+.zhengti {
+background-color: #161b22;
+border: 1px solid #30363d;
+}
+.descc {
+color: #9ca3af;
+}
+.linktext {
+color: #9ca3af;
+}
+}
+&lt;/style>
+&lt;h2 id="前期准备">前期准备&lt;/h2>
+&lt;p>Draw 选项卡下将焦距设置为85mm，视情况设置Align To Object&lt;/p>
+&lt;p>Render - Render Properties下激活AO&lt;/p>
+&lt;p>&lt;img src="/post/zbrush-render/images/AO.webp"
+width="214"
+height="489"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="43"
+data-flex-basis="105px"
+>&lt;/p>
+&lt;p>调整Shadow&lt;/p>
+&lt;p>&lt;img src="/post/zbrush-render/images/Shadow.webp"
+width="237"
+height="200"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="118"
+data-flex-basis="284px"
+>&lt;/p>
+&lt;p>调整灯光分别渲染 Keylight 和 RimLight&lt;/p>
+&lt;p>主光用 Orb Clay，补光用 Basic Material&lt;/p>
+&lt;p>&lt;img src="/post/zbrush-render/images/Key.webp"
+width="2120"
+height="1252"
+loading="lazy"
+alt="KeyLight"
+class="gallery-image"
+data-flex-grow="169"
+data-flex-basis="406px"
+> &lt;img src="/post/zbrush-render/images/Rim.webp"
+width="2120"
+height="1252"
+loading="lazy"
+alt="RimLight"
+class="gallery-image"
+data-flex-grow="169"
+data-flex-basis="406px"
+>&lt;/p>
+&lt;p>分别导出 Shaded、Depth、Mask，由于深度图和Mask一致，最终得到4张图，保存为PSD格式方便处理&lt;/p>
+&lt;h2 id="ps合成">PS合成&lt;/h2>
+&lt;p>对补光&lt;kbd>Ctrl+L&lt;/kbd>色阶调整，提高对比度，之后擦除不想让边缘光产生的位置&lt;/p>
+&lt;p>此时的边缘光有较多锯齿，导入Mask，将通道作为选区&lt;br>
+&lt;kbd>Ctrl+Shift+C&lt;/kbd>→隐藏Mask图层→&lt;kbd>Ctrl+V&lt;/kbd>，得到一张背景透明的渲染主体A&lt;/p>
+&lt;p>新建合适的背景图层并与A合并&lt;/p>
+&lt;p>将&lt;code>Depth&lt;/code>复制至新通道，以它为源对A做镜头模糊
+&lt;img src="/post/zbrush-render/images/Blur.webp"
+width="2538"
+height="1420"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="178"
+data-flex-basis="428px"
+>&lt;/p>
+&lt;p>放两张结果&lt;/p>
+&lt;p>&lt;img src="/post/zbrush-render/images/rock1.webp"
+width="2120"
+height="1252"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="169"
+data-flex-basis="406px"
+> &lt;img src="/post/zbrush-render/images/rock2.webp"
+width="2120"
+height="1279"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="165"
+data-flex-basis="397px"
+>&lt;/p>
+&lt;h2 id="杂技">杂技&lt;/h2>
+&lt;p>本篇为练习石头雕刻以及展UV做材质的副产物&lt;/p>
+&lt;p>&lt;a href="/hugo/icon/blender.svg" download>Click&lt;/a>&lt;/p>
+&lt;link rel="stylesheet" href="https://cdn.staticfile.net/aplayer/1.10.1/APlayer.min.css">
+&lt;script src="https://cdn.staticfile.net/aplayer/1.10.1/APlayer.min.js">&lt;/script>
+&lt;script src="https://cdn.staticfile.net/meting/2.0.1/Meting.min.js">&lt;/script>&lt;meting-js auto="https://music.163.com/#/song?id=2600428341" theme="#2980b9" volume="0.15">&lt;/meting-js></description></item></channel></rss>
