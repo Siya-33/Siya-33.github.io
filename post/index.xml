@@ -1,4 +1,50 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Shirakii</title><link>/post/</link><description>Recent content in Posts on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><lastBuildDate>Wed, 31 Jul 2024 21:45:00 +0800</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Zbrush渲染基本流程</title><link>/post/zbrush-render/</link><pubDate>Wed, 31 Jul 2024 21:45:00 +0800</pubDate><guid>/post/zbrush-render/</guid><description>&lt;img src="/post/zbrush-render/cover.webp" alt="Featured image of post Zbrush渲染基本流程" />&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Shirakii</title><link>/post/</link><description>Recent content in Posts on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><lastBuildDate>Fri, 06 Sep 2024 07:32:59 +0800</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml"/><item><title>如何在UE5.4中快速重定向动画</title><link>/post/animation-retarget/</link><pubDate>Fri, 06 Sep 2024 07:32:59 +0800</pubDate><guid>/post/animation-retarget/</guid><description>&lt;img src="/post/animation-retarget/cover.webp" alt="Featured image of post 如何在UE5.4中快速重定向动画" />&lt;p>首先我从 &lt;a class="link" href="https://www.mixamo.com/" target="_blank" rel="noopener"
+>Mixamo&lt;/a> 上随便下载一个动画资产，导入 UE 后右键重定向动画&lt;/p>
+&lt;p>&lt;img src="/post/animation-retarget/images/1.webp"
+width="331"
+height="429"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="77"
+data-flex-basis="185px"
+>&lt;/p>
+&lt;p>设置源骨骼网格体和目标骨骼网格体，不用关心 T-Pose 和 A-Pose，如果左下报错需要自行修改骨骼 &lt;br>
+设置完成后双击需要定向的动画序列&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="images/2.avif" width="80%"/>
+&lt;/figure>
+&lt;p>导出动画即可&lt;/p>
+&lt;p>另外讲讲在 Sequencer 中给人物添加动画的步骤。首先可以看到我在场景中添加了官方的 Quinn，选中后直接在Sequencer中右键添加&lt;/p>
+&lt;p>&lt;img src="/post/animation-retarget/images/3.webp"
+width="1151"
+height="932"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="123"
+data-flex-basis="296px"
+>&lt;/p>
+&lt;p>在动画处添加刚刚导出的动画序列，可以发现时间轴上有了段落但是播放无效&lt;/p>
+&lt;p>记得必须删除骨骼，官方文档里居然没提这个晕&lt;/p>
+&lt;p>&lt;img src="/post/animation-retarget/images/4.webp"
+width="557"
+height="171"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="325"
+data-flex-basis="781px"
+>&lt;/p>
+&lt;p>OK! 动画动起来了&lt;br>
+以上就是 UE5.4 中动画的傻瓜式操作以及一些坑，另外新功能模块化绑定也很强大，感兴趣可以玩玩&lt;/p>
+&lt;hr>
+&lt;p>写完这篇的时候刚好在放Daisy，就刚好放末尾吧（万恶的VIP😠）&lt;/p>
+&lt;link rel="stylesheet" href="https://cdn.staticfile.net/aplayer/1.10.1/APlayer.min.css">
+&lt;script src="https://cdn.staticfile.net/aplayer/1.10.1/APlayer.min.js">&lt;/script>
+&lt;script src="https://cdn.staticfile.net/meting/2.0.1/Meting.min.js">&lt;/script>&lt;meting-js auto="https://music.163.com/#/song?id=1383736734" theme="#2980b9" volume="0.15">&lt;/meting-js>
+&lt;h2 id="致谢">致谢&lt;/h2>
+&lt;p>Cover:&lt;a class="link" href="https://x.com/huashiJW/status/1823388905674305935/photo/1" target="_blank" rel="noopener"
+>@huashiJW&lt;/a>&lt;br>
+&lt;a class="link" href="https://www.youtube.com/watch?v=kX7rzHFoNao" target="_blank" rel="noopener"
+>Applying Animation to a Character or Mannequin in Unreal Engine 5.1&lt;/a>&lt;/p></description></item><item><title>Zbrush渲染基本流程</title><link>/post/zbrush-render/</link><pubDate>Wed, 31 Jul 2024 21:45:00 +0800</pubDate><guid>/post/zbrush-render/</guid><description>&lt;img src="/post/zbrush-render/cover.webp" alt="Featured image of post Zbrush渲染基本流程" />&lt;blockquote>
 &lt;p>封面有点欺诈是SP上了材质后的渲染图。姑且记录一下Zbrush渲染的过程，主要参考了&lt;a class="link" href="https://orb.gumroad.com/l/srZiJ" target="_blank" rel="noopener"
 >Orb的渲染教程&lt;/a>&lt;/p>
 &lt;/blockquote>
