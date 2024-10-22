@@ -23,8 +23,16 @@ class="gallery-image"
 data-flex-grow="123"
 data-flex-basis="296px"
 >&lt;/p>
-&lt;p>在动画处添加刚刚导出的动画序列，可以发现时间轴上有了段落但是播放无效&lt;/p>
-&lt;p>记得必须删除骨骼，官方文档里居然没提这个晕&lt;/p>
+&lt;p>此处有两种方式添加动画。可以看到自动添加了一个control rig，右键点击时间轴导入动画序列&lt;/p>
+&lt;p>&lt;img src="/post/animation-retarget/images/5.webp"
+width="679"
+height="649"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="104"
+data-flex-basis="251px"
+>&lt;/p>
+&lt;p>也可以删除绑定后在动画处添加刚刚导出的动画序列，如果只是为了省事的话&lt;/p>
 &lt;p>&lt;img src="/post/animation-retarget/images/4.webp"
 width="557"
 height="171"
