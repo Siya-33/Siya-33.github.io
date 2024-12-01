@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>生活 on Shirakii</title><link>/categories/%E7%94%9F%E6%B4%BB/</link><description>Recent content in 生活 on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><lastBuildDate>Sun, 13 Aug 2023 22:19:17 +0800</lastBuildDate><atom:link href="/categories/%E7%94%9F%E6%B4%BB/index.xml" rel="self" type="application/rss+xml"/><item><title>年轻人的第一台主机</title><link>/post/my-first-post/</link><pubDate>Sun, 13 Aug 2023 22:19:17 +0800</pubDate><guid>/post/my-first-post/</guid><description>&lt;img src="/post/my-first-post/cover.jpg" alt="Featured image of post 年轻人的第一台主机" />&lt;p>其实很早就想搭一个技术博客了，但是一直感觉无从弄起而且耗费精力，直到我看到了&lt;a class="link" href="https://www.cyanilux.com/" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>生活 on Shirakii</title><link>/categories/%E7%94%9F%E6%B4%BB/</link><description>Recent content in 生活 on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><lastBuildDate>Thu, 26 Oct 2023 00:36:44 +0800</lastBuildDate><atom:link href="/categories/%E7%94%9F%E6%B4%BB/index.xml" rel="self" type="application/rss+xml"/><item><title>年轻人的第一台主机</title><link>/post/my-first-post/</link><pubDate>Sun, 13 Aug 2023 22:19:17 +0800</pubDate><guid>/post/my-first-post/</guid><description>&lt;img src="/post/my-first-post/cover.jpg" alt="Featured image of post 年轻人的第一台主机" />&lt;p>其实很早就想搭一个技术博客了，但是一直感觉无从弄起而且耗费精力，直到我看到了&lt;a class="link" href="https://www.cyanilux.com/" target="_blank" rel="noopener"
 >Cyanilux&lt;/a>这个网站，了解到了hugo，况且我也刚组了台主机，就将这作为纪念吧。&lt;/p>
 &lt;figure>
 &lt;img loading="lazy" src="images/1.png#center" width="40%"/>
@@ -47,12 +47,12 @@ data-flex-grow="177"
 data-flex-basis="426px"
 >&lt;/p>
 &lt;h2>感恩父母&lt;/h2>
-&lt;h1 id="后记">后记&lt;/h1>
-&lt;blockquote>
+&lt;h1 id="后记">后记
+&lt;/h1>&lt;blockquote>
 &lt;p>前几天由于windows擅自更新的缘故，后来直接无限进入自动修复的重启界面，还原点没用、卸载更新没用，连插u盘进PE系统都蓝屏，最后无奈重装系统。&lt;/p>
 &lt;/blockquote>
-&lt;h1 id="一定要禁用更新啊">一定要禁用更新啊&lt;/h1>
-&lt;figure>
+&lt;h1 id="一定要禁用更新啊">一定要禁用更新啊
+&lt;/h1>&lt;figure>
 &lt;img loading="lazy" src="images/footer.jpg" width="400"/> &lt;figcaption>
 &lt;p>
 &lt;a href="https://twitter.com/Dino_illus/status/1675066447502929921">@Dino_illus&lt;/a>&lt;/p>

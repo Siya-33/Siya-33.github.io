@@ -48,8 +48,8 @@ data-flex-basis="781px"
 &lt;link rel="stylesheet" href="https://cdn.staticfile.net/aplayer/1.10.1/APlayer.min.css">
 &lt;script src="https://cdn.staticfile.net/aplayer/1.10.1/APlayer.min.js">&lt;/script>
 &lt;script src="https://cdn.staticfile.net/meting/2.0.1/Meting.min.js">&lt;/script>&lt;meting-js auto="https://music.163.com/#/song?id=1383736734" theme="#2980b9" volume="0.15">&lt;/meting-js>
-&lt;h2 id="致谢">致谢&lt;/h2>
-&lt;p>Cover:&lt;a class="link" href="https://x.com/huashiJW/status/1823388905674305935/photo/1" target="_blank" rel="noopener"
+&lt;h2 id="致谢">致谢
+&lt;/h2>&lt;p>Cover:&lt;a class="link" href="https://x.com/huashiJW/status/1823388905674305935/photo/1" target="_blank" rel="noopener"
 >@huashiJW&lt;/a>&lt;br>
 &lt;a class="link" href="https://www.youtube.com/watch?v=kX7rzHFoNao" target="_blank" rel="noopener"
 >Applying Animation to a Character or Mannequin in Unreal Engine 5.1&lt;/a>&lt;/p></description></item><item><title>Zbrush渲染基本流程</title><link>/post/zbrush-render/</link><pubDate>Wed, 31 Jul 2024 21:45:00 +0800</pubDate><guid>/post/zbrush-render/</guid><description>&lt;img src="/post/zbrush-render/cover.webp" alt="Featured image of post Zbrush渲染基本流程" />&lt;blockquote>
@@ -181,8 +181,8 @@ color: #9ca3af;
 }
 }
 &lt;/style>
-&lt;h2 id="前期准备">前期准备&lt;/h2>
-&lt;p>Draw 选项卡下将焦距设置为85mm，视情况设置Align To Object&lt;/p>
+&lt;h2 id="前期准备">前期准备
+&lt;/h2>&lt;p>Draw 选项卡下将焦距设置为85mm，视情况设置Align To Object&lt;/p>
 &lt;p>Render - Render Properties下激活AO&lt;/p>
 &lt;p>&lt;img src="/post/zbrush-render/images/AO.webp"
 width="214"
@@ -221,8 +221,8 @@ data-flex-grow="169"
 data-flex-basis="406px"
 >&lt;/p>
 &lt;p>分别导出 Shaded、Depth、Mask，由于深度图和Mask一致，最终得到4张图，保存为PSD格式方便处理&lt;/p>
-&lt;h2 id="ps合成">PS合成&lt;/h2>
-&lt;p>对补光&lt;kbd>Ctrl+L&lt;/kbd>色阶调整，提高对比度，之后擦除不想让边缘光产生的位置&lt;/p>
+&lt;h2 id="ps合成">PS合成
+&lt;/h2>&lt;p>对补光&lt;kbd>Ctrl+L&lt;/kbd>色阶调整，提高对比度，之后擦除不想让边缘光产生的位置&lt;/p>
 &lt;p>此时的边缘光有较多锯齿，导入Mask，将通道作为选区&lt;br>
 &lt;kbd>Ctrl+Shift+C&lt;/kbd>→隐藏Mask图层→&lt;kbd>Ctrl+V&lt;/kbd>，得到一张背景透明的渲染主体A&lt;/p>
 &lt;p>新建合适的背景图层并与A合并&lt;/p>
@@ -251,8 +251,8 @@ class="gallery-image"
 data-flex-grow="165"
 data-flex-basis="397px"
 >&lt;/p>
-&lt;h2 id="杂记">杂记&lt;/h2>
-&lt;p>本篇为练习石头雕刻以及展UV做材质的副产物，相关文件见&lt;a class="link" href="https://www.patreon.com/posts/zbrush-render-109185786?utm_medium=clipboard_copy&amp;amp;utm_source=copyLink&amp;amp;utm_campaign=postshare_creator&amp;amp;utm_content=join_link" target="_blank" rel="noopener"
+&lt;h2 id="杂记">杂记
+&lt;/h2>&lt;p>本篇为练习石头雕刻以及展UV做材质的副产物，相关文件见&lt;a class="link" href="https://www.patreon.com/posts/zbrush-render-109185786?utm_medium=clipboard_copy&amp;amp;utm_source=copyLink&amp;amp;utm_campaign=postshare_creator&amp;amp;utm_content=join_link" target="_blank" rel="noopener"
 >Patreon&lt;/a>&lt;/p>
 &lt;p>最近天气是真的热，下面这歌很有海边散步的感觉
 &lt;link rel="stylesheet" href="https://cdn.staticfile.net/aplayer/1.10.1/APlayer.min.css">
@@ -262,8 +262,8 @@ data-flex-basis="397px"
 &lt;/blockquote>
 &lt;p>使用环境为&lt;a class="link" href="https://www.overleaf.com/" target="_blank" rel="noopener"
 >Overleaf&lt;/a>，如果是本地的latex编译器的话应该不会出什么问题，本文选择循序渐进地解释，确保理解每条命令的作用&lt;/p>
-&lt;h2 id="中文">中文&lt;/h2>
-&lt;p>首先使用&lt;code>XeLaTex&lt;/code>编译，点进左上角Menu更改&lt;/p>
+&lt;h2 id="中文">中文
+&lt;/h2>&lt;p>首先使用&lt;code>XeLaTex&lt;/code>编译，点进左上角Menu更改&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-latex" data-lang="latex">&lt;span class="line">&lt;span class="cl">&lt;span class="k">\usepackage&lt;/span>&lt;span class="nb">{&lt;/span>xeCJK&lt;span class="nb">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\setCJKmainfont&lt;/span>&lt;span class="na">[AutoFakeBold={4}]&lt;/span>&lt;span class="nb">{&lt;/span>AR PL UKai CN&lt;span class="nb">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Overleaf默认支持的字体见&lt;a class="link" href="https://www.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F#Chinese" target="_blank" rel="noopener"
@@ -288,8 +288,8 @@ data-flex-basis="397px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\CJKfamily&lt;/span>&lt;span class="nb">{&lt;/span>stkaiti&lt;span class="nb">}&lt;/span>&lt;span class="k">\vspace&lt;/span>&lt;span class="nb">{&lt;/span>-4pt&lt;span class="nb">}&lt;/span>&lt;span class="k">\scshape\raggedright\large&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">}{}{&lt;/span>0em&lt;span class="nb">}{}&lt;/span>[&lt;span class="k">\color&lt;/span>&lt;span class="nb">{&lt;/span>black&lt;span class="nb">}&lt;/span>&lt;span class="k">\titlerule&lt;/span> &lt;span class="k">\vspace&lt;/span>&lt;span class="nb">{&lt;/span>-7pt&lt;span class="nb">}&lt;/span>]
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>这样就和正文区分开来了，同理可以用在任何一段文字上&lt;code>\CJKfamily{stkaiti}\textbf{xxxx}&lt;/code>&lt;/p>
-&lt;h2 id="英文">英文&lt;/h2>
-&lt;p>另外如果你想精准控制英文的显示效果，可以在对应的段落前添加&lt;code>\fontfamily{lmss}\selectfont&lt;/code>&lt;/p>
+&lt;h2 id="英文">英文
+&lt;/h2>&lt;p>另外如果你想精准控制英文的显示效果，可以在对应的段落前添加&lt;code>\fontfamily{lmss}\selectfont&lt;/code>&lt;/p>
 &lt;!-- &lt;figure>
 &lt;img loading="lazy" src="images/lmss.webp" width="20%"/>
 &lt;/figure>
@@ -348,8 +348,8 @@ data-flex-basis="998px"
 &lt;link rel="stylesheet" href="https://cdn.staticfile.net/aplayer/1.10.1/APlayer.min.css">
 &lt;script src="https://cdn.staticfile.net/aplayer/1.10.1/APlayer.min.js">&lt;/script>
 &lt;script src="https://cdn.staticfile.net/meting/2.0.1/Meting.min.js">&lt;/script>&lt;meting-js auto="https://music.163.com/#/song?id=2116719045" theme="#2980b9" volume="0.15">&lt;/meting-js>&lt;/p>
-&lt;h2 id="致谢">致谢&lt;/h2>
-&lt;p>Cover:&lt;a class="link" href="https://twitter.com/liyuliyuzhou/status/1782053286725771733" target="_blank" rel="noopener"
+&lt;h2 id="致谢">致谢
+&lt;/h2>&lt;p>Cover:&lt;a class="link" href="https://twitter.com/liyuliyuzhou/status/1782053286725771733" target="_blank" rel="noopener"
 >@liyuliyuzhou&lt;/a>&lt;br>
 &lt;a class="link" href="https://stackoverflow.com/questions/71590026/package-fontspec-error-the-font-simsun-cant-be-found" target="_blank" rel="noopener"
 >Package fontspec Error: The Font SimSun can&amp;rsquo;t be found&lt;/a>&lt;br>
@@ -382,8 +382,8 @@ data-flex-basis="998px"
 &lt;figure>
 &lt;img loading="lazy" src="images/Kazusa.webp" width="30%"/>
 &lt;/figure>
-&lt;h2 id="致谢">致谢&lt;/h2>
-&lt;p>cover:&lt;a class="link" href="https://twitter.com/nekoyousuten/status/1778415263593181374/photo/1" target="_blank" rel="noopener"
+&lt;h2 id="致谢">致谢
+&lt;/h2>&lt;p>cover:&lt;a class="link" href="https://twitter.com/nekoyousuten/status/1778415263593181374/photo/1" target="_blank" rel="noopener"
 >@nekoyousuten&lt;/a>&lt;br>
 &lt;a class="link" href="https://github.com/chidiwilliams/buzz" target="_blank" rel="noopener"
 >Buzz&lt;/a>&lt;br>
@@ -392,14 +392,14 @@ data-flex-basis="998px"
 侧重点主要是些没学习成本的软件，力求小白也能用&lt;br>
 &lt;strong>点击标题跳转软件地址，右侧目录暂时无法使用&lt;/strong>&lt;/p>
 &lt;h2 id="everythinghttpswwwvoidtoolscomzh-cn">&lt;a class="link" href="https://www.voidtools.com/zh-cn/" target="_blank" rel="noopener"
->Everything&lt;/a>&lt;/h2>
-&lt;figure>
+>Everything&lt;/a>
+&lt;/h2>&lt;figure>
 &lt;img loading="lazy" src="images/everything.webp" width="80%"/>
 &lt;/figure>
 &lt;p>已经被营销号推荐烂的软件，界面简洁搜索迅速，支持正则表达式，也可以用来启用ETP/FTP服务器&lt;/p>
 &lt;h2 id="listaryhttpswwwlistarycom">&lt;a class="link" href="https://www.listary.com/" target="_blank" rel="noopener"
->Listary&lt;/a>&lt;/h2>
-&lt;figure>
+>Listary&lt;/a>
+&lt;/h2>&lt;figure>
 &lt;img loading="lazy" src="images/listary01.webp" width="80%"/>
 &lt;/figure>
 &lt;p>基础功能类似Mac的聚焦搜索，但是有几个相当好用的附带功能。免费版完全可用，虽然我入了专业版。&lt;/p>
@@ -417,8 +417,8 @@ data-flex-basis="998px"
 &lt;/figure>
 &lt;/details>
 &lt;h2 id="pixpinhttpspixpinappcom">&lt;a class="link" href="https://pixpinapp.com/" target="_blank" rel="noopener"
->PixPin&lt;/a>&lt;/h2>
-&lt;figure>
+>PixPin&lt;/a>
+&lt;/h2>&lt;figure>
 &lt;img loading="lazy" src="images/pixpin.webp" width="80%"/>
 &lt;/figure>
 &lt;p>国产截图神作，代替Snipaste的唯一工具，Mac版尚未推出。经过多个版本的更新，现在卡顿情况已经很少，功能只多不少。&lt;/p>
@@ -429,54 +429,54 @@ data-flex-basis="998px"
 &lt;li>录制&lt;/li>
 &lt;/ul>
 &lt;h2 id="clipxhttpbluemarsorgclipx">&lt;a class="link" href="http://bluemars.org/clipx" target="_blank" rel="noopener"
->ClipX&lt;/a>&lt;/h2>
-&lt;figure>
+>ClipX&lt;/a>
+&lt;/h2>&lt;figure>
 &lt;img loading="lazy" src="images/clipx.webp" width="40%"/>
 &lt;/figure>
 &lt;p>使用频率相当高的软件，官网也已经年久失修了。&lt;br>但是他的功能实在太好用了，鼠标移到哪剪贴板历史显示在哪，最多可设置保存1024条记录&lt;/p>
 &lt;p>由于和我自身的快捷键冲突，并为了日常使用舒服，我将快捷键设置为了&lt;kbd>Alt+C&lt;/kbd>。但是你在设置的时候这个快捷键会自动关闭软件，所以必须进配置文件修改，可以参考&lt;a class="link" href="https://blog.csdn.net/lzlalpha/article/details/2981357" target="_blank" rel="noopener"
 >为ClipX设置粘帖热键（Alt+C）&lt;/a>&lt;/p>
 &lt;h2 id="honeycamhttpscnbandisoftcomhoneycam">&lt;a class="link" href="https://cn.bandisoft.com/honeycam/" target="_blank" rel="noopener"
->Honeycam&lt;/a>&lt;/h2>
-&lt;figure>
+>Honeycam&lt;/a>
+&lt;/h2>&lt;figure>
 &lt;img loading="lazy" src="images/honeycam.webp" width="80%"/>
 &lt;/figure>
 &lt;p>在进行简单的录制、格式转换时，我真的不想打开别的繁琐软件。&lt;br>
 Honeycam刚好小巧强大，可控性强，能制作高质量的gif/webp动画&lt;/p>
 &lt;h2 id="geekhttpsgeekuninstallercom">&lt;a class="link" href="https://geekuninstaller.com/" target="_blank" rel="noopener"
->Geek&lt;/a>&lt;/h2>
-&lt;figure>
+>Geek&lt;/a>
+&lt;/h2>&lt;figure>
 &lt;img loading="lazy" src="images/geek.webp" width="40%"/>
 &lt;/figure>
 &lt;p>卸载，好用&lt;/p>
 &lt;h2 id="internet-download-managerhttpswwwinternetdownloadmanagercn">&lt;a class="link" href="https://www.internetdownloadmanager.cn/" target="_blank" rel="noopener"
->Internet Download Manager&lt;/a>&lt;/h2>
-&lt;figure>
+>Internet Download Manager&lt;/a>
+&lt;/h2>&lt;figure>
 &lt;img loading="lazy" src="images/idm.webp" width="80%"/>
 &lt;/figure>
 &lt;p>IDM最快的多线程下载器，无需多言，入正享受更新。配合网络插件抓取网页内容。&lt;/p>
 &lt;h2 id="火绒安全httpswwwhuorongcnperson5html">&lt;a class="link" href="https://www.huorong.cn/person5.html" target="_blank" rel="noopener"
->火绒安全&lt;/a>&lt;/h2>
-&lt;figure>
+>火绒安全&lt;/a>
+&lt;/h2>&lt;figure>
 &lt;img loading="lazy" src="images/huorong.webp" width="80%"/>
 &lt;/figure>
 &lt;p>虽然说之前出了次安全事故，但对于大多电脑小白来说很简洁了。强烈推荐安全工具中的弹窗拦截、右键管理和网络修复，能节省很多时间。&lt;/p>
 &lt;h2 id="dismhttpsgithubcomchuyu-teamdism-multi-languagereleasestagv10110022">&lt;a class="link" href="https://github.com/Chuyu-Team/Dism-Multi-language/releases/tag/v10.1.1002.2" target="_blank" rel="noopener"
->Dism++&lt;/a>&lt;/h2>
-&lt;figure>
+>Dism++&lt;/a>
+&lt;/h2>&lt;figure>
 &lt;img loading="lazy" src="images/dism&amp;#43;&amp;#43;.webp" width="80%"/>
 &lt;/figure>
 &lt;p>很好用的清理工具，系统优化面板里有很多好用的功能&lt;/p>
 &lt;h2 id="wiztreehttpsdiskanalyzercom">&lt;a class="link" href="https://diskanalyzer.com/" target="_blank" rel="noopener"
->WizTree&lt;/a>&lt;/h2>
-&lt;figure>
+>WizTree&lt;/a>
+&lt;/h2>&lt;figure>
 &lt;img loading="lazy" src="images/wiztree.webp" width="80%"/>
 &lt;/figure>
 &lt;p>这个软件能快速扫描出文件夹的树结构，方便用户删除一些无用的内容。当然为了释放磁盘空间可以选择&lt;a class="link" href="https://www.diskgenius.cn/" target="_blank" rel="noopener"
 >DiskGenius&lt;/a>来扩容，或者用&lt;a class="link" href="https://foldermove.com/" target="_blank" rel="noopener"
 >FolderMove&lt;/a>来符号链接文件夹&lt;/p>
-&lt;h2 id="后记">后记&lt;/h2>
-&lt;p>10个感觉差不多了，其实好用的软件还是蛮多的，有空再写。这篇文章有部分参考我以前发过的&lt;a class="link" href="https://www.bilibili.com/read/cv22993455/" target="_blank" rel="noopener"
+&lt;h2 id="后记">后记
+&lt;/h2>&lt;p>10个感觉差不多了，其实好用的软件还是蛮多的，有空再写。这篇文章有部分参考我以前发过的&lt;a class="link" href="https://www.bilibili.com/read/cv22993455/" target="_blank" rel="noopener"
 >专栏&lt;/a>。好久没玩瓦了，拿张苏可大神的画做封面。最近刚开始用Directory Opus，估计之后可能会出篇文章吧，谢谢！&lt;/p>
 &lt;figure>
 &lt;img loading="lazy" src="images/footer.webp" width="40%"/> &lt;figcaption>
@@ -484,21 +484,21 @@ Honeycam刚好小巧强大，可控性强，能制作高质量的gif/webp动画&
 &lt;a href="https://www.pixiv.net/artworks/105990892">@Dino&lt;/a>&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
-&lt;h2 id="致谢">致谢&lt;/h2>
-&lt;p>&lt;strong>cover:&lt;/strong> &lt;a class="link" href="https://www.artstation.com/sukeart" target="_blank" rel="noopener"
+&lt;h2 id="致谢">致谢
+&lt;/h2>&lt;p>&lt;strong>cover:&lt;/strong> &lt;a class="link" href="https://www.artstation.com/sukeart" target="_blank" rel="noopener"
 >苏可&lt;/a>&lt;/p></description></item><item><title>解决Creative Cloud文件同步禁用</title><link>/post/creative-cloud-file-sync-disabled/</link><pubDate>Sat, 09 Mar 2024 05:47:19 +0800</pubDate><guid>/post/creative-cloud-file-sync-disabled/</guid><description>&lt;img src="/post/creative-cloud-file-sync-disabled/cover.webp" alt="Featured image of post 解决Creative Cloud文件同步禁用" />&lt;blockquote>
 &lt;p>记录一下折腾的过程。也纪念一下&lt;a class="link" href="https://twitter.com/DB_official_jp/status/1765935480234016917" target="_blank" rel="noopener"
 >鸟山明老师&lt;/a>，犹记得小时候我哥带我看龙珠的快乐时光，虽然只记得小悟空第一次在月光下变身那集，还有龟仙人一些搞笑桥段。据说是死于急性硬脑膜外出血。&lt;br>妇女节这天也发生了很惊悚的事情，我爸昨天刚好骑电瓶被车撞到了，头着地缝了好几针，还好CT没事，太吓人了。&lt;br>世事无常啊，找个挣钱又有时间陪家人的工作，希望大家都身体健康、快乐地过完一辈子&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="起因">起因&lt;/h2>
-&lt;p>在一次用lightroom处理照片的时候，我想着咋不把raw文件和成片都拖到这个100G的云盘里呢，不用白不用。好家伙，结果直接给我禁用了。但是我其他电脑上的同步还是能够正常使用。&lt;/p>
+&lt;h2 id="起因">起因
+&lt;/h2>&lt;p>在一次用lightroom处理照片的时候，我想着咋不把raw文件和成片都拖到这个100G的云盘里呢，不用白不用。好家伙，结果直接给我禁用了。但是我其他电脑上的同步还是能够正常使用。&lt;/p>
 &lt;p>&lt;strong>文件同步已禁用，请联系你的IT管理员&lt;/strong>&lt;br>
 &lt;strong>File syncing disabled. Contact your IT administrator for details&lt;/strong>&lt;/p>
 &lt;p>我TM自己就一个个人用户，哪来的IT管理员，看了一下官方的&lt;a class="link" href="https://community.adobe.com/t5/creative-cloud-services-discussions/creative-cloud-quot-file-syncing-disabled-contact-your-it-administrator-for-details-quot/td-p/11044796" target="_blank" rel="noopener"
 >答复&lt;/a>&lt;/p>
 &lt;p>在使用各种干净的卸载清理工具，活动检查器禁用服务等等操作后，均以失败告终(我这台Mac这辈子都没重启这么多次)，甚至电脑里都出现不了&lt;code>Creative Cloud Files&lt;/code>这个文件夹了&lt;/p>
-&lt;h2 id="解决">解决&lt;/h2>
-&lt;p>&lt;strong>使用以下方法前请确保已经备份您的云文件，以避免造成不必要的损失，已上传的文件不会丢失。&lt;/strong>&lt;/p>
+&lt;h2 id="解决">解决
+&lt;/h2>&lt;p>&lt;strong>使用以下方法前请确保已经备份您的云文件，以避免造成不必要的损失，已上传的文件不会丢失。&lt;/strong>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> Library/Application&lt;span class="se">\ &lt;/span>Support/Adobe
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">open .
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Windows下为该路径&lt;code>C:\Users\&amp;lt;用户文件夹&amp;gt;\AppData\Local\Adobe\OOBE&lt;/code>&lt;/p>
@@ -508,10 +508,10 @@ Honeycam刚好小巧强大，可控性强，能制作高质量的gif/webp动画&
 >ACC卸载&lt;/a>
 &lt;a class="link" href="https://www.adobe.com/apps/all/all-platforms?action=install&amp;amp;source=apps&amp;amp;productId=creative-cloud" target="_blank" rel="noopener"
 >ACC安装&lt;/a>&lt;/p>
-&lt;h2 id="后记">后记&lt;/h2>
-&lt;p>如果只是有些文件未能同步，只需要暂时关闭一下代理软件即可&lt;/p>
-&lt;h2 id="致谢">致谢&lt;/h2>
-&lt;p>cover:&lt;a class="link" href="https://twitter.com/Anonamos_701/status/1765954663000818152/photo/1" target="_blank" rel="noopener"
+&lt;h2 id="后记">后记
+&lt;/h2>&lt;p>如果只是有些文件未能同步，只需要暂时关闭一下代理软件即可&lt;/p>
+&lt;h2 id="致谢">致谢
+&lt;/h2>&lt;p>cover:&lt;a class="link" href="https://twitter.com/Anonamos_701/status/1765954663000818152/photo/1" target="_blank" rel="noopener"
 >@Anonamos_701&lt;/a>&lt;/p></description></item><item><title>将萌萌计数器部署到 Cloudflare Workers</title><link>/post/moe-counter-cf/</link><pubDate>Tue, 05 Mar 2024 01:44:58 +0800</pubDate><guid>/post/moe-counter-cf/</guid><description>&lt;img src="/post/moe-counter-cf/cover.webp" alt="Featured image of post 将萌萌计数器部署到 Cloudflare Workers" />&lt;p>&lt;strong>本篇仅为&lt;a class="link" href="https://champhoon.xyz/note/moe-counter-cf/" target="_blank" rel="noopener"
 >champhoon&lt;/a>大佬文章在实际部署过程中的补充&lt;/strong>&lt;/p>
 &lt;p>在安装&lt;code>Wrangler-CLI&lt;/code>过程中命令行提示v1版本已经不再维护，目前已经更新至v3，npm项目的地址为&lt;a class="link" href="https://www.npmjs.com/package/wrangler" target="_blank" rel="noopener"
@@ -539,8 +539,8 @@ Honeycam刚好小巧强大，可控性强，能制作高质量的gif/webp动画&
 >champhoon&lt;/a>和&lt;a class="link" href="https://blog.dsrkafuu.net/" target="_blank" rel="noopener"
 >dsrkafuu&lt;/a>，以及原作者&lt;a class="link" href="https://github.com/journey-ad" target="_blank" rel="noopener"
 >journey-ad&lt;/a>&lt;/p>
-&lt;h1 id="后记">后记&lt;/h1>
-&lt;div class="video-wrapper">
+&lt;h1 id="后记">后记
+&lt;/h1>&lt;div class="video-wrapper">
 &lt;video
 loop
 muted
@@ -556,8 +556,8 @@ Your browser doesn't support HTML5 video. Here is a
 &lt;p>本来想把这个当封面的，结果webp效果好点要7M，考虑到网速还是算了。这个UI入水那下是真的惊艳(好想玩P3R啊啊啊啊，谁送我一个)&lt;/p>
 &lt;p>这里放的是mp4，因为我发现我这个图片放大的js貌似不支持avif，而且avif和wep在加载时会闪烁&lt;br>但是avif格式只需4M，奈何&lt;a class="link" href="https://github.com/gohugoio/hugo/issues/7837" target="_blank" rel="noopener"
 >高质量的原生Go编码器&lt;/a>还没有，放不到封面上&lt;/p>
-&lt;h1 id="致谢">致谢&lt;/h1>
-&lt;p>Cover: &lt;a class="link" href="https://asia.sega.com/p3r/cn/" target="_blank" rel="noopener"
+&lt;h1 id="致谢">致谢
+&lt;/h1>&lt;p>Cover: &lt;a class="link" href="https://asia.sega.com/p3r/cn/" target="_blank" rel="noopener"
 >P3R&lt;/a>&lt;br>
 &lt;a class="link" href="https://github.com/journey-ad/Moe-Counter" target="_blank" rel="noopener"
 >Moe-Counter&lt;/a>&lt;br>
@@ -622,8 +622,8 @@ alt="Alt text"
 >
 &lt;/details>
 &lt;p>其实还是有痛点的，比如你调整好的height level再重新打开还是还原为默认值，不过做完之后影响不大，就是Adobe咋这么懒，这个材质的设置值就不能保存在项目文件中吗🤔&lt;/p>
-&lt;h2 id="致谢">致谢&lt;/h2>
-&lt;p>Cover: &lt;a class="link" href="https://twitter.com/MEINOSS/status/1762061242599174281" target="_blank" rel="noopener"
+&lt;h2 id="致谢">致谢
+&lt;/h2>&lt;p>Cover: &lt;a class="link" href="https://twitter.com/MEINOSS/status/1762061242599174281" target="_blank" rel="noopener"
 >MEInoss&lt;/a>&lt;/p></description></item><item><title>摄影小白入坑记录</title><link>/post/new-to-photography/</link><pubDate>Tue, 06 Feb 2024 14:38:59 +0800</pubDate><guid>/post/new-to-photography/</guid><description>&lt;img src="/post/new-to-photography/cover.webp" alt="Featured image of post 摄影小白入坑记录" />&lt;blockquote>
 &lt;p>用了半年的G7X3，但是一英寸的卡片机甚至比不上新换的小米14了。&lt;br>
 为了更高的可玩性和记录生活，入手了α7C II 和适马28-70&lt;br>
@@ -635,8 +635,8 @@ alt="Alt text"
 &lt;/details>
 &lt;p>这机子对于目前的我来说近乎于完美无缺，尽管没有ZV-E1的动态增强防抖，但我并不怎么拍视频，够用就行&lt;/p>
 &lt;p>&lt;strong>本篇主要记录自用的一些设置和思考，想到哪写到哪，至于参数什么的都能自己去了解。&lt;/strong>&lt;/p>
-&lt;h2 id="自定义键设置">自定义键设置&lt;/h2>
-&lt;p>首先是拍照模式下自定义键的设置，理由之后再讲，c1设置为&lt;a class="link" href="#%e5%af%b9%e7%84%a6%e6%a8%a1%e5%bc%8f" >对焦模式&lt;/a>，c2即删除键设置为触摸操作选择&lt;/p>
+&lt;h2 id="自定义键设置">自定义键设置
+&lt;/h2>&lt;p>首先是拍照模式下自定义键的设置，理由之后再讲，c1设置为&lt;a class="link" href="#%e5%af%b9%e7%84%a6%e6%a8%a1%e5%bc%8f" >对焦模式&lt;/a>，c2即删除键设置为触摸操作选择&lt;/p>
 &lt;p>AF-ON键设置为放大对焦，大轮盘设置为&lt;a class="link" href="#%e5%88%9b%e6%84%8f%e5%a4%96%e8%a7%82" >创意外观&lt;/a>，录制键为对焦区域&lt;/p>
 &lt;figure>
 &lt;img loading="lazy" src="images/1.webp" width="60%"/>
@@ -649,13 +649,13 @@ alt="Alt text"
 &lt;link rel="stylesheet" href="https://cdn.staticfile.net/aplayer/1.10.1/APlayer.min.css">
 &lt;script src="https://cdn.staticfile.net/aplayer/1.10.1/APlayer.min.js">&lt;/script>
 &lt;script src="https://cdn.staticfile.net/meting/2.0.1/Meting.min.js">&lt;/script>&lt;meting-js auto="https://music.163.com/#/song?id=2028618026" theme="#2980b9"volume="0.15">&lt;/meting-js> -->
-&lt;h2 id="知识点">知识点&lt;/h2>
-&lt;h3 id="对焦模式">对焦模式&lt;/h3>
-&lt;p>一般有五种，AF代表&lt;code>Auto Focus&lt;/code>，MF代表&lt;code>Manual Focus&lt;/code>&lt;/p>
+&lt;h2 id="知识点">知识点
+&lt;/h2>&lt;h3 id="对焦模式">对焦模式
+&lt;/h3>&lt;p>一般有五种，AF代表&lt;code>Auto Focus&lt;/code>，MF代表&lt;code>Manual Focus&lt;/code>&lt;/p>
 &lt;p>建议观看&lt;a class="link" href="https://www.bilibili.com/video/BV15w411A7Mk/" target="_blank" rel="noopener"
 >视频&lt;/a>快速了解&lt;/p>
 &lt;div class="video-wrapper">
-&lt;iframe src="https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;bvid=BV15w411A7Mk&amp;autoplay=0"
+&lt;iframe src="https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;bvid=BV15w411A7Mk"
 scrolling="no"
 frameborder="no"
 framespacing="0"
@@ -673,12 +673,12 @@ allowfullscreen="true"
 &lt;/ul>
 &lt;p>最常用的就是AF-C和DMF，需要完全可控时MF。由于A7C2引入了AI识别技术，并且能够更改识别类型，因此实际使用过程中AF-C追焦的体验相当好&lt;/p>
 &lt;p>顺便简单带过一下对焦区域，一般就是广域、区、点对焦和跟踪等等。由于技术的发展现在的对焦已经相当迅速傻瓜，前几种顾名思义，主要说一下跟踪的使用场景。你可以先识别到主体，再进行构图，但是其实大部分情况下你手点下触摸屏也能达到同样的效果&lt;/p>
-&lt;h3 id="创意外观">创意外观&lt;/h3>
-&lt;p>创意外观作为A7M4后才有的功能当然是十分好用，即一个调色预设，可以去看下官方的&lt;a class="link" href="https://helpguide.sony.net/ilc/2110/v1/zh-cn/contents/TP1000651009.html" target="_blank" rel="noopener"
+&lt;h3 id="创意外观">创意外观
+&lt;/h3>&lt;p>创意外观作为A7M4后才有的功能当然是十分好用，即一个调色预设，可以去看下官方的&lt;a class="link" href="https://helpguide.sony.net/ilc/2110/v1/zh-cn/contents/TP1000651009.html" target="_blank" rel="noopener"
 >帮助指南&lt;/a>简单理解下，这个&lt;a class="link" href="https://www.bilibili.com/video/av468110520" target="_blank" rel="noopener"
 >B站视频&lt;/a>讲得也很好，浅显易懂&lt;/p>
 &lt;div class="video-wrapper">
-&lt;iframe src="https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;aid=468110520&amp;autoplay=0"
+&lt;iframe src="https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;aid=468110520"
 scrolling="no"
 frameborder="no"
 framespacing="0"
@@ -696,8 +696,8 @@ allowfullscreen="true"
 &lt;li>SH：极大提亮画面，适合拍大光比，整体画面较柔和。会发灰，特别是暗部多的场景。&lt;/li>
 &lt;/ul>
 &lt;p>其实理解一下英文就知道这些是什么作用了，Portrait、Netural、Vivid、Film、Ins、Soften Highlight&lt;/p>
-&lt;h2 id="镜头">镜头&lt;/h2>
-&lt;p>镜头方面为了适合A7C2的体积我选择的是适马28-70mmF2.8，其实也可以选择24-70，因为貌似新批次都不大会进灰了。富哥选2070G也蛮好的，不过在旅游完之后再让我选的话，我一定咬咬牙上腾龙28-200.旅游的时候有个长焦实在太爽了，广角不够直接手机拍也不错的。&lt;/p>
+&lt;h2 id="镜头">镜头
+&lt;/h2>&lt;p>镜头方面为了适合A7C2的体积我选择的是适马28-70mmF2.8，其实也可以选择24-70，因为貌似新批次都不大会进灰了。富哥选2070G也蛮好的，不过在旅游完之后再让我选的话，我一定咬咬牙上腾龙28-200.旅游的时候有个长焦实在太爽了，广角不够直接手机拍也不错的。&lt;/p>
 &lt;p>选择28-70主要有几个原因，具体评测可以看这个&lt;a class="link" href="https://www.bilibili.com/video/BV1cB4y1D7YZ/" target="_blank" rel="noopener"
 >B站视频&lt;/a>，讲得蛮好。&lt;/p>
 &lt;ul>
@@ -708,8 +708,8 @@ allowfullscreen="true"
 &lt;/ul>
 &lt;p>另外值得注意的是长焦锐化没广角端好，据有关不可靠数据测试在F4时锐度最好&lt;/p>
 &lt;p>至于广角端如果不嫌麻烦可以换极具性价比的唯卓仕AF20mm F2.8&lt;/p>
-&lt;h2 id="配件">配件&lt;/h2>
-&lt;ul>
+&lt;h2 id="配件">配件
+&lt;/h2>&lt;ul>
 &lt;li>小隼Maglink快拆腕带&lt;/li>
 &lt;li>小隼Maglink快拆肩带&lt;/li>
 &lt;li>马小路xt 26S&lt;/li>
@@ -722,12 +722,12 @@ allowfullscreen="true"
 &lt;/details>
 &lt;p>我说实话还是多给自己的背包扩展扩展&lt;a class="link" href="https://shop446272619.taobao.com/" target="_blank" rel="noopener"
 >FidLock&lt;/a>的磁扣来的实在&lt;/p>
-&lt;h2 id="视频">视频&lt;/h2>
-&lt;p>A7C2有了7轴防抖后可能手持拍拍简单的视频还真可以，我也稍微学了下log拍摄和机内lut，就是感觉新手在不同环境下调参数好累，目前感觉拍log的时候曝光补偿在+0.7比较不错。就是我实在太懒了啊啊啊啊啊啊啊啊，这么多素材还要剪和统一调色对我来说太花时间了，哎😔&lt;/p>
-&lt;h2 id="后记">后记&lt;/h2>
-&lt;p>对于只是想出门随便拍拍的真的最好上腾龙28-200，我还是看他二代啥时候出再换吧。最近两月的照片都处理好了，但是视频遥遥无期，看我啥时候有空把春节玩的写出来吧&lt;/p>
-&lt;h2 id="致谢">致谢&lt;/h2>
-&lt;p>Cover: &lt;a class="link" href="https://www.pixiv.net/artworks/99091304" target="_blank" rel="noopener"
+&lt;h2 id="视频">视频
+&lt;/h2>&lt;p>A7C2有了7轴防抖后可能手持拍拍简单的视频还真可以，我也稍微学了下log拍摄和机内lut，就是感觉新手在不同环境下调参数好累，目前感觉拍log的时候曝光补偿在+0.7比较不错。就是我实在太懒了啊啊啊啊啊啊啊啊，这么多素材还要剪和统一调色对我来说太花时间了，哎😔&lt;/p>
+&lt;h2 id="后记">后记
+&lt;/h2>&lt;p>对于只是想出门随便拍拍的真的最好上腾龙28-200，我还是看他二代啥时候出再换吧。最近两月的照片都处理好了，但是视频遥遥无期，看我啥时候有空把春节玩的写出来吧&lt;/p>
+&lt;h2 id="致谢">致谢
+&lt;/h2>&lt;p>Cover: &lt;a class="link" href="https://www.pixiv.net/artworks/99091304" target="_blank" rel="noopener"
 >Li Flag&lt;/a>&lt;/br>
 &lt;a class="link" href="https://helpguide.sony.net/ilc/2110/v1/zh-cn/contents/TP1000651009.html" target="_blank" rel="noopener"
 >Sony帮助指南&lt;/a>&lt;/br>
@@ -874,8 +874,8 @@ Your browser doesn't support HTML5 video. Here is a
 &lt;/p>
 &lt;/video>
 &lt;/div>
-&lt;h2 id="可顶点绘制的布料材质">可顶点绘制的布料材质&lt;/h2>
-&lt;div class="video-wrapper">
+&lt;h2 id="可顶点绘制的布料材质">可顶点绘制的布料材质
+&lt;/h2>&lt;div class="video-wrapper">
 &lt;video
 loop
 muted
@@ -904,8 +904,8 @@ allowfullscreen="true"
 >
 &lt;/iframe>
 &lt;/div>
-&lt;h2 id="管道蓝图">管道蓝图&lt;/h2>
-&lt;p>比较常规的样条线蓝图&lt;/p>
+&lt;h2 id="管道蓝图">管道蓝图
+&lt;/h2>&lt;p>比较常规的样条线蓝图&lt;/p>
 &lt;div class="video-wrapper">
 &lt;iframe src="https://blueprintue.com/render/eeghxgxf/"scrolling="no"
 frameborder="no"
@@ -918,16 +918,16 @@ allowfullscreen="true"
 &lt;figure>
 &lt;img loading="lazy" src="images/BP_pipe.webp" width="60%"/>
 &lt;/figure>
-&lt;h2 id="decal蓝图工具">Decal蓝图工具&lt;/h2>
-&lt;p>主要方便UV偏移以快速选中需要的decal，学习蓝图设置动态材质&lt;/p>
+&lt;h2 id="decal蓝图工具">Decal蓝图工具
+&lt;/h2>&lt;p>主要方便UV偏移以快速选中需要的decal，学习蓝图设置动态材质&lt;/p>
 &lt;figure>
 &lt;img loading="lazy" src="images/M_decal.webp" width="60%"/>
 &lt;/figure>
 &lt;figure>
 &lt;img loading="lazy" src="images/BP_decal.webp" width="60%"/>
 &lt;/figure>
-&lt;h2 id="塑料薄膜">塑料薄膜&lt;/h2>
-&lt;div class="video-wrapper">
+&lt;h2 id="塑料薄膜">塑料薄膜
+&lt;/h2>&lt;div class="video-wrapper">
 &lt;video
 loop
 muted
@@ -944,8 +944,8 @@ Your browser doesn't support HTML5 video. Here is a
 &lt;figure>
 &lt;img loading="lazy" src="images/M_plastic.webp" width="60%"/>
 &lt;/figure>
-&lt;h2 id="总结">总结&lt;/h2>
-&lt;p>其实作者最花时间的还是场景中各种小资产的制作，主材质也是相对简单的。从一个基础的构图开始，最后添加上了各种安全屋的小物件丰富场景&lt;/p></description></item><item><title>Cloudflare Dns 批量删除</title><link>/post/cloudflare-dns-delete/</link><pubDate>Thu, 19 Oct 2023 16:35:44 +0800</pubDate><guid>/post/cloudflare-dns-delete/</guid><description>&lt;img src="/post/cloudflare-dns-delete/cover.jpg" alt="Featured image of post Cloudflare Dns 批量删除" />&lt;blockquote>
+&lt;h2 id="总结">总结
+&lt;/h2>&lt;p>其实作者最花时间的还是场景中各种小资产的制作，主材质也是相对简单的。从一个基础的构图开始，最后添加上了各种安全屋的小物件丰富场景&lt;/p></description></item><item><title>Cloudflare Dns 批量删除</title><link>/post/cloudflare-dns-delete/</link><pubDate>Thu, 19 Oct 2023 16:35:44 +0800</pubDate><guid>/post/cloudflare-dns-delete/</guid><description>&lt;img src="/post/cloudflare-dns-delete/cover.jpg" alt="Featured image of post Cloudflare Dns 批量删除" />&lt;blockquote>
 &lt;p>由于之前博客为了输入方便一直放在根域名，现在需要将字体部署到子域名下，为了干净整洁些需要将之前的DNS删除。&lt;br>并且不再用vercel部署，采用cloudflare&lt;/p>
 &lt;/blockquote>
 &lt;p>进入&lt;a class="link" href="https://dash.cloudflare.com/profile/api-tokens" target="_blank" rel="noopener"
@@ -985,11 +985,11 @@ Your browser doesn't support HTML5 video. Here is a
 &lt;a href="https://twitter.com/_Chuzenji_/status/1455128190037356546/photo/1">好有副岛成记的风格&lt;br>@Chuzenji&lt;/a>&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
-&lt;h2 id="参考">参考&lt;/h2>
-&lt;p>cover:&lt;a class="link" href="https://www.pixiv.net/artworks/92463499" target="_blank" rel="noopener"
+&lt;h2 id="参考">参考
+&lt;/h2>&lt;p>cover:&lt;a class="link" href="https://www.pixiv.net/artworks/92463499" target="_blank" rel="noopener"
 >@mocha&lt;/a>&lt;br>&lt;a class="link" href="https://community.cloudflare.com/t/bulk-delete-dns-records/421686" target="_blank" rel="noopener"
->Bulk delete DNS records&lt;/a>&lt;/p></description></item><item><title>几何节点入门纲要</title><link>/post/geometrynode-start/</link><pubDate>Thu, 05 Oct 2023 23:20:26 +0800</pubDate><guid>/post/geometrynode-start/</guid><description>&lt;img src="/post/geometrynode-start/cover.jpg" alt="Featured image of post 几何节点入门纲要" />&lt;h2 id="前言">前言&lt;/h2>
-&lt;p>我创建这个博客的初衷，有很大一部分是方便记录分享自己实现的一些几何节点效果，因此写一下这篇文章来分享一下我之前学习过程中的一些感悟和经验，希望对你有帮助。&lt;/p>
+>Bulk delete DNS records&lt;/a>&lt;/p></description></item><item><title>几何节点入门纲要</title><link>/post/geometrynode-start/</link><pubDate>Thu, 05 Oct 2023 23:20:26 +0800</pubDate><guid>/post/geometrynode-start/</guid><description>&lt;img src="/post/geometrynode-start/cover.jpg" alt="Featured image of post 几何节点入门纲要" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>我创建这个博客的初衷，有很大一部分是方便记录分享自己实现的一些几何节点效果，因此写一下这篇文章来分享一下我之前学习过程中的一些感悟和经验，希望对你有帮助。&lt;/p>
 &lt;p>感兴趣的话可以看下我的&lt;a class="link" href="https://www.artstation.com/siya_33" target="_blank" rel="noopener"
 >Artstation&lt;/a>或者&lt;a class="link" href="https://space.bilibili.com/333322096" target="_blank" rel="noopener"
 >Bilibili&lt;/a>，里面大概还是有很多相关的内容的，或者你也可以打开&lt;a class="link" href="https://siya33.gumroad.com/" target="_blank" rel="noopener"
@@ -1019,25 +1019,25 @@ class="gallery-image"
 data-flex-grow="177"
 data-flex-basis="426px"
 >&lt;/p>
-&lt;h2 id="用途">用途&lt;/h2>
-&lt;p>我们之所以用几何节点制作效果当然是因为它有很多好处。程序化节点式的工作流让你能够轻松快捷地调整最终效果，而不是又从零到一地画一幅画，并且我们能精确地操控每一个参数供我们使用。也能够将工作流中常使用的效果打包为节点组，高效地嵌套使用。&lt;/p>
-&lt;h2 id="学习方法">学习方法&lt;/h2>
-&lt;p>其实最快的学习方式就是看到一个好看的效果，直接上手去实现。做的过程中会慢慢地了解制作思路，遇到理解不了的节点就去翻翻文档或解释的视频。&lt;/p>
+&lt;h2 id="用途">用途
+&lt;/h2>&lt;p>我们之所以用几何节点制作效果当然是因为它有很多好处。程序化节点式的工作流让你能够轻松快捷地调整最终效果，而不是又从零到一地画一幅画，并且我们能精确地操控每一个参数供我们使用。也能够将工作流中常使用的效果打包为节点组，高效地嵌套使用。&lt;/p>
+&lt;h2 id="学习方法">学习方法
+&lt;/h2>&lt;p>其实最快的学习方式就是看到一个好看的效果，直接上手去实现。做的过程中会慢慢地了解制作思路，遇到理解不了的节点就去翻翻文档或解释的视频。&lt;/p>
 &lt;p>国内的话强烈建议可以看看&lt;a class="link" href="https://space.bilibili.com/373134990" target="_blank" rel="noopener"
 >峰峰居士&lt;/a>和&lt;a class="link" href="https://space.bilibili.com/17548972" target="_blank" rel="noopener"
 >darkstarrd&lt;/a>的视频，之后尤其要了解一下几何节点中的&lt;strong>几何流&lt;/strong>和&lt;strong>函数流&lt;/strong>思想。&lt;/p>
 &lt;p>至于版本我建议使用3.4之后的版本，很多冗余的节点都被修改了，3.3也行，大差不差。&lt;/p>
 &lt;p>其实最重要的是多看别人开阔眼界，过程中了解一些自己之前没怎么用到的节点和思路。看到一个大佬的推文或教程之后，根据相关推荐发现一个又一个新大陆。入门之后可以尝试用各种节点包加速工作流，我了解到的部分内容放在相关资源里。&lt;/p>
-&lt;h2 id="必要插件">必要插件&lt;/h2>
-&lt;p>内置插件Node Wrangler，有点基础的话应该都开启了，善用&lt;code>Ctrl Shift LMB&lt;/code>预览值和其他基础操作&lt;/p>
+&lt;h2 id="必要插件">必要插件
+&lt;/h2>&lt;p>内置插件Node Wrangler，有点基础的话应该都开启了，善用&lt;code>Ctrl Shift LMB&lt;/code>预览值和其他基础操作&lt;/p>
 &lt;p>&lt;a class="link" href="https://github.com/williamchange/node_tabber" target="_blank" rel="noopener"
 >node_tabber&lt;/a>，使用houdini的方式搜索节点。对我来说相当重要的插件，再用不用&lt;code>Shift A&lt;/code>多点几步了，拯救时间的利器&lt;/p>
 &lt;p>效果如下，快速查找节点&lt;/p>
 &lt;figure>
 &lt;img loading="lazy" src="images/3.jpg" width="80%"/>
 &lt;/figure>
-&lt;h2 id="相关资源">相关资源&lt;/h2>
-&lt;ul>
+&lt;h2 id="相关资源">相关资源
+&lt;/h2>&lt;ul>
 &lt;li>
 &lt;p>推荐博主&lt;/p>
 &lt;ul>
@@ -1083,20 +1083,20 @@ data-flex-basis="426px"
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;h2 id="结语">结语&lt;/h2>
-&lt;p>总之在学习中开拓自己的思路是最重要的，没有几何节点实现不了的效果，创意是无限的&lt;/p>
+&lt;h2 id="结语">结语
+&lt;/h2>&lt;p>总之在学习中开拓自己的思路是最重要的，没有几何节点实现不了的效果，创意是无限的&lt;/p>
 &lt;figure>
 &lt;img loading="lazy" src="images/4.jpg" width="60%"/> &lt;figcaption>
 &lt;p>
 &lt;a href="https://twitter.com/jiehananana/status/1685683840768262144">&lt;/br>Lily&amp;amp;Buttercups&lt;/a>&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
-&lt;h2 id="参考与鸣谢">参考与鸣谢&lt;/h2>
-&lt;p>&lt;strong>cover:&lt;/strong> &lt;a class="link" href="https://twitter.com/Dino_illus/status/1702099616081052049" target="_blank" rel="noopener"
->@Dino&lt;/a>&lt;/p></description></item><item><title>R3F蒙版&amp;绿幕推流</title><link>/post/r3f-streaming/</link><pubDate>Thu, 14 Sep 2023 17:18:38 +0800</pubDate><guid>/post/r3f-streaming/</guid><description>&lt;img src="/post/r3f-streaming/cover.jpg" alt="Featured image of post R3F蒙版&amp;绿幕推流" />&lt;h2 id="前言">前言&lt;/h2>
-&lt;p>上个月从零开始直接上手&lt;code>react three fiber&lt;/code>，跟着同事写了一堆交互，总算弄得差不多了。不会&lt;code>React&lt;/code>，不会&lt;code>TS&lt;/code>，不会&lt;code>three&lt;/code>，真不知道自己怎么过来的。途中也了解到原子化&lt;code>css&lt;/code>，总之收获颇丰。目前是因为需要将渲染画面推流到场景中，故做点经验分享&lt;/p>
-&lt;h2 id="前期准备">前期准备&lt;/h2>
-&lt;p>首先得创建个场景然后播放视频吧，可以参考下面我做的这个案例&lt;/p>
+&lt;h2 id="参考与鸣谢">参考与鸣谢
+&lt;/h2>&lt;p>&lt;strong>cover:&lt;/strong> &lt;a class="link" href="https://twitter.com/Dino_illus/status/1702099616081052049" target="_blank" rel="noopener"
+>@Dino&lt;/a>&lt;/p></description></item><item><title>R3F蒙版&amp;绿幕推流</title><link>/post/r3f-streaming/</link><pubDate>Thu, 14 Sep 2023 17:18:38 +0800</pubDate><guid>/post/r3f-streaming/</guid><description>&lt;img src="/post/r3f-streaming/cover.jpg" alt="Featured image of post R3F蒙版&amp;绿幕推流" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>上个月从零开始直接上手&lt;code>react three fiber&lt;/code>，跟着同事写了一堆交互，总算弄得差不多了。不会&lt;code>React&lt;/code>，不会&lt;code>TS&lt;/code>，不会&lt;code>three&lt;/code>，真不知道自己怎么过来的。途中也了解到原子化&lt;code>css&lt;/code>，总之收获颇丰。目前是因为需要将渲染画面推流到场景中，故做点经验分享&lt;/p>
+&lt;h2 id="前期准备">前期准备
+&lt;/h2>&lt;p>首先得创建个场景然后播放视频吧，可以参考下面我做的这个案例&lt;/p>
 &lt;figure>
 &lt;img loading="lazy" src="https://uploads.codesandbox.io/uploads/user/831db286-7f88-4d2e-804a-05751a1066ca/lUPY-thumbnail.jpg" width="80%"/> &lt;figcaption>
 &lt;p>
@@ -1131,8 +1131,8 @@ data-flex-basis="426px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">Suspense&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">mesh&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>这样就可以看到一个带透明通道的视频显示在屏幕上，当然可能用quicktime格式会更快些，但体积大&lt;/p>
-&lt;h2 id="视频流">视频流&lt;/h2>
-&lt;p>有条件的可以现在主机上插个摄像头，先通过API获取到视频流&lt;/p>
+&lt;h2 id="视频流">视频流
+&lt;/h2>&lt;p>有条件的可以现在主机上插个摄像头，先通过API获取到视频流&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-jsx" data-lang="jsx">&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="nx">stream&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">setStream&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">useState&lt;/span>&lt;span class="p">()&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">useEffect&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kr">async&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">constraints&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
@@ -1156,8 +1156,8 @@ data-flex-basis="426px"
 &lt;figure>
 &lt;img loading="lazy" src="images/1.png#center" width="500px"/>
 &lt;/figure>
-&lt;h2 id="obs虚拟摄像头">OBS虚拟摄像头&lt;/h2>
-&lt;p>但是我们如果想输出各种画面一般都是使用&lt;a class="link" href="https://obsproject.com" target="_blank" rel="noopener"
+&lt;h2 id="obs虚拟摄像头">OBS虚拟摄像头
+&lt;/h2>&lt;p>但是我们如果想输出各种画面一般都是使用&lt;a class="link" href="https://obsproject.com" target="_blank" rel="noopener"
 >OBS&lt;/a>的虚拟摄像机推流。那么怎么切换摄像机呢？&lt;/p>
 &lt;p>可以看到上述的代码通过使用&lt;code>constraints&lt;/code>来约束使用的摄像头，需要的&lt;code>deviceId&lt;/code>可从&lt;code>console&lt;/code>中获取&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">InputDeviceInfo
@@ -1173,8 +1173,8 @@ data-flex-basis="426px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">YOUR&lt;/span> &lt;span class="na">OBS&lt;/span> &lt;span class="na">ID&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="绿幕shader">绿幕shader&lt;/h2>
-&lt;p>接下来就剩抠绿幕了。你或许会问为什么不在OBS里直接用色度键去除呢？因为它不支持推流视频带alpha通道，虽然抠的只剩个人但推出去还是个大黑框&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="绿幕shader">绿幕shader
+&lt;/h2>&lt;p>接下来就剩抠绿幕了。你或许会问为什么不在OBS里直接用色度键去除呢？因为它不支持推流视频带alpha通道，虽然抠的只剩个人但推出去还是个大黑框&lt;/p>
 &lt;p>于是我们就得用到&lt;code>shaderMaterial&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-glsl" data-lang="glsl">&lt;span class="line">&lt;span class="cl">&lt;span class="k">const&lt;/span> &lt;span class="n">vertexShader&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="err">`&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">varying&lt;/span> &lt;span class="k">vec2&lt;/span> &lt;span class="n">vUv&lt;/span>&lt;span class="p">;&lt;/span>
@@ -1238,11 +1238,11 @@ data-flex-basis="426px"
 &lt;figure>
 &lt;img loading="lazy" src="images/alice.gif#center" width="500px"/>
 &lt;/figure>
-&lt;h2 id="后话">后话&lt;/h2>
-&lt;p>至于为什么这里不采用&lt;code>VideoMaterial&lt;/code>另开一个材质函数的写法，而是&lt;code>three.js&lt;/code>的用法，是因为我也不知道为什么会有bug，欢迎在评论区交流&lt;/p>
+&lt;h2 id="后话">后话
+&lt;/h2>&lt;p>至于为什么这里不采用&lt;code>VideoMaterial&lt;/code>另开一个材质函数的写法，而是&lt;code>three.js&lt;/code>的用法，是因为我也不知道为什么会有bug，欢迎在评论区交流&lt;/p>
 &lt;p>最后在实际体验过程中，我需要让这块平面始终朝向摄像机，会的人可能觉得一个&lt;code>useRef&lt;/code>和&lt;code>useFrame&lt;/code>就解决了，但是我拿不到父组件的摄像头信息。后来终于发现可以用&lt;code>useThree&lt;/code>这个hook，直接拿到&lt;code>camera&lt;/code>&lt;/p>
-&lt;h2 id="参考链接">参考链接&lt;/h2>
-&lt;p>&lt;a href="https://codesandbox.io/s/2cemck" rel="nofollow">&lt;img width="20%" src="https://camo.githubusercontent.com/911cd7576d9b11ce2cd235f4513198e18fd29b4653545092ff3ebb8017cfdb4a/68747470733a2f2f636f646573616e64626f782e696f2f6170692f76312f73616e64626f7865732f3263656d636b2f73637265656e73686f742e706e673f7632" alt="Demo" data-canonical-src="https://codesandbox.io/api/v1/sandboxes/2cemck/screenshot.png?v2" style="max-width: 100%;">&lt;/a>&lt;/p>
+&lt;h2 id="参考链接">参考链接
+&lt;/h2>&lt;p>&lt;a href="https://codesandbox.io/s/2cemck" rel="nofollow">&lt;img width="20%" src="https://camo.githubusercontent.com/911cd7576d9b11ce2cd235f4513198e18fd29b4653545092ff3ebb8017cfdb4a/68747470733a2f2f636f646573616e64626f782e696f2f6170692f76312f73616e64626f7865732f3263656d636b2f73637265656e73686f742e706e673f7632" alt="Demo" data-canonical-src="https://codesandbox.io/api/v1/sandboxes/2cemck/screenshot.png?v2" style="max-width: 100%;">&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://sbcode.net/threejs/webcam/" target="_blank" rel="noopener"
 >webcam&lt;/a>&lt;/p>
 &lt;div class="video-wrapper">
@@ -1253,14 +1253,14 @@ title="YouTube Video"
 >
 &lt;/iframe>
 &lt;/div>
-&lt;h2 id="byebye">Bye~Bye&lt;/h2>
-&lt;figure>
+&lt;h2 id="byebye">Bye~Bye
+&lt;/h2>&lt;figure>
 &lt;img loading="lazy" src="images/2.jpg" width="400"/> &lt;figcaption>
 &lt;p>
 &lt;a href="https://twitter.com/Kerno_kr/status/1697538936015618120">和纱太好看了&lt;br>@Kerno_kr&lt;/a>&lt;/p>
 &lt;/figcaption>
-&lt;/figure></description></item><item><title>关于</title><link>/%E5%85%B3%E4%BA%8E/</link><pubDate>Sun, 27 Aug 2023 00:00:00 +0000</pubDate><guid>/%E5%85%B3%E4%BA%8E/</guid><description>&lt;img src="https://pic.imgdb.cn/item/659d902a871b83018aebaec2.webp" alt="Featured image of post 关于" />&lt;h2 id="关于我">关于我&lt;/h2>
-&lt;p>网名Shirakii，软件工程专业，大学AI相关的基础课程学得多一些，目前热衷CG行业，是一名Texture Artist&lt;br>
+&lt;/figure></description></item><item><title>关于</title><link>/%E5%85%B3%E4%BA%8E/</link><pubDate>Sun, 27 Aug 2023 00:00:00 +0000</pubDate><guid>/%E5%85%B3%E4%BA%8E/</guid><description>&lt;img src="https://pic.imgdb.cn/item/659d902a871b83018aebaec2.webp" alt="Featured image of post 关于" />&lt;h2 id="关于我">关于我
+&lt;/h2>&lt;p>网名Shirakii，软件工程专业，大学AI相关的基础课程学得多一些，目前热衷CG行业，是一名Texture Artist&lt;br>
 目标是用美术更好地辅助游戏传达价值观，以及用程序化的方式节约美术迭代的成本&lt;/p>
 &lt;p>主要相关的网站:&lt;a class="link" href="https://linktr.ee/shirakii" target="_blank" rel="noopener"
 >Linktree&lt;/a>&lt;br>
@@ -1273,8 +1273,8 @@ title="YouTube Video"
 &lt;li>&lt;img width=32 src='/icon/ue.svg' /> &lt;img width=32 src='/icon/SP.svg' /> &lt;img width=32 src='/icon/zbrush.svg' /> &lt;img width=32 src='/icon/embergen.ico' /> &lt;img width=32 src='/icon/plasticity.ico' />&lt;/li>
 &lt;li>&lt;img width=32 src='/icon/godot.svg' /> &lt;img width=32 src='/icon/houdini.svg' />&lt;/li>
 &lt;/ul>
-&lt;h3 id="主要技能">主要技能&lt;/h3>
-&lt;ul>
+&lt;h3 id="主要技能">主要技能
+&lt;/h3>&lt;ul>
 &lt;li>Blender中除绑定、蒙皮外的所有技能&lt;/li>
 &lt;li>使用Substance Designer、Substance Painter 和 &lt;a class="link" href="https://www.materialmaker.org/" target="_blank" rel="noopener"
 >Material Maker&lt;/a>创建材质&lt;/li>
@@ -1288,19 +1288,19 @@ title="YouTube Video"
 &lt;/ul>
 &lt;p>联系我的最佳方式是通过Gmail——&lt;code>gs857474407@gmail.com&lt;/code>&lt;/p>
 &lt;p>平常的话程序化的东西研究的多一些，用节点式的工作流节约生命.其实爱好也蛮多的足球、音乐、画画等等，就是我的logic和电吉他都没什么时间练，还想玩玩3D打印。也会去打打轴，翻译下歌曲或者节目，可惜学会日语遥遥无期。总之希望某天我也能出现在一个知名游戏或者动画电影的片尾感谢名单上吧&lt;/p>
-&lt;h2 id="关于博客">关于博客&lt;/h2>
-&lt;p>写些有价值、能帮到人的文章，偶尔会自娱自乐吐槽一下。如果对你有帮助，我会很开心&lt;/p>
+&lt;h2 id="关于博客">关于博客
+&lt;/h2>&lt;p>写些有价值、能帮到人的文章，偶尔会自娱自乐吐槽一下。如果对你有帮助，我会很开心&lt;/p>
 &lt;p>其实我存的好看的画或者照片竖着的比较多，但不适合当文章封面，所以就看心情每篇文末放一张？&lt;/p>
-&lt;h2 id="博客统计">博客统计&lt;/h2>
-&lt;p>2023.9.14开始统计至6452&lt;br>
+&lt;h2 id="博客统计">博客统计
+&lt;/h2>&lt;p>2023.9.14开始统计至6452&lt;br>
 已重新部署&lt;/p>
 &lt;img src="https://counter.shirakii.com/shirakii:home?theme=asoul" alt=":shirakii" />
-&lt;h2 id="建站日志">建站日志&lt;/h2>
-&lt;h3 id="很久以前">很久以前&lt;/h3>
-&lt;p>被&lt;a class="link" href="https://www.cyanilux.com/" target="_blank" rel="noopener"
+&lt;h2 id="建站日志">建站日志
+&lt;/h2>&lt;h3 id="很久以前">很久以前
+&lt;/h3>&lt;p>被&lt;a class="link" href="https://www.cyanilux.com/" target="_blank" rel="noopener"
 >Cyanilux&lt;/a>的优雅所折服，按下F12后发现了Hugo这块新天地&lt;/p>
-&lt;h3 id="2023">2023&lt;/h3>
-&lt;ul>
+&lt;h3 id="2023">2023
+&lt;/h3>&lt;ul>
 &lt;li>
 &lt;p>2023.8&lt;/p>
 &lt;p>8.13 决心搭建博客，折腾一天成功使用papermod主题发布第一篇文章&lt;/p>
@@ -1335,8 +1335,8 @@ title="YouTube Video"
 >jsDelivr&lt;/a>进行CDN加速&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;h3 id="2024">2024&lt;/h3>
-&lt;ul>
+&lt;h3 id="2024">2024
+&lt;/h3>&lt;ul>
 &lt;li>
 &lt;p>2024.1&lt;/p>
 &lt;p>1.10 修复代码块bug，图片懒加载，优化国内加载速度&lt;a class="link" href="https://www.staticfile.net/" target="_blank" rel="noopener"
@@ -1348,8 +1348,8 @@ title="YouTube Video"
 >moe-counter-cf&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;h2 id="todo">Todo&lt;/h2>
-&lt;ul>
+&lt;h2 id="todo">Todo
+&lt;/h2>&lt;ul>
 &lt;li>动态logo&lt;/li>
 &lt;li>分层画廊&lt;/li>
 &lt;li>fancybox图片浏览&lt;/li>
@@ -1476,14 +1476,37 @@ data-flex-grow="177"
 data-flex-basis="426px"
 >&lt;/p>
 &lt;h2>感恩父母&lt;/h2>
-&lt;h1 id="后记">后记&lt;/h1>
-&lt;blockquote>
+&lt;h1 id="后记">后记
+&lt;/h1>&lt;blockquote>
 &lt;p>前几天由于windows擅自更新的缘故，后来直接无限进入自动修复的重启界面，还原点没用、卸载更新没用，连插u盘进PE系统都蓝屏，最后无奈重装系统。&lt;/p>
 &lt;/blockquote>
-&lt;h1 id="一定要禁用更新啊">一定要禁用更新啊&lt;/h1>
-&lt;figure>
+&lt;h1 id="一定要禁用更新啊">一定要禁用更新啊
+&lt;/h1>&lt;figure>
 &lt;img loading="lazy" src="images/footer.jpg" width="400"/> &lt;figcaption>
 &lt;p>
 &lt;a href="https://twitter.com/Dino_illus/status/1675066447502929921">@Dino_illus&lt;/a>&lt;/p>
 &lt;/figcaption>
-&lt;/figure></description></item><item><title>归档</title><link>/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>/archives/</guid><description/></item><item><title/><link>/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/</guid><description/></item><item><title/><link>/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/</guid><description/></item><item><title>Archives</title><link>/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/archives/</guid><description/></item><item><title>搜索</title><link>/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/search/</guid><description/></item></channel></rss>
+&lt;/figure></description></item><item><title>归档</title><link>/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>/archives/</guid><description/></item><item><title/><link>/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/</guid><description>&lt;!-- ---
+title: "作品"
+date: 2023-05-28
+# layout: "list"
+# slug: "list"
+links:
+- title: GitHub
+description: GitHub is the world's largest software development platform.
+website: https://github.com
+image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+- title: TypeScript
+description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
+website: https://www.typescriptlang.org
+image: ts-logo-128.jpg
+menu:
+main:
+weight: -50
+params:
+icon: link
+comments: false
+--- --></description></item><item><title/><link>/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/</guid><description>&lt;!-- ---
+title: "画廊"
+layout: "photos"
+--- --></description></item><item><title>Archives</title><link>/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/archives/</guid><description/></item><item><title>搜索</title><link>/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/search/</guid><description/></item></channel></rss>

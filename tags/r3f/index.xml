@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>r3f on Shirakii</title><link>/tags/r3f/</link><description>Recent content in r3f on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><lastBuildDate>Thu, 14 Sep 2023 17:18:38 +0800</lastBuildDate><atom:link href="/tags/r3f/index.xml" rel="self" type="application/rss+xml"/><item><title>R3F蒙版&amp;绿幕推流</title><link>/post/r3f-streaming/</link><pubDate>Thu, 14 Sep 2023 17:18:38 +0800</pubDate><guid>/post/r3f-streaming/</guid><description>&lt;img src="/post/r3f-streaming/cover.jpg" alt="Featured image of post R3F蒙版&amp;绿幕推流" />&lt;h2 id="前言">前言&lt;/h2>
-&lt;p>上个月从零开始直接上手&lt;code>react three fiber&lt;/code>，跟着同事写了一堆交互，总算弄得差不多了。不会&lt;code>React&lt;/code>，不会&lt;code>TS&lt;/code>，不会&lt;code>three&lt;/code>，真不知道自己怎么过来的。途中也了解到原子化&lt;code>css&lt;/code>，总之收获颇丰。目前是因为需要将渲染画面推流到场景中，故做点经验分享&lt;/p>
-&lt;h2 id="前期准备">前期准备&lt;/h2>
-&lt;p>首先得创建个场景然后播放视频吧，可以参考下面我做的这个案例&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>R3f on Shirakii</title><link>/tags/r3f/</link><description>Recent content in R3f on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><lastBuildDate>Sat, 23 Sep 2023 19:02:00 +0800</lastBuildDate><atom:link href="/tags/r3f/index.xml" rel="self" type="application/rss+xml"/><item><title>R3F蒙版&amp;绿幕推流</title><link>/post/r3f-streaming/</link><pubDate>Thu, 14 Sep 2023 17:18:38 +0800</pubDate><guid>/post/r3f-streaming/</guid><description>&lt;img src="/post/r3f-streaming/cover.jpg" alt="Featured image of post R3F蒙版&amp;绿幕推流" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>上个月从零开始直接上手&lt;code>react three fiber&lt;/code>，跟着同事写了一堆交互，总算弄得差不多了。不会&lt;code>React&lt;/code>，不会&lt;code>TS&lt;/code>，不会&lt;code>three&lt;/code>，真不知道自己怎么过来的。途中也了解到原子化&lt;code>css&lt;/code>，总之收获颇丰。目前是因为需要将渲染画面推流到场景中，故做点经验分享&lt;/p>
+&lt;h2 id="前期准备">前期准备
+&lt;/h2>&lt;p>首先得创建个场景然后播放视频吧，可以参考下面我做的这个案例&lt;/p>
 &lt;figure>
 &lt;img loading="lazy" src="https://uploads.codesandbox.io/uploads/user/831db286-7f88-4d2e-804a-05751a1066ca/lUPY-thumbnail.jpg" width="80%"/> &lt;figcaption>
 &lt;p>
@@ -36,8 +36,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">Suspense&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">mesh&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>这样就可以看到一个带透明通道的视频显示在屏幕上，当然可能用quicktime格式会更快些，但体积大&lt;/p>
-&lt;h2 id="视频流">视频流&lt;/h2>
-&lt;p>有条件的可以现在主机上插个摄像头，先通过API获取到视频流&lt;/p>
+&lt;h2 id="视频流">视频流
+&lt;/h2>&lt;p>有条件的可以现在主机上插个摄像头，先通过API获取到视频流&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-jsx" data-lang="jsx">&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="nx">stream&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">setStream&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">useState&lt;/span>&lt;span class="p">()&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">useEffect&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kr">async&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">constraints&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
@@ -61,8 +61,8 @@
 &lt;figure>
 &lt;img loading="lazy" src="images/1.png#center" width="500px"/>
 &lt;/figure>
-&lt;h2 id="obs虚拟摄像头">OBS虚拟摄像头&lt;/h2>
-&lt;p>但是我们如果想输出各种画面一般都是使用&lt;a class="link" href="https://obsproject.com" target="_blank" rel="noopener"
+&lt;h2 id="obs虚拟摄像头">OBS虚拟摄像头
+&lt;/h2>&lt;p>但是我们如果想输出各种画面一般都是使用&lt;a class="link" href="https://obsproject.com" target="_blank" rel="noopener"
 >OBS&lt;/a>的虚拟摄像机推流。那么怎么切换摄像机呢？&lt;/p>
 &lt;p>可以看到上述的代码通过使用&lt;code>constraints&lt;/code>来约束使用的摄像头，需要的&lt;code>deviceId&lt;/code>可从&lt;code>console&lt;/code>中获取&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">InputDeviceInfo
@@ -78,8 +78,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">YOUR&lt;/span> &lt;span class="na">OBS&lt;/span> &lt;span class="na">ID&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="绿幕shader">绿幕shader&lt;/h2>
-&lt;p>接下来就剩抠绿幕了。你或许会问为什么不在OBS里直接用色度键去除呢？因为它不支持推流视频带alpha通道，虽然抠的只剩个人但推出去还是个大黑框&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="绿幕shader">绿幕shader
+&lt;/h2>&lt;p>接下来就剩抠绿幕了。你或许会问为什么不在OBS里直接用色度键去除呢？因为它不支持推流视频带alpha通道，虽然抠的只剩个人但推出去还是个大黑框&lt;/p>
 &lt;p>于是我们就得用到&lt;code>shaderMaterial&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-glsl" data-lang="glsl">&lt;span class="line">&lt;span class="cl">&lt;span class="k">const&lt;/span> &lt;span class="n">vertexShader&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="err">`&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">varying&lt;/span> &lt;span class="k">vec2&lt;/span> &lt;span class="n">vUv&lt;/span>&lt;span class="p">;&lt;/span>
@@ -143,11 +143,11 @@
 &lt;figure>
 &lt;img loading="lazy" src="images/alice.gif#center" width="500px"/>
 &lt;/figure>
-&lt;h2 id="后话">后话&lt;/h2>
-&lt;p>至于为什么这里不采用&lt;code>VideoMaterial&lt;/code>另开一个材质函数的写法，而是&lt;code>three.js&lt;/code>的用法，是因为我也不知道为什么会有bug，欢迎在评论区交流&lt;/p>
+&lt;h2 id="后话">后话
+&lt;/h2>&lt;p>至于为什么这里不采用&lt;code>VideoMaterial&lt;/code>另开一个材质函数的写法，而是&lt;code>three.js&lt;/code>的用法，是因为我也不知道为什么会有bug，欢迎在评论区交流&lt;/p>
 &lt;p>最后在实际体验过程中，我需要让这块平面始终朝向摄像机，会的人可能觉得一个&lt;code>useRef&lt;/code>和&lt;code>useFrame&lt;/code>就解决了，但是我拿不到父组件的摄像头信息。后来终于发现可以用&lt;code>useThree&lt;/code>这个hook，直接拿到&lt;code>camera&lt;/code>&lt;/p>
-&lt;h2 id="参考链接">参考链接&lt;/h2>
-&lt;p>&lt;a href="https://codesandbox.io/s/2cemck" rel="nofollow">&lt;img width="20%" src="https://camo.githubusercontent.com/911cd7576d9b11ce2cd235f4513198e18fd29b4653545092ff3ebb8017cfdb4a/68747470733a2f2f636f646573616e64626f782e696f2f6170692f76312f73616e64626f7865732f3263656d636b2f73637265656e73686f742e706e673f7632" alt="Demo" data-canonical-src="https://codesandbox.io/api/v1/sandboxes/2cemck/screenshot.png?v2" style="max-width: 100%;">&lt;/a>&lt;/p>
+&lt;h2 id="参考链接">参考链接
+&lt;/h2>&lt;p>&lt;a href="https://codesandbox.io/s/2cemck" rel="nofollow">&lt;img width="20%" src="https://camo.githubusercontent.com/911cd7576d9b11ce2cd235f4513198e18fd29b4653545092ff3ebb8017cfdb4a/68747470733a2f2f636f646573616e64626f782e696f2f6170692f76312f73616e64626f7865732f3263656d636b2f73637265656e73686f742e706e673f7632" alt="Demo" data-canonical-src="https://codesandbox.io/api/v1/sandboxes/2cemck/screenshot.png?v2" style="max-width: 100%;">&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://sbcode.net/threejs/webcam/" target="_blank" rel="noopener"
 >webcam&lt;/a>&lt;/p>
 &lt;div class="video-wrapper">
@@ -158,8 +158,8 @@ title="YouTube Video"
 >
 &lt;/iframe>
 &lt;/div>
-&lt;h2 id="byebye">Bye~Bye&lt;/h2>
-&lt;figure>
+&lt;h2 id="byebye">Bye~Bye
+&lt;/h2>&lt;figure>
 &lt;img loading="lazy" src="images/2.jpg" width="400"/> &lt;figcaption>
 &lt;p>
 &lt;a href="https://twitter.com/Kerno_kr/status/1697538936015618120">和纱太好看了&lt;br>@Kerno_kr&lt;/a>&lt;/p>

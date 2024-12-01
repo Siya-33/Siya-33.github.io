@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SD on Shirakii</title><link>/tags/sd/</link><description>Recent content in SD on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><lastBuildDate>Wed, 28 Feb 2024 19:54:52 +0800</lastBuildDate><atom:link href="/tags/sd/index.xml" rel="self" type="application/rss+xml"/><item><title>如何在Substance Designer中设置Tessellation Factor的初始值</title><link>/post/sd-tessellation/</link><pubDate>Wed, 28 Feb 2024 19:54:52 +0800</pubDate><guid>/post/sd-tessellation/</guid><description>&lt;img src="/post/sd-tessellation/cover.webp" alt="Featured image of post 如何在Substance Designer中设置Tessellation Factor的初始值" />&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SD on Shirakii</title><link>/tags/sd/</link><description>Recent content in SD on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><lastBuildDate>Sun, 03 Mar 2024 15:22:08 +0800</lastBuildDate><atom:link href="/tags/sd/index.xml" rel="self" type="application/rss+xml"/><item><title>如何在Substance Designer中设置Tessellation Factor的初始值</title><link>/post/sd-tessellation/</link><pubDate>Wed, 28 Feb 2024 19:54:52 +0800</pubDate><guid>/post/sd-tessellation/</guid><description>&lt;img src="/post/sd-tessellation/cover.webp" alt="Featured image of post 如何在Substance Designer中设置Tessellation Factor的初始值" />&lt;blockquote>
 &lt;p>我最初找到的官方答复是这个&lt;a class="link" href="https://community.adobe.com/t5/substance-3d-designer-discussions/tessellation-setting-for-project/td-p/12140575" target="_blank" rel="noopener"
 >Tessellation Setting for Project&lt;/a>，但是这个问题实在太影响使用体验了。&lt;/br> 比如你每次打开一个做到一半的项目，细分设置总会重置，都要多点那么几下回到以前的状态。其实我之前解决过一次，但忘记记录了，这次在家里的电脑上正好复刻一下。&lt;/p>
 &lt;/blockquote>
@@ -56,6 +56,6 @@ alt="Alt text"
 >
 &lt;/details>
 &lt;p>其实还是有痛点的，比如你调整好的height level再重新打开还是还原为默认值，不过做完之后影响不大，就是Adobe咋这么懒，这个材质的设置值就不能保存在项目文件中吗🤔&lt;/p>
-&lt;h2 id="致谢">致谢&lt;/h2>
-&lt;p>Cover: &lt;a class="link" href="https://twitter.com/MEINOSS/status/1762061242599174281" target="_blank" rel="noopener"
+&lt;h2 id="致谢">致谢
+&lt;/h2>&lt;p>Cover: &lt;a class="link" href="https://twitter.com/MEINOSS/status/1762061242599174281" target="_blank" rel="noopener"
 >MEInoss&lt;/a>&lt;/p></description></item></channel></rss>

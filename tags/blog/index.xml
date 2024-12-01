@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on Shirakii</title><link>/tags/blog/</link><description>Recent content in Blog on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><lastBuildDate>Tue, 05 Mar 2024 01:44:58 +0800</lastBuildDate><atom:link href="/tags/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>将萌萌计数器部署到 Cloudflare Workers</title><link>/post/moe-counter-cf/</link><pubDate>Tue, 05 Mar 2024 01:44:58 +0800</pubDate><guid>/post/moe-counter-cf/</guid><description>&lt;img src="/post/moe-counter-cf/cover.webp" alt="Featured image of post 将萌萌计数器部署到 Cloudflare Workers" />&lt;p>&lt;strong>本篇仅为&lt;a class="link" href="https://champhoon.xyz/note/moe-counter-cf/" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on Shirakii</title><link>/tags/blog/</link><description>Recent content in Blog on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><lastBuildDate>Tue, 05 Mar 2024 03:58:00 +0800</lastBuildDate><atom:link href="/tags/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>将萌萌计数器部署到 Cloudflare Workers</title><link>/post/moe-counter-cf/</link><pubDate>Tue, 05 Mar 2024 01:44:58 +0800</pubDate><guid>/post/moe-counter-cf/</guid><description>&lt;img src="/post/moe-counter-cf/cover.webp" alt="Featured image of post 将萌萌计数器部署到 Cloudflare Workers" />&lt;p>&lt;strong>本篇仅为&lt;a class="link" href="https://champhoon.xyz/note/moe-counter-cf/" target="_blank" rel="noopener"
 >champhoon&lt;/a>大佬文章在实际部署过程中的补充&lt;/strong>&lt;/p>
 &lt;p>在安装&lt;code>Wrangler-CLI&lt;/code>过程中命令行提示v1版本已经不再维护，目前已经更新至v3，npm项目的地址为&lt;a class="link" href="https://www.npmjs.com/package/wrangler" target="_blank" rel="noopener"
 >wrangler&lt;/a>&lt;/p>
@@ -25,8 +25,8 @@
 >champhoon&lt;/a>和&lt;a class="link" href="https://blog.dsrkafuu.net/" target="_blank" rel="noopener"
 >dsrkafuu&lt;/a>，以及原作者&lt;a class="link" href="https://github.com/journey-ad" target="_blank" rel="noopener"
 >journey-ad&lt;/a>&lt;/p>
-&lt;h1 id="后记">后记&lt;/h1>
-&lt;div class="video-wrapper">
+&lt;h1 id="后记">后记
+&lt;/h1>&lt;div class="video-wrapper">
 &lt;video
 loop
 muted
@@ -42,8 +42,8 @@ Your browser doesn't support HTML5 video. Here is a
 &lt;p>本来想把这个当封面的，结果webp效果好点要7M，考虑到网速还是算了。这个UI入水那下是真的惊艳(好想玩P3R啊啊啊啊，谁送我一个)&lt;/p>
 &lt;p>这里放的是mp4，因为我发现我这个图片放大的js貌似不支持avif，而且avif和wep在加载时会闪烁&lt;br>但是avif格式只需4M，奈何&lt;a class="link" href="https://github.com/gohugoio/hugo/issues/7837" target="_blank" rel="noopener"
 >高质量的原生Go编码器&lt;/a>还没有，放不到封面上&lt;/p>
-&lt;h1 id="致谢">致谢&lt;/h1>
-&lt;p>Cover: &lt;a class="link" href="https://asia.sega.com/p3r/cn/" target="_blank" rel="noopener"
+&lt;h1 id="致谢">致谢
+&lt;/h1>&lt;p>Cover: &lt;a class="link" href="https://asia.sega.com/p3r/cn/" target="_blank" rel="noopener"
 >P3R&lt;/a>&lt;br>
 &lt;a class="link" href="https://github.com/journey-ad/Moe-Counter" target="_blank" rel="noopener"
 >Moe-Counter&lt;/a>&lt;br>

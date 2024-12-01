@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>摄影 on Shirakii</title><link>/tags/%E6%91%84%E5%BD%B1/</link><description>Recent content in 摄影 on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><lastBuildDate>Tue, 06 Feb 2024 14:38:59 +0800</lastBuildDate><atom:link href="/tags/%E6%91%84%E5%BD%B1/index.xml" rel="self" type="application/rss+xml"/><item><title>摄影小白入坑记录</title><link>/post/new-to-photography/</link><pubDate>Tue, 06 Feb 2024 14:38:59 +0800</pubDate><guid>/post/new-to-photography/</guid><description>&lt;img src="/post/new-to-photography/cover.webp" alt="Featured image of post 摄影小白入坑记录" />&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>摄影 on Shirakii</title><link>/tags/%E6%91%84%E5%BD%B1/</link><description>Recent content in 摄影 on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><lastBuildDate>Sun, 03 Mar 2024 14:31:44 +0800</lastBuildDate><atom:link href="/tags/%E6%91%84%E5%BD%B1/index.xml" rel="self" type="application/rss+xml"/><item><title>摄影小白入坑记录</title><link>/post/new-to-photography/</link><pubDate>Tue, 06 Feb 2024 14:38:59 +0800</pubDate><guid>/post/new-to-photography/</guid><description>&lt;img src="/post/new-to-photography/cover.webp" alt="Featured image of post 摄影小白入坑记录" />&lt;blockquote>
 &lt;p>用了半年的G7X3，但是一英寸的卡片机甚至比不上新换的小米14了。&lt;br>
 为了更高的可玩性和记录生活，入手了α7C II 和适马28-70&lt;br>
 这个&lt;a class="link" href="#%e8%87%b4%e8%b0%a2" >封面&lt;/a>蛮青春洋溢的就选了，画得真好😭😭&lt;/p>
@@ -9,8 +9,8 @@
 &lt;/details>
 &lt;p>这机子对于目前的我来说近乎于完美无缺，尽管没有ZV-E1的动态增强防抖，但我并不怎么拍视频，够用就行&lt;/p>
 &lt;p>&lt;strong>本篇主要记录自用的一些设置和思考，想到哪写到哪，至于参数什么的都能自己去了解。&lt;/strong>&lt;/p>
-&lt;h2 id="自定义键设置">自定义键设置&lt;/h2>
-&lt;p>首先是拍照模式下自定义键的设置，理由之后再讲，c1设置为&lt;a class="link" href="#%e5%af%b9%e7%84%a6%e6%a8%a1%e5%bc%8f" >对焦模式&lt;/a>，c2即删除键设置为触摸操作选择&lt;/p>
+&lt;h2 id="自定义键设置">自定义键设置
+&lt;/h2>&lt;p>首先是拍照模式下自定义键的设置，理由之后再讲，c1设置为&lt;a class="link" href="#%e5%af%b9%e7%84%a6%e6%a8%a1%e5%bc%8f" >对焦模式&lt;/a>，c2即删除键设置为触摸操作选择&lt;/p>
 &lt;p>AF-ON键设置为放大对焦，大轮盘设置为&lt;a class="link" href="#%e5%88%9b%e6%84%8f%e5%a4%96%e8%a7%82" >创意外观&lt;/a>，录制键为对焦区域&lt;/p>
 &lt;figure>
 &lt;img loading="lazy" src="images/1.webp" width="60%"/>
@@ -23,13 +23,13 @@
 &lt;link rel="stylesheet" href="https://cdn.staticfile.net/aplayer/1.10.1/APlayer.min.css">
 &lt;script src="https://cdn.staticfile.net/aplayer/1.10.1/APlayer.min.js">&lt;/script>
 &lt;script src="https://cdn.staticfile.net/meting/2.0.1/Meting.min.js">&lt;/script>&lt;meting-js auto="https://music.163.com/#/song?id=2028618026" theme="#2980b9"volume="0.15">&lt;/meting-js> -->
-&lt;h2 id="知识点">知识点&lt;/h2>
-&lt;h3 id="对焦模式">对焦模式&lt;/h3>
-&lt;p>一般有五种，AF代表&lt;code>Auto Focus&lt;/code>，MF代表&lt;code>Manual Focus&lt;/code>&lt;/p>
+&lt;h2 id="知识点">知识点
+&lt;/h2>&lt;h3 id="对焦模式">对焦模式
+&lt;/h3>&lt;p>一般有五种，AF代表&lt;code>Auto Focus&lt;/code>，MF代表&lt;code>Manual Focus&lt;/code>&lt;/p>
 &lt;p>建议观看&lt;a class="link" href="https://www.bilibili.com/video/BV15w411A7Mk/" target="_blank" rel="noopener"
 >视频&lt;/a>快速了解&lt;/p>
 &lt;div class="video-wrapper">
-&lt;iframe src="https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;bvid=BV15w411A7Mk&amp;autoplay=0"
+&lt;iframe src="https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;bvid=BV15w411A7Mk"
 scrolling="no"
 frameborder="no"
 framespacing="0"
@@ -47,12 +47,12 @@ allowfullscreen="true"
 &lt;/ul>
 &lt;p>最常用的就是AF-C和DMF，需要完全可控时MF。由于A7C2引入了AI识别技术，并且能够更改识别类型，因此实际使用过程中AF-C追焦的体验相当好&lt;/p>
 &lt;p>顺便简单带过一下对焦区域，一般就是广域、区、点对焦和跟踪等等。由于技术的发展现在的对焦已经相当迅速傻瓜，前几种顾名思义，主要说一下跟踪的使用场景。你可以先识别到主体，再进行构图，但是其实大部分情况下你手点下触摸屏也能达到同样的效果&lt;/p>
-&lt;h3 id="创意外观">创意外观&lt;/h3>
-&lt;p>创意外观作为A7M4后才有的功能当然是十分好用，即一个调色预设，可以去看下官方的&lt;a class="link" href="https://helpguide.sony.net/ilc/2110/v1/zh-cn/contents/TP1000651009.html" target="_blank" rel="noopener"
+&lt;h3 id="创意外观">创意外观
+&lt;/h3>&lt;p>创意外观作为A7M4后才有的功能当然是十分好用，即一个调色预设，可以去看下官方的&lt;a class="link" href="https://helpguide.sony.net/ilc/2110/v1/zh-cn/contents/TP1000651009.html" target="_blank" rel="noopener"
 >帮助指南&lt;/a>简单理解下，这个&lt;a class="link" href="https://www.bilibili.com/video/av468110520" target="_blank" rel="noopener"
 >B站视频&lt;/a>讲得也很好，浅显易懂&lt;/p>
 &lt;div class="video-wrapper">
-&lt;iframe src="https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;aid=468110520&amp;autoplay=0"
+&lt;iframe src="https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;aid=468110520"
 scrolling="no"
 frameborder="no"
 framespacing="0"
@@ -70,8 +70,8 @@ allowfullscreen="true"
 &lt;li>SH：极大提亮画面，适合拍大光比，整体画面较柔和。会发灰，特别是暗部多的场景。&lt;/li>
 &lt;/ul>
 &lt;p>其实理解一下英文就知道这些是什么作用了，Portrait、Netural、Vivid、Film、Ins、Soften Highlight&lt;/p>
-&lt;h2 id="镜头">镜头&lt;/h2>
-&lt;p>镜头方面为了适合A7C2的体积我选择的是适马28-70mmF2.8，其实也可以选择24-70，因为貌似新批次都不大会进灰了。富哥选2070G也蛮好的，不过在旅游完之后再让我选的话，我一定咬咬牙上腾龙28-200.旅游的时候有个长焦实在太爽了，广角不够直接手机拍也不错的。&lt;/p>
+&lt;h2 id="镜头">镜头
+&lt;/h2>&lt;p>镜头方面为了适合A7C2的体积我选择的是适马28-70mmF2.8，其实也可以选择24-70，因为貌似新批次都不大会进灰了。富哥选2070G也蛮好的，不过在旅游完之后再让我选的话，我一定咬咬牙上腾龙28-200.旅游的时候有个长焦实在太爽了，广角不够直接手机拍也不错的。&lt;/p>
 &lt;p>选择28-70主要有几个原因，具体评测可以看这个&lt;a class="link" href="https://www.bilibili.com/video/BV1cB4y1D7YZ/" target="_blank" rel="noopener"
 >B站视频&lt;/a>，讲得蛮好。&lt;/p>
 &lt;ul>
@@ -82,8 +82,8 @@ allowfullscreen="true"
 &lt;/ul>
 &lt;p>另外值得注意的是长焦锐化没广角端好，据有关不可靠数据测试在F4时锐度最好&lt;/p>
 &lt;p>至于广角端如果不嫌麻烦可以换极具性价比的唯卓仕AF20mm F2.8&lt;/p>
-&lt;h2 id="配件">配件&lt;/h2>
-&lt;ul>
+&lt;h2 id="配件">配件
+&lt;/h2>&lt;ul>
 &lt;li>小隼Maglink快拆腕带&lt;/li>
 &lt;li>小隼Maglink快拆肩带&lt;/li>
 &lt;li>马小路xt 26S&lt;/li>
@@ -96,12 +96,12 @@ allowfullscreen="true"
 &lt;/details>
 &lt;p>我说实话还是多给自己的背包扩展扩展&lt;a class="link" href="https://shop446272619.taobao.com/" target="_blank" rel="noopener"
 >FidLock&lt;/a>的磁扣来的实在&lt;/p>
-&lt;h2 id="视频">视频&lt;/h2>
-&lt;p>A7C2有了7轴防抖后可能手持拍拍简单的视频还真可以，我也稍微学了下log拍摄和机内lut，就是感觉新手在不同环境下调参数好累，目前感觉拍log的时候曝光补偿在+0.7比较不错。就是我实在太懒了啊啊啊啊啊啊啊啊，这么多素材还要剪和统一调色对我来说太花时间了，哎😔&lt;/p>
-&lt;h2 id="后记">后记&lt;/h2>
-&lt;p>对于只是想出门随便拍拍的真的最好上腾龙28-200，我还是看他二代啥时候出再换吧。最近两月的照片都处理好了，但是视频遥遥无期，看我啥时候有空把春节玩的写出来吧&lt;/p>
-&lt;h2 id="致谢">致谢&lt;/h2>
-&lt;p>Cover: &lt;a class="link" href="https://www.pixiv.net/artworks/99091304" target="_blank" rel="noopener"
+&lt;h2 id="视频">视频
+&lt;/h2>&lt;p>A7C2有了7轴防抖后可能手持拍拍简单的视频还真可以，我也稍微学了下log拍摄和机内lut，就是感觉新手在不同环境下调参数好累，目前感觉拍log的时候曝光补偿在+0.7比较不错。就是我实在太懒了啊啊啊啊啊啊啊啊，这么多素材还要剪和统一调色对我来说太花时间了，哎😔&lt;/p>
+&lt;h2 id="后记">后记
+&lt;/h2>&lt;p>对于只是想出门随便拍拍的真的最好上腾龙28-200，我还是看他二代啥时候出再换吧。最近两月的照片都处理好了，但是视频遥遥无期，看我啥时候有空把春节玩的写出来吧&lt;/p>
+&lt;h2 id="致谢">致谢
+&lt;/h2>&lt;p>Cover: &lt;a class="link" href="https://www.pixiv.net/artworks/99091304" target="_blank" rel="noopener"
 >Li Flag&lt;/a>&lt;/br>
 &lt;a class="link" href="https://helpguide.sony.net/ilc/2110/v1/zh-cn/contents/TP1000651009.html" target="_blank" rel="noopener"
 >Sony帮助指南&lt;/a>&lt;/br>

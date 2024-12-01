@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Retarget on Shirakii</title><link>/tags/retarget/</link><description>Recent content in Retarget on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><lastBuildDate>Fri, 06 Sep 2024 07:32:59 +0800</lastBuildDate><atom:link href="/tags/retarget/index.xml" rel="self" type="application/rss+xml"/><item><title>如何在UE5.4中快速重定向动画</title><link>/post/animation-retarget/</link><pubDate>Fri, 06 Sep 2024 07:32:59 +0800</pubDate><guid>/post/animation-retarget/</guid><description>&lt;img src="/post/animation-retarget/cover.webp" alt="Featured image of post 如何在UE5.4中快速重定向动画" />&lt;p>首先我从 &lt;a class="link" href="https://www.mixamo.com/" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Retarget on Shirakii</title><link>/tags/retarget/</link><description>Recent content in Retarget on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><lastBuildDate>Tue, 22 Oct 2024 23:32:59 +0800</lastBuildDate><atom:link href="/tags/retarget/index.xml" rel="self" type="application/rss+xml"/><item><title>如何在UE5.4中快速重定向动画</title><link>/post/animation-retarget/</link><pubDate>Fri, 06 Sep 2024 07:32:59 +0800</pubDate><guid>/post/animation-retarget/</guid><description>&lt;img src="/post/animation-retarget/cover.webp" alt="Featured image of post 如何在UE5.4中快速重定向动画" />&lt;p>首先我从 &lt;a class="link" href="https://www.mixamo.com/" target="_blank" rel="noopener"
 >Mixamo&lt;/a> 上随便下载一个动画资产，导入 UE 后右键重定向动画&lt;/p>
 &lt;p>&lt;img src="/post/animation-retarget/images/1.webp"
 width="331"
@@ -48,8 +48,8 @@ data-flex-basis="781px"
 &lt;link rel="stylesheet" href="https://cdn.staticfile.net/aplayer/1.10.1/APlayer.min.css">
 &lt;script src="https://cdn.staticfile.net/aplayer/1.10.1/APlayer.min.js">&lt;/script>
 &lt;script src="https://cdn.staticfile.net/meting/2.0.1/Meting.min.js">&lt;/script>&lt;meting-js auto="https://music.163.com/#/song?id=1383736734" theme="#2980b9" volume="0.15">&lt;/meting-js>
-&lt;h2 id="致谢">致谢&lt;/h2>
-&lt;p>Cover:&lt;a class="link" href="https://x.com/huashiJW/status/1823388905674305935/photo/1" target="_blank" rel="noopener"
+&lt;h2 id="致谢">致谢
+&lt;/h2>&lt;p>Cover:&lt;a class="link" href="https://x.com/huashiJW/status/1823388905674305935/photo/1" target="_blank" rel="noopener"
 >@huashiJW&lt;/a>&lt;br>
 &lt;a class="link" href="https://www.youtube.com/watch?v=kX7rzHFoNao" target="_blank" rel="noopener"
 >Applying Animation to a Character or Mannequin in Unreal Engine 5.1&lt;/a>&lt;/p></description></item></channel></rss>
