@@ -268,6 +268,7 @@ data-flex-basis="639px"
 &lt;p>目前还没将这个功能pull到原主题，因为和原来的评论系统有点割裂，需要单独加一个参数而不是放到provider里，暂时好像只能这样做。&lt;br>
 还有点可惜的是这个js现在不能显示该帖子的点赞数，过滤评论之类的功能都没有提及的那个项目完善，不过对我来说小巧易用就行&lt;br>
 好处也有，以前的文章先不用管了哈哈&lt;/p>
+&lt;p>。。。第一次部署的时候把bluesky简写成bsky了🥲&lt;/p>
 &lt;h2 id="致谢">致谢
 &lt;/h2>&lt;p>Cover:&lt;a class="link" href="https://x.com/makeine_anime" target="_blank" rel="noopener"
 >負けヒロインが多すぎる！&lt;/a>&lt;br>
