@@ -5,30 +5,67 @@
 >Overleaf&lt;/a>，如果是本地的latex编译器的话应该不会出什么问题，本文选择循序渐进地解释，确保理解每条命令的作用&lt;/p>
 &lt;h2 id="中文">中文
 &lt;/h2>&lt;p>首先使用&lt;code>XeLaTex&lt;/code>编译，点进左上角Menu更改&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-latex" data-lang="latex">&lt;span class="line">&lt;span class="cl">&lt;span class="k">\usepackage&lt;/span>&lt;span class="nb">{&lt;/span>xeCJK&lt;span class="nb">}&lt;/span>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-latex" data-lang="latex">&lt;span class="line">&lt;span class="cl">&lt;span class="k">\usepackage&lt;/span>&lt;span class="nb">{&lt;/span>xeCJK&lt;span class="nb">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\setCJKmainfont&lt;/span>&lt;span class="na">[AutoFakeBold={4}]&lt;/span>&lt;span class="nb">{&lt;/span>AR PL UKai CN&lt;span class="nb">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Overleaf默认支持的字体见&lt;a class="link" href="https://www.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F#Chinese" target="_blank" rel="noopener"
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Overleaf默认支持的字体见&lt;a class="link" href="https://www.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F#Chinese" target="_blank" rel="noopener"
 >手册&lt;/a>，但是可惜的是默认的字体大多都很丑很细，很多还缺失，好不容易有好看的但是标点符号不符合简体中文的习惯，譬如上面用的这个，标点符号都在中间&lt;/p>
 &lt;p>于是我们使用自己喜欢的字体，将自己下载好的ttf、otf文件拖拽至新建的fonts文件夹。&lt;/p>
 &lt;figure>
 &lt;img loading="lazy" src="images/fonts.webp" width="30%"/>
 &lt;/figure>
 &lt;p>在&lt;code>\documentclass&lt;/code>类中添加&lt;code>cjk-font=none&lt;/code>，例子如下&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-latex" data-lang="latex">&lt;span class="line">&lt;span class="cl">&lt;span class="k">\documentclass&lt;/span>&lt;span class="na">[a4paper,11pt,cjk-font=none]&lt;/span>&lt;span class="nb">{&lt;/span>article&lt;span class="nb">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>接下来设置字体路径和中文字体&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-latex" data-lang="latex">&lt;span class="line">&lt;span class="cl">&lt;span class="k">\defaultfontfeatures&lt;/span>&lt;span class="nb">{&lt;/span>Path=fonts/&lt;span class="nb">}&lt;/span>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-latex" data-lang="latex">&lt;span class="line">&lt;span class="cl">&lt;span class="k">\documentclass&lt;/span>&lt;span class="na">[a4paper,11pt,cjk-font=none]&lt;/span>&lt;span class="nb">{&lt;/span>article&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>接下来设置字体路径和中文字体&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-latex" data-lang="latex">&lt;span class="line">&lt;span class="cl">&lt;span class="k">\defaultfontfeatures&lt;/span>&lt;span class="nb">{&lt;/span>Path=fonts/&lt;span class="nb">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\setCJKmainfont&lt;/span>&lt;span class="na">[AutoFakeBold={4}]&lt;/span>&lt;span class="nb">{&lt;/span>LXGWWenKaiScreen.ttf&lt;span class="nb">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\setCJKmonofont&lt;/span>&lt;span class="nb">{&lt;/span>simfang.ttf&lt;span class="nb">}&lt;/span> &lt;span class="c">% 设置等宽字体
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>AutoFakeBold&lt;/code>是为了实现伪粗体，自由调节想要的视觉效果。&lt;/p>
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>AutoFakeBold&lt;/code>是为了实现伪粗体，自由调节想要的视觉效果。&lt;/p>
 &lt;p>但是这样有个问题，就是我们整篇文章都是一种字体，连衬线都没有。以下以我想让所有&lt;code>\section&lt;/code>显示衬线字体为例&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-latex" data-lang="latex">&lt;span class="line">&lt;span class="cl">&lt;span class="k">\setCJKfamilyfont&lt;/span>&lt;span class="nb">{&lt;/span>stkaiti&lt;span class="nb">}{&lt;/span>STKaiti-regular.ttf&lt;span class="nb">}&lt;/span>[AutoFakeBold=&lt;span class="nb">{&lt;/span>4&lt;span class="nb">}&lt;/span>]
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-latex" data-lang="latex">&lt;span class="line">&lt;span class="cl">&lt;span class="k">\setCJKfamilyfont&lt;/span>&lt;span class="nb">{&lt;/span>stkaiti&lt;span class="nb">}{&lt;/span>STKaiti-regular.ttf&lt;span class="nb">}&lt;/span>[AutoFakeBold=&lt;span class="nb">{&lt;/span>4&lt;span class="nb">}&lt;/span>]
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">% Sections formatting
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="k">\titleformat&lt;/span>&lt;span class="nb">{&lt;/span>&lt;span class="k">\section&lt;/span>&lt;span class="nb">}{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\CJKfamily&lt;/span>&lt;span class="nb">{&lt;/span>stkaiti&lt;span class="nb">}&lt;/span>&lt;span class="k">\vspace&lt;/span>&lt;span class="nb">{&lt;/span>-4pt&lt;span class="nb">}&lt;/span>&lt;span class="k">\scshape\raggedright\large&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">}{}{&lt;/span>0em&lt;span class="nb">}{}&lt;/span>[&lt;span class="k">\color&lt;/span>&lt;span class="nb">{&lt;/span>black&lt;span class="nb">}&lt;/span>&lt;span class="k">\titlerule&lt;/span> &lt;span class="k">\vspace&lt;/span>&lt;span class="nb">{&lt;/span>-7pt&lt;span class="nb">}&lt;/span>]
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>这样就和正文区分开来了，同理可以用在任何一段文字上&lt;code>\CJKfamily{stkaiti}\textbf{xxxx}&lt;/code>&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这样就和正文区分开来了，同理可以用在任何一段文字上&lt;code>\CJKfamily{stkaiti}\textbf{xxxx}&lt;/code>&lt;/p>
 &lt;h2 id="英文">英文
 &lt;/h2>&lt;p>另外如果你想精准控制英文的显示效果，可以在对应的段落前添加&lt;code>\fontfamily{lmss}\selectfont&lt;/code>&lt;/p>
 &lt;!-- &lt;figure>
@@ -51,7 +88,34 @@ data-flex-grow="416"
 data-flex-basis="998px"
 >&lt;/p>
 &lt;p>默认的有以下十几种&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-latex" data-lang="latex">&lt;span class="line">&lt;span class="cl">&lt;span class="k">\documentclass&lt;/span>&lt;span class="nb">{&lt;/span>article&lt;span class="nb">}&lt;/span>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-latex" data-lang="latex">&lt;span class="line">&lt;span class="cl">&lt;span class="k">\documentclass&lt;/span>&lt;span class="nb">{&lt;/span>article&lt;span class="nb">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\begin&lt;/span>&lt;span class="nb">{&lt;/span>document&lt;span class="nb">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\begin&lt;/span>&lt;span class="nb">{&lt;/span>enumerate&lt;span class="nb">}&lt;/span>&lt;span class="k">\fontencoding&lt;/span>&lt;span class="nb">{&lt;/span>T1&lt;span class="nb">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\fontfamily&lt;/span>&lt;span class="nb">{&lt;/span>pag&lt;span class="nb">}&lt;/span>&lt;span class="k">\selectfont&lt;/span> &lt;span class="k">\item&lt;/span> Avant Garde
@@ -74,7 +138,9 @@ data-flex-basis="998px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\fontfamily&lt;/span>&lt;span class="nb">{&lt;/span>pzc&lt;span class="nb">}&lt;/span>&lt;span class="k">\selectfont&lt;/span> &lt;span class="k">\item&lt;/span> Zapf Chancery
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\end&lt;/span>&lt;span class="nb">{&lt;/span>enumerate&lt;span class="nb">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\end&lt;/span>&lt;span class="nb">{&lt;/span>document&lt;span class="nb">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p style="text-align:center;font-size:2.4rem; ">效果如下&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p style="text-align:center;font-size:2.4rem; ">效果如下&lt;/p>
 &lt;figure>
 &lt;img loading="lazy" src="images/1.png" width="40%"/>
 &lt;/figure>

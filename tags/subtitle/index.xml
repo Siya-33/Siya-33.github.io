@@ -4,8 +4,15 @@
 &lt;p>首先确保电脑安装了&lt;a class="link" href="https://github.com/BtbN/FFmpeg-Builds" target="_blank" rel="noopener"
 >ffmpeg&lt;/a>，这总应该有的吧&lt;/p>
 &lt;p>我们需要抽取视频的音频，由于接下来的工具只支持mp3格式，所以没用copy，速度相对慢些&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">ffmpeg -i input.mp4 -vn -acodec libmp3lame output.mp3
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>修改音频文件名和视频一致，看着舒服点&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">ffmpeg -i input.mp4 -vn -acodec libmp3lame output.mp3
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>修改音频文件名和视频一致，看着舒服点&lt;/p>
 &lt;p>接下来安装并打开&lt;a class="link" href="https://github.com/chidiwilliams/buzz" target="_blank" rel="noopener"
 >Buzz&lt;/a>&lt;/p>
 &lt;figure>

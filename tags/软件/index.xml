@@ -18,7 +18,8 @@
 &lt;li>文件夹集成搜索&lt;/li>
 &lt;/ul>
 &lt;details>
-&lt;summary>额外功能&lt;/summary>
+&lt;summary class="toggle-button">额外功能&lt;/summary>
+&lt;p>&lt;/p>
 &lt;figure>
 &lt;img loading="lazy" src="images/listary.gif" width="80%"/>
 &lt;/figure>
