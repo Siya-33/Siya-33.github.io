@@ -117,7 +117,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!-- 在文章内容和页脚之间插入评论系统 --&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ with .Params.bsky_post }}
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ if . }}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ partial &amp;#34;bsky-comments.html&amp;#34; . }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ partial &amp;#34;comments/bsky-comments.html&amp;#34; . }}
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ end }}
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ end }}
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
@@ -163,7 +163,7 @@
 &lt;/div>
 &lt;/div>
 &lt;/details>
-&lt;p>在&lt;code>layouts\partial&lt;/code>处创建文件 &lt;code>bsky-comments.html&lt;/code>&lt;/p>
+&lt;p>在&lt;code>layouts\partial\comments&lt;/code>处创建文件 &lt;code>bsky-comments.html&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
