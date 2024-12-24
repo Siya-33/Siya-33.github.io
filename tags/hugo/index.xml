@@ -224,49 +224,45 @@ data-flex-basis="639px"
 &lt;/span>&lt;span class="lnt">28
 &lt;/span>&lt;span class="lnt">29
 &lt;/span>&lt;span class="lnt">30
-&lt;/span>&lt;span class="lnt">31
-&lt;/span>&lt;span class="lnt">32
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;module&amp;#34;&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://esm.sh/gh/loueed/bsky@v1.0.0/comments&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- &amp;lt;script type=&amp;#34;module&amp;#34; src=&amp;#34;https://cdn.jsdelivr.net/gh/Siya-33/static@1.2.6/js/bsky-comments.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; --&amp;gt;&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- &amp;lt;script type=&amp;#34;module&amp;#34; src=&amp;#34;https://esm.sh/gh/loueed/bsky@v1.0.0/comments&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;module&amp;#34;&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://cdn.jsdelivr.net/gh/Siya-33/static@1.2.7/js/bsky-comments.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">bsky-comments&lt;/span> &lt;span class="na">post&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ . }}&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">bsky-comments&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">style&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">bsky-comments&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">card&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">background&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--text-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">card&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="kc">text&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="kc">color&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">main&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--link-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">code&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="kc">text&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="kc">color&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--link-hover-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#be1df8&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--comment-meta-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#5E9595&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--error-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">red&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--reply-border-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">body&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="kc">text&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="kc">color&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">--&lt;/span>&lt;span class="n">button-background-color&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">card&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">background&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--button-hover-background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">card&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">background&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--reply-border-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">transparent&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--button-background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">code&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">background&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="kc">color&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--author-avatar-border-radius&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">style&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addEventListener&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;DOMContentLoaded&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kd">function&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">bskyComments&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">querySelector&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;bsky-comments&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">bskyComments&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">style&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">createElement&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;style&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">style&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">textContent&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="sb">`
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb"> comments {
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb"> border-radius: var(--card-border-radius);
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb"> max-width: none !important;
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb"> }
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb"> `&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">bskyComments&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">shadowRoot&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">appendChild&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">style&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">});&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- custom style --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- &amp;lt;script&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> document.addEventListener(&amp;#39;DOMContentLoaded&amp;#39;, function() {
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> const bskyComments = document.querySelector(&amp;#39;bsky-comments&amp;#39;);
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> if (bskyComments) {
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> const style = document.createElement(&amp;#39;style&amp;#39;);
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> style.textContent = `
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> comments {
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> border-radius: var(--card-border-radius);
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> }
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> `;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> bskyComments.shadowRoot.appendChild(style);
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> }
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> });
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;/script&amp;gt; --&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>
 &lt;/details>
 &lt;/p>
 &lt;p>目前还没将这个功能pull到原主题，因为和原来的评论系统有点割裂，需要单独加一个参数而不是放到provider里，暂时好像只能这样做。&lt;br>
-还有点可惜的是这个js现在不能显示该帖子的点赞数，过滤评论之类的功能都没有提及的那个项目完善，不过对我来说小巧易用就行&lt;br>
+还有点可惜的是这个js现在不能显示该帖子的点赞数，过滤评论之类的功能都没有提及的那个项目完善，不过对我来说小巧易用就行。&lt;br>
 好处也有，以前的文章先不用管了哈哈&lt;/p>
 &lt;p>。。。第一次部署的时候把bluesky简写成bsky了🥲&lt;/p>
 &lt;h2 id="致谢">致谢
@@ -279,10 +275,7 @@ data-flex-basis="639px"
 &lt;a class="link" href="https://passivestar.xyz/posts/hugo/" target="_blank" rel="noopener"
 >@passivestar&lt;/a>&lt;br>
 &lt;a class="link" href="https://github.com/czue/bluesky-comments" target="_blank" rel="noopener"
->@Cory Zue&lt;/a>&lt;/p>
-&lt;!-- &lt;script type="module" src="https://esm.sh/gh/loueed/bsky@v1.0.0/comments">&lt;/script>
-&lt;bsky-comments post="at://did:plc:ne3g57sdd2e2zljt3ra2wmwe/app.bsky.feed.post/3ldxzuc3f722p">&lt;/bsky-comments> -->
-&lt;!-- &lt;blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:ne3g57sdd2e2zljt3ra2wmwe/app.bsky.feed.post/3ldxzuc3f722p" data-bluesky-cid="bafyreidpp73tastosz46tszxx53ymxa3m3trahdsbi46hzescwv4q6chb4">&lt;p lang="zh">这是一条测试&lt;/p>&amp;mdash; Shirakii (&lt;a href="https://bsky.app/profile/did:plc:ne3g57sdd2e2zljt3ra2wmwe?ref_src=embed">@shirakii.bsky.social&lt;/a>) &lt;a href="https://bsky.app/profile/did:plc:ne3g57sdd2e2zljt3ra2wmwe/post/3ldxzuc3f722p?ref_src=embed">2024年12月23日 21:27&lt;/a>&lt;/blockquote>&lt;script async src="https://embed.bsky.app/static/embed.js" charset="utf-8">&lt;/script> --></description></item><item><title>Hugo中使用图片的一些心得</title><link>/post/hugo-image/</link><pubDate>Sun, 20 Aug 2023 23:03:03 +0800</pubDate><guid>/post/hugo-image/</guid><description>&lt;img src="/post/hugo-image/cover.jpg" alt="Featured image of post Hugo中使用图片的一些心得" />&lt;p>研究了一会儿hugo中怎样使用图片，顺便做个记录。&lt;/p>
+>@Cory Zue&lt;/a>&lt;/p></description></item><item><title>Hugo中使用图片的一些心得</title><link>/post/hugo-image/</link><pubDate>Sun, 20 Aug 2023 23:03:03 +0800</pubDate><guid>/post/hugo-image/</guid><description>&lt;img src="/post/hugo-image/cover.jpg" alt="Featured image of post Hugo中使用图片的一些心得" />&lt;p>研究了一会儿hugo中怎样使用图片，顺便做个记录。&lt;/p>
 &lt;p>最高效正确的方法应该就是使用&lt;a class="link" href="https://gohugo.io/getting-started/configuration-markup/#markdown-render-hooks" target="_blank" rel="noopener"
 >Markdown render hooks&lt;/a>，即可通过以下的markdown形式快速地调整图片大小&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
