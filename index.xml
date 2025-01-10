@@ -1,4 +1,79 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shirakii</title><link>/</link><description>Recent content on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>在博客中集成 Bluesky 评论</title><link>/post/bluesky-comments/</link><pubDate>Mon, 23 Dec 2024 20:11:08 +0800</pubDate><guid>/post/bluesky-comments/</guid><description>&lt;img src="/post/bluesky-comments/cover.webp" alt="Featured image of post 在博客中集成 Bluesky 评论" />&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shirakii</title><link>/</link><description>Recent content on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>用脚本在Directory Opus中解放双手</title><link>/post/do-script/</link><pubDate>Sat, 11 Jan 2025 01:35:03 +0800</pubDate><guid>/post/do-script/</guid><description>&lt;img src="/post/do-script/cover.webp" alt="Featured image of post 用脚本在Directory Opus中解放双手" />&lt;p>我们在日常处理文件的过程中经常会遇到一些重复的劳动，用命令虽然快但有学习成本，而且始终没有图形界面的交互直观。今天稍微学习了下自定义脚本的步骤，记录下方便以后有人需要。当然，我估计才发挥出 &lt;a class="link" href="https://www.gpsoft.com.au/" target="_blank" rel="noopener"
+>Directory Opus&lt;/a> 百分之十的功能，更多的还是自己去挖掘吧。&lt;/p>
+&lt;p>譬如把封面压缩成webp格式,或者是扩充背景这类重复操作我就可以一键完成了&lt;/p>
+&lt;p>&lt;img src="/post/do-script/images/1.gif"
+width="912"
+height="833"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="109"
+data-flex-basis="262px"
+> &lt;img src="/post/do-script/images/2.gif"
+width="912"
+height="833"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="109"
+data-flex-basis="262px"
+>&lt;/p>
+&lt;p>现在介绍下具体操作。&lt;/p>
+&lt;p>依次点击设置-自定义工具栏和热键-用户命令-新建，我这里把类型改为了MS-DOS批处理功能&lt;/p>
+&lt;p>&lt;img src="/post/do-script/images/script.webp"
+width="764"
+height="505"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="151"
+data-flex-basis="363px"
+>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">@nofilenamequoting
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">magick &lt;span class="s2">&amp;#34;{filepath}&amp;#34;&lt;/span> -quality &lt;span class="m">80&lt;/span> &lt;span class="s2">&amp;#34;{filepath|noext}.webp&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>点击确定后，别关闭自定义窗口，把脚本拖拽到想要的区域即可。&lt;/p>
+&lt;p>之后只要选中想要的图片再点击按钮，当然想要更加有条理只要在代码上缝缝补补就可以了。&lt;/p>
+&lt;p>需要动态的参数输入也很简单，以扩充背景为例&lt;/p>
+&lt;details>
+&lt;summary class="toggle-button">Resize&lt;/summary>
+&lt;p>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">@set w={dlgstring|Enter Width (w)|1920}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">@set h={dlgstring|Enter Height (h)|1080}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">@nofilenamequoting
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ffmpeg -i &amp;#34;{filepath}&amp;#34; -vf &amp;#34;scale=w={$w}:h={$h}:force_original_aspect_ratio=decrease,pad={$w}:{$h}:(ow-iw)/2:(oh-ih)/2:black&amp;#34; &amp;#34;{filepath|noext}_resized.jpg&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+&lt;/details>
+&lt;p>另外&lt;a class="link" href="https://resource.dopus.com/" target="_blank" rel="noopener"
+>论坛&lt;/a>也有很多大神分享的脚本代码，可以去官网上找。我当时下了这个软件也是一头雾水，建议慢慢按需添加功能，适合自己的才是最好的&lt;/p>
+&lt;p>&lt;img src="/post/do-script/images/3.webp"
+width="2136"
+height="1302"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="164"
+data-flex-basis="393px"
+>&lt;/p>
+&lt;p>当然如果实在懒也可以copy我的设置，放个备份配置在这
+&lt;a class="link" href="https://wwzz.lanzouv.com/iRYw12kkizde" target="_blank" rel="noopener"
+>Shirakii - DOpus Config&lt;/a>&lt;/p>
+&lt;h2 id="致谢">致谢
+&lt;/h2>&lt;p>Cover:&lt;a class="link" href="https://x.com/gracile_jp/status/1877342548743660019" target="_blank" rel="noopener"
+>@gracile_jp&lt;/a>&lt;br>&lt;/p></description></item><item><title>在博客中集成 Bluesky 评论</title><link>/post/bluesky-comments/</link><pubDate>Mon, 23 Dec 2024 20:11:08 +0800</pubDate><guid>/post/bluesky-comments/</guid><description>&lt;img src="/post/bluesky-comments/cover.webp" alt="Featured image of post 在博客中集成 Bluesky 评论" />&lt;blockquote>
 &lt;p>有一天我看到了&lt;a class="link" href="https://passivestar.xyz/posts/hugo/" target="_blank" rel="noopener"
 >passivestar&lt;/a>的博客，发现他把 &lt;code>Bluesky&lt;/code> 的评论集成到了博客内，但是看到&lt;a class="link" href="https://github.com/czue/bluesky-comments" target="_blank" rel="noopener"
 >文末项目&lt;/a>的使用对我来说太过复杂和繁琐。&lt;br>因此我在&lt;a class="link" href="https://bsky.app/profile/did:plc:q7w52744vwysd6iobeqo5tni/post/3lbsizqjik22o" target="_blank" rel="noopener"
