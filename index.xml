@@ -72,8 +72,8 @@ data-flex-basis="393px"
 &lt;a class="link" href="https://wwzz.lanzouv.com/iRYw12kkizde" target="_blank" rel="noopener"
 >Shirakii - DOpus Config&lt;/a>&lt;/p>
 &lt;h2 id="致谢">致谢
-&lt;/h2>&lt;p>Cover:&lt;a class="link" href="https://x.com/gracile_jp/status/1877342548743660019" target="_blank" rel="noopener"
->@gracile_jp&lt;/a>&lt;br>&lt;/p></description></item><item><title>在博客中集成 Bluesky 评论</title><link>/post/bluesky-comments/</link><pubDate>Mon, 23 Dec 2024 20:11:08 +0800</pubDate><guid>/post/bluesky-comments/</guid><description>&lt;img src="/post/bluesky-comments/cover.webp" alt="Featured image of post 在博客中集成 Bluesky 评论" />&lt;blockquote>
+&lt;/h2>&lt;p>Cover:&lt;a class="link" href="https://x.com/xilmo1/status/1826921030054826285" target="_blank" rel="noopener"
+>xilmo@夕末&lt;/a>&lt;br>&lt;/p></description></item><item><title>在博客中集成 Bluesky 评论</title><link>/post/bluesky-comments/</link><pubDate>Mon, 23 Dec 2024 20:11:08 +0800</pubDate><guid>/post/bluesky-comments/</guid><description>&lt;img src="/post/bluesky-comments/cover.webp" alt="Featured image of post 在博客中集成 Bluesky 评论" />&lt;blockquote>
 &lt;p>有一天我看到了&lt;a class="link" href="https://passivestar.xyz/posts/hugo/" target="_blank" rel="noopener"
 >passivestar&lt;/a>的博客，发现他把 &lt;code>Bluesky&lt;/code> 的评论集成到了博客内，但是看到&lt;a class="link" href="https://github.com/czue/bluesky-comments" target="_blank" rel="noopener"
 >文末项目&lt;/a>的使用对我来说太过复杂和繁琐。&lt;br>因此我在&lt;a class="link" href="https://bsky.app/profile/did:plc:q7w52744vwysd6iobeqo5tni/post/3lbsizqjik22o" target="_blank" rel="noopener"
