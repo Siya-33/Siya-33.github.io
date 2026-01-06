@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Geometrynodes on Shirakii</title><link>/tags/geometrynodes/</link><description>Recent content in Geometrynodes on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><lastBuildDate>Thu, 26 Oct 2023 00:54:44 +0800</lastBuildDate><atom:link href="/tags/geometrynodes/index.xml" rel="self" type="application/rss+xml"/><item><title>几何节点入门纲要</title><link>/post/geometrynode-start/</link><pubDate>Thu, 05 Oct 2023 23:20:26 +0800</pubDate><guid>/post/geometrynode-start/</guid><description>&lt;img src="/post/geometrynode-start/cover.jpg" alt="Featured image of post 几何节点入门纲要" />&lt;h2 id="前言">前言
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Geometrynodes on Shirakii</title><link>https://www.shirakii.com/tags/geometrynodes/</link><description>Recent content in Geometrynodes on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><lastBuildDate>Thu, 26 Oct 2023 00:54:44 +0800</lastBuildDate><atom:link href="https://www.shirakii.com/tags/geometrynodes/index.xml" rel="self" type="application/rss+xml"/><item><title>几何节点入门纲要</title><link>https://www.shirakii.com/post/geometrynode-start/</link><pubDate>Thu, 05 Oct 2023 23:20:26 +0800</pubDate><guid>https://www.shirakii.com/post/geometrynode-start/</guid><description>&lt;img src="https://www.shirakii.com/post/geometrynode-start/cover.jpg" alt="Featured image of post 几何节点入门纲要" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;p>我创建这个博客的初衷，有很大一部分是方便记录分享自己实现的一些几何节点效果，因此写一下这篇文章来分享一下我之前学习过程中的一些感悟和经验，希望对你有帮助。&lt;/p>
 &lt;p>感兴趣的话可以看下我的&lt;a class="link" href="https://www.artstation.com/siya_33" target="_blank" rel="noopener"
 >Artstation&lt;/a>或者&lt;a class="link" href="https://space.bilibili.com/333322096" target="_blank" rel="noopener"
@@ -12,7 +12,7 @@
 &lt;img loading="lazy" src="images/2.gif" width="500px"/>
 &lt;/figure>
 -->
-&lt;p>&lt;img src="/post/geometrynode-start/images/1.gif"
+&lt;p>&lt;img src="https://www.shirakii.com/post/geometrynode-start/images/1.gif"
 width="600"
 height="600"
 loading="lazy"
@@ -20,7 +20,7 @@ alt="MG"
 class="gallery-image"
 data-flex-grow="100"
 data-flex-basis="240px"
-> &lt;img src="/post/geometrynode-start/images/2.gif"
+> &lt;img src="https://www.shirakii.com/post/geometrynode-start/images/2.gif"
 width="768"
 height="432"
 loading="lazy"

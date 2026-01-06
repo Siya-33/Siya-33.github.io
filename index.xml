@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shirakii</title><link>/</link><description>Recent content on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>用脚本在Directory Opus中解放双手</title><link>/post/do-script/</link><pubDate>Sat, 11 Jan 2025 01:35:03 +0800</pubDate><guid>/post/do-script/</guid><description>&lt;img src="/post/do-script/cover.webp" alt="Featured image of post 用脚本在Directory Opus中解放双手" />&lt;p>我们在日常处理文件的过程中经常会遇到一些重复的劳动，用命令虽然快但有学习成本，而且始终没有图形界面的交互直观。今天稍微学习了下自定义脚本的步骤，记录下方便以后有人需要。当然，我估计才发挥出 &lt;a class="link" href="https://www.gpsoft.com.au/" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shirakii</title><link>https://www.shirakii.com/</link><description>Recent content on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><atom:link href="https://www.shirakii.com/index.xml" rel="self" type="application/rss+xml"/><item><title>用脚本在Directory Opus中解放双手</title><link>https://www.shirakii.com/post/do-script/</link><pubDate>Sat, 11 Jan 2025 01:35:03 +0800</pubDate><guid>https://www.shirakii.com/post/do-script/</guid><description>&lt;img src="https://www.shirakii.com/post/do-script/cover.webp" alt="Featured image of post 用脚本在Directory Opus中解放双手" />&lt;p>我们在日常处理文件的过程中经常会遇到一些重复的劳动，用命令虽然快但有学习成本，而且始终没有图形界面的交互直观。今天稍微学习了下自定义脚本的步骤，记录下方便以后有人需要。当然，我估计才发挥出 &lt;a class="link" href="https://www.gpsoft.com.au/" target="_blank" rel="noopener"
 >Directory Opus&lt;/a> 百分之十的功能，更多的还是自己去挖掘吧。&lt;/p>
 &lt;p>譬如把封面压缩成webp格式,或者是扩充背景这类重复操作我就可以一键完成了&lt;/p>
-&lt;p>&lt;img src="/post/do-script/images/1.gif"
+&lt;p>&lt;img src="https://www.shirakii.com/post/do-script/images/1.gif"
 width="912"
 height="833"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="109"
 data-flex-basis="262px"
-> &lt;img src="/post/do-script/images/2.gif"
+> &lt;img src="https://www.shirakii.com/post/do-script/images/2.gif"
 width="912"
 height="833"
 loading="lazy"
@@ -18,7 +18,7 @@ data-flex-basis="262px"
 >&lt;/p>
 &lt;p>现在介绍下具体操作。&lt;/p>
 &lt;p>依次点击设置-自定义工具栏和热键-用户命令-新建，我这里把类型改为了MS-DOS批处理功能&lt;/p>
-&lt;p>&lt;img src="/post/do-script/images/script.webp"
+&lt;p>&lt;img src="https://www.shirakii.com/post/do-script/images/script.webp"
 width="764"
 height="505"
 loading="lazy"
@@ -60,7 +60,7 @@ data-flex-basis="363px"
 &lt;/details>
 &lt;p>另外&lt;a class="link" href="https://resource.dopus.com/" target="_blank" rel="noopener"
 >论坛&lt;/a>也有很多大神分享的脚本代码，可以去官网上找。我当时下了这个软件也是一头雾水，建议慢慢按需添加功能，适合自己的才是最好的&lt;/p>
-&lt;p>&lt;img src="/post/do-script/images/3.webp"
+&lt;p>&lt;img src="https://www.shirakii.com/post/do-script/images/3.webp"
 width="2136"
 height="1302"
 loading="lazy"
@@ -73,7 +73,7 @@ data-flex-basis="393px"
 >Shirakii - DOpus Config&lt;/a>&lt;/p>
 &lt;h2 id="致谢">致谢
 &lt;/h2>&lt;p>Cover:&lt;a class="link" href="https://x.com/xilmo1/status/1826921030054826285" target="_blank" rel="noopener"
->xilmo@夕末&lt;/a>&lt;br>&lt;/p></description></item><item><title>元旦快乐</title><link>/post/yuandan/</link><pubDate>Wed, 01 Jan 2025 00:02:02 +0800</pubDate><guid>/post/yuandan/</guid><description>&lt;img src="/post/yuandan/cover.webp" alt="Featured image of post 元旦快乐" />&lt;blockquote>
+>xilmo@夕末&lt;/a>&lt;br>&lt;/p></description></item><item><title>元旦快乐</title><link>https://www.shirakii.com/post/yuandan/</link><pubDate>Wed, 01 Jan 2025 00:02:02 +0800</pubDate><guid>https://www.shirakii.com/post/yuandan/</guid><description>&lt;img src="https://www.shirakii.com/post/yuandan/cover.webp" alt="Featured image of post 元旦快乐" />&lt;blockquote>
 &lt;p>其实这篇元旦当晚就该写完的，但最近沉迷 Niagara，一直拖到现在。&lt;br>&lt;strong>写这篇博客主要是想定下2025年的一些目标，希望自己能不负韶华吧&lt;/strong>&lt;br>&lt;strong>写给明天的自己&lt;/strong>&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="于自己">于自己
@@ -85,7 +85,7 @@ data-flex-basis="393px"
 &lt;p>虽然我每天都在做东西，但还是希望给自己定几个可量化的目标。像什么材质、硬表面和特效之类的平时肯定会学习，但是发布一个完整的资产包既能锻炼我自己也能满足他人的需求。&lt;/p>
 &lt;p>另外 3D 打印一直是我很想玩的一个东西，我都买了 Plasticity 这个 CAD 软件，做点实用的东西给家里用未尝不可，正好可以把书房改造一下。&lt;/p>
 &lt;p>然后就是记录下当前 Artstation 的页面，希望明年能做出更多高质量的作品，尤其是硬表面模型方面，想做各种枪械和刀&lt;/p>
-&lt;p>&lt;img src="/post/yuandan/images/1.webp"
+&lt;p>&lt;img src="https://www.shirakii.com/post/yuandan/images/1.webp"
 width="2511"
 height="1440"
 loading="lazy"
@@ -124,7 +124,7 @@ allowfullscreen="true"
 &lt;script src="https://cdn.staticfile.net/meting/2.0.1/Meting.min.js">&lt;/script>&lt;meting-js auto="https://music.163.com/#/song?id=1890530891" theme="#2980b9" volume="0.15">&lt;/meting-js>
 &lt;h2 id="致谢">致谢
 &lt;/h2>&lt;p>Cover:&lt;a class="link" href="https://x.com/aoki__hina/status/1790691969620156908" target="_blank" rel="noopener"
->@青木阳菜&lt;/a>&lt;/p></description></item><item><title>在博客中集成 Bluesky 评论</title><link>/post/bluesky-comments/</link><pubDate>Mon, 23 Dec 2024 20:11:08 +0800</pubDate><guid>/post/bluesky-comments/</guid><description>&lt;img src="/post/bluesky-comments/cover.webp" alt="Featured image of post 在博客中集成 Bluesky 评论" />&lt;blockquote>
+>@青木阳菜&lt;/a>&lt;/p></description></item><item><title>在博客中集成 Bluesky 评论</title><link>https://www.shirakii.com/post/bluesky-comments/</link><pubDate>Mon, 23 Dec 2024 20:11:08 +0800</pubDate><guid>https://www.shirakii.com/post/bluesky-comments/</guid><description>&lt;img src="https://www.shirakii.com/post/bluesky-comments/cover.webp" alt="Featured image of post 在博客中集成 Bluesky 评论" />&lt;blockquote>
 &lt;p>有一天我看到了&lt;a class="link" href="https://passivestar.xyz/posts/hugo/" target="_blank" rel="noopener"
 >passivestar&lt;/a>的博客，发现他把 &lt;code>Bluesky&lt;/code> 的评论集成到了博客内，但是看到&lt;a class="link" href="https://github.com/czue/bluesky-comments" target="_blank" rel="noopener"
 >文末项目&lt;/a>的使用对我来说太过复杂和繁琐。&lt;br>因此我在&lt;a class="link" href="https://bsky.app/profile/did:plc:q7w52744vwysd6iobeqo5tni/post/3lbsizqjik22o" target="_blank" rel="noopener"
@@ -306,7 +306,7 @@ allowfullscreen="true"
 我主要调整了些style，以及给具体评论也添加了链接跳转&lt;/p>
 &lt;p>之后在文章开头的参数里加上一行&lt;code>bsky_post: &amp;lt;data-bluesky-uri&amp;gt;&lt;/code>&lt;br>
 这个uri地址你可以从帖子的嵌入代码里找&lt;/p>
-&lt;p>&lt;img src="/post/bluesky-comments/images/1.webp"
+&lt;p>&lt;img src="https://www.shirakii.com/post/bluesky-comments/images/1.webp"
 width="639"
 height="240"
 loading="lazy"
@@ -401,9 +401,9 @@ data-flex-basis="639px"
 &lt;a class="link" href="https://passivestar.xyz/posts/hugo/" target="_blank" rel="noopener"
 >@passivestar&lt;/a>&lt;br>
 &lt;a class="link" href="https://github.com/czue/bluesky-comments" target="_blank" rel="noopener"
->@Cory Zue&lt;/a>&lt;/p></description></item><item><title>如何在UE5.4中快速重定向动画</title><link>/post/animation-retarget/</link><pubDate>Fri, 06 Sep 2024 07:32:59 +0800</pubDate><guid>/post/animation-retarget/</guid><description>&lt;img src="/post/animation-retarget/cover.webp" alt="Featured image of post 如何在UE5.4中快速重定向动画" />&lt;p>首先我从 &lt;a class="link" href="https://www.mixamo.com/" target="_blank" rel="noopener"
+>@Cory Zue&lt;/a>&lt;/p></description></item><item><title>如何在UE5.4中快速重定向动画</title><link>https://www.shirakii.com/post/animation-retarget/</link><pubDate>Fri, 06 Sep 2024 07:32:59 +0800</pubDate><guid>https://www.shirakii.com/post/animation-retarget/</guid><description>&lt;img src="https://www.shirakii.com/post/animation-retarget/cover.webp" alt="Featured image of post 如何在UE5.4中快速重定向动画" />&lt;p>首先我从 &lt;a class="link" href="https://www.mixamo.com/" target="_blank" rel="noopener"
 >Mixamo&lt;/a> 上随便下载一个动画资产，导入 UE 后右键重定向动画&lt;/p>
-&lt;p>&lt;img src="/post/animation-retarget/images/1.webp"
+&lt;p>&lt;img src="https://www.shirakii.com/post/animation-retarget/images/1.webp"
 width="331"
 height="429"
 loading="lazy"
@@ -418,7 +418,7 @@ data-flex-basis="185px"
 &lt;/figure>
 &lt;p>导出动画即可&lt;/p>
 &lt;p>另外讲讲在 Sequencer 中给人物添加动画的步骤。首先可以看到我在场景中添加了官方的 Quinn，选中后直接在Sequencer中右键添加&lt;/p>
-&lt;p>&lt;img src="/post/animation-retarget/images/3.webp"
+&lt;p>&lt;img src="https://www.shirakii.com/post/animation-retarget/images/3.webp"
 width="1151"
 height="932"
 loading="lazy"
@@ -427,7 +427,7 @@ data-flex-grow="123"
 data-flex-basis="296px"
 >&lt;/p>
 &lt;p>此处有两种方式添加动画。可以看到自动添加了一个control rig，右键点击时间轴导入动画序列&lt;/p>
-&lt;p>&lt;img src="/post/animation-retarget/images/5.webp"
+&lt;p>&lt;img src="https://www.shirakii.com/post/animation-retarget/images/5.webp"
 width="679"
 height="649"
 loading="lazy"
@@ -436,7 +436,7 @@ data-flex-grow="104"
 data-flex-basis="251px"
 >&lt;/p>
 &lt;p>也可以删除绑定后在动画处添加刚刚导出的动画序列，如果只是为了省事的话&lt;/p>
-&lt;p>&lt;img src="/post/animation-retarget/images/4.webp"
+&lt;p>&lt;img src="https://www.shirakii.com/post/animation-retarget/images/4.webp"
 width="557"
 height="171"
 loading="lazy"
@@ -455,7 +455,7 @@ data-flex-basis="781px"
 &lt;/h2>&lt;p>Cover:&lt;a class="link" href="https://x.com/huashiJW/status/1823388905674305935/photo/1" target="_blank" rel="noopener"
 >@huashiJW&lt;/a>&lt;br>
 &lt;a class="link" href="https://www.youtube.com/watch?v=kX7rzHFoNao" target="_blank" rel="noopener"
->Applying Animation to a Character or Mannequin in Unreal Engine 5.1&lt;/a>&lt;/p></description></item><item><title>Zbrush渲染基本流程</title><link>/post/zbrush-render/</link><pubDate>Wed, 31 Jul 2024 21:45:00 +0800</pubDate><guid>/post/zbrush-render/</guid><description>&lt;img src="/post/zbrush-render/cover.webp" alt="Featured image of post Zbrush渲染基本流程" />&lt;blockquote>
+>Applying Animation to a Character or Mannequin in Unreal Engine 5.1&lt;/a>&lt;/p></description></item><item><title>Zbrush渲染基本流程</title><link>https://www.shirakii.com/post/zbrush-render/</link><pubDate>Wed, 31 Jul 2024 21:45:00 +0800</pubDate><guid>https://www.shirakii.com/post/zbrush-render/</guid><description>&lt;img src="https://www.shirakii.com/post/zbrush-render/cover.webp" alt="Featured image of post Zbrush渲染基本流程" />&lt;blockquote>
 &lt;p>封面有点欺诈是SP上了材质后的渲染图。姑且记录一下Zbrush渲染的过程，主要参考了&lt;a class="link" href="https://orb.gumroad.com/l/srZiJ" target="_blank" rel="noopener"
 >Orb的渲染教程&lt;/a>&lt;/p>
 &lt;/blockquote>
@@ -587,7 +587,7 @@ color: #9ca3af;
 &lt;h2 id="前期准备">前期准备
 &lt;/h2>&lt;p>Draw 选项卡下将焦距设置为85mm，视情况设置Align To Object&lt;/p>
 &lt;p>Render - Render Properties下激活AO&lt;/p>
-&lt;p>&lt;img src="/post/zbrush-render/images/AO.webp"
+&lt;p>&lt;img src="https://www.shirakii.com/post/zbrush-render/images/AO.webp"
 width="214"
 height="489"
 loading="lazy"
@@ -596,7 +596,7 @@ data-flex-grow="43"
 data-flex-basis="105px"
 >&lt;/p>
 &lt;p>调整Shadow&lt;/p>
-&lt;p>&lt;img src="/post/zbrush-render/images/Shadow.webp"
+&lt;p>&lt;img src="https://www.shirakii.com/post/zbrush-render/images/Shadow.webp"
 width="237"
 height="200"
 loading="lazy"
@@ -606,7 +606,7 @@ data-flex-basis="284px"
 >&lt;/p>
 &lt;p>调整灯光分别渲染 Keylight 和 RimLight&lt;/p>
 &lt;p>主光用 Orb Clay，补光用 Basic Material&lt;/p>
-&lt;p>&lt;img src="/post/zbrush-render/images/Key.webp"
+&lt;p>&lt;img src="https://www.shirakii.com/post/zbrush-render/images/Key.webp"
 width="2120"
 height="1252"
 loading="lazy"
@@ -614,7 +614,7 @@ alt="KeyLight"
 class="gallery-image"
 data-flex-grow="169"
 data-flex-basis="406px"
-> &lt;img src="/post/zbrush-render/images/Rim.webp"
+> &lt;img src="https://www.shirakii.com/post/zbrush-render/images/Rim.webp"
 width="2120"
 height="1252"
 loading="lazy"
@@ -630,7 +630,7 @@ data-flex-basis="406px"
 &lt;kbd>Ctrl+Shift+C&lt;/kbd>→隐藏Mask图层→&lt;kbd>Ctrl+V&lt;/kbd>，得到一张背景透明的渲染主体A&lt;/p>
 &lt;p>新建合适的背景图层并与A合并&lt;/p>
 &lt;p>将&lt;code>Depth&lt;/code>复制至新通道，以它为源对A做镜头模糊
-&lt;img src="/post/zbrush-render/images/Blur.webp"
+&lt;img src="https://www.shirakii.com/post/zbrush-render/images/Blur.webp"
 width="2538"
 height="1420"
 loading="lazy"
@@ -639,14 +639,14 @@ data-flex-grow="178"
 data-flex-basis="428px"
 >&lt;/p>
 &lt;p>放两张效果图&lt;/p>
-&lt;p>&lt;img src="/post/zbrush-render/images/rock1.webp"
+&lt;p>&lt;img src="https://www.shirakii.com/post/zbrush-render/images/rock1.webp"
 width="2120"
 height="1252"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="169"
 data-flex-basis="406px"
-> &lt;img src="/post/zbrush-render/images/rock2.webp"
+> &lt;img src="https://www.shirakii.com/post/zbrush-render/images/rock2.webp"
 width="2120"
 height="1279"
 loading="lazy"
@@ -660,7 +660,7 @@ data-flex-basis="397px"
 &lt;p>最近天气是真的热，下面这歌很有海边散步的感觉
 &lt;link rel="stylesheet" href="https://cdn.staticfile.net/aplayer/1.10.1/APlayer.min.css">
 &lt;script src="https://cdn.staticfile.net/aplayer/1.10.1/APlayer.min.js">&lt;/script>
-&lt;script src="https://cdn.staticfile.net/meting/2.0.1/Meting.min.js">&lt;/script>&lt;meting-js auto="https://music.163.com/#/song?id=2600428341" theme="#2980b9" volume="0.15">&lt;/meting-js>&lt;/p></description></item><item><title>Latex中文写作踩坑记录</title><link>/post/latex-chinese-record/</link><pubDate>Mon, 13 May 2024 05:01:04 +0800</pubDate><guid>/post/latex-chinese-record/</guid><description>&lt;img src="/post/latex-chinese-record/cover.webp" alt="Featured image of post Latex中文写作踩坑记录" />&lt;blockquote>
+&lt;script src="https://cdn.staticfile.net/meting/2.0.1/Meting.min.js">&lt;/script>&lt;meting-js auto="https://music.163.com/#/song?id=2600428341" theme="#2980b9" volume="0.15">&lt;/meting-js>&lt;/p></description></item><item><title>Latex中文写作踩坑记录</title><link>https://www.shirakii.com/post/latex-chinese-record/</link><pubDate>Mon, 13 May 2024 05:01:04 +0800</pubDate><guid>https://www.shirakii.com/post/latex-chinese-record/</guid><description>&lt;img src="https://www.shirakii.com/post/latex-chinese-record/cover.webp" alt="Featured image of post Latex中文写作踩坑记录" />&lt;blockquote>
 &lt;p>总结了一些使用中文字体的经验，踩在前辈们的肩膀上&lt;/p>
 &lt;/blockquote>
 &lt;p>使用环境为&lt;a class="link" href="https://www.overleaf.com/" target="_blank" rel="noopener"
@@ -734,14 +734,14 @@ data-flex-basis="397px"
 &lt;img loading="lazy" src="images/lmss.webp" width="20%"/>
 &lt;/figure>
 -->
-&lt;p>&lt;img src="/post/latex-chinese-record/images/lmss.webp"
+&lt;p>&lt;img src="https://www.shirakii.com/post/latex-chinese-record/images/lmss.webp"
 width="349"
 height="250"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="139"
 data-flex-basis="335px"
-> &lt;img src="/post/latex-chinese-record/images/cmr.webp"
+> &lt;img src="https://www.shirakii.com/post/latex-chinese-record/images/cmr.webp"
 width="1261"
 height="303"
 loading="lazy"
@@ -827,7 +827,7 @@ data-flex-basis="998px"
 &lt;a class="link" href="https://tex.stackexchange.com/questions/426279/fontfamily-selectfont-does-not-work-with-xelatex-engine" target="_blank" rel="noopener"
 >\fontfamily{&amp;hellip;}\selectfont does not work with XeLaTeX engine&lt;/a>&lt;br>
 &lt;a class="link" href="https://www.ituring.com.cn/article/904" target="_blank" rel="noopener"
->开源书和开源技术-PDF中蛋疼的中文字体&lt;/a>&lt;/p></description></item><item><title>教程字幕提取</title><link>/post/tutorial-subtitle-extract/</link><pubDate>Wed, 24 Apr 2024 02:38:16 +0800</pubDate><guid>/post/tutorial-subtitle-extract/</guid><description>&lt;img src="/post/tutorial-subtitle-extract/cover.webp" alt="Featured image of post 教程字幕提取" />&lt;blockquote>
+>开源书和开源技术-PDF中蛋疼的中文字体&lt;/a>&lt;/p></description></item><item><title>教程字幕提取</title><link>https://www.shirakii.com/post/tutorial-subtitle-extract/</link><pubDate>Wed, 24 Apr 2024 02:38:16 +0800</pubDate><guid>https://www.shirakii.com/post/tutorial-subtitle-extract/</guid><description>&lt;img src="https://www.shirakii.com/post/tutorial-subtitle-extract/cover.webp" alt="Featured image of post 教程字幕提取" />&lt;blockquote>
 &lt;p>由于网上有很多教程都是英文的，有时候想看着舒服点需要字幕，一般用剪映的智能识别就能搞定，但是稍微长点的视频处理就很慢也没个进度条，因此本文介绍一种简单有效的方法&lt;/p>
 &lt;/blockquote>
 &lt;p>首先确保电脑安装了&lt;a class="link" href="https://github.com/BtbN/FFmpeg-Builds" target="_blank" rel="noopener"
@@ -864,7 +864,7 @@ data-flex-basis="998px"
 &lt;a class="link" href="https://github.com/chidiwilliams/buzz" target="_blank" rel="noopener"
 >Buzz&lt;/a>&lt;br>
 &lt;a class="link" href="https://github.com/BtbN/FFmpeg-Builds" target="_blank" rel="noopener"
->ffmpeg&lt;/a>&lt;/p></description></item><item><title>PC日常使用软件分享（一）</title><link>/post/daily-software-01/</link><pubDate>Wed, 20 Mar 2024 23:24:23 +0800</pubDate><guid>/post/daily-software-01/</guid><description>&lt;img src="/post/daily-software-01/cover.webp" alt="Featured image of post PC日常使用软件分享（一）" />&lt;p>推荐软件的必要条件是开源或买断制，以下介绍一些我在电脑上必使用的软件。&lt;br>
+>ffmpeg&lt;/a>&lt;/p></description></item><item><title>PC日常使用软件分享（一）</title><link>https://www.shirakii.com/post/daily-software-01/</link><pubDate>Wed, 20 Mar 2024 23:24:23 +0800</pubDate><guid>https://www.shirakii.com/post/daily-software-01/</guid><description>&lt;img src="https://www.shirakii.com/post/daily-software-01/cover.webp" alt="Featured image of post PC日常使用软件分享（一）" />&lt;p>推荐软件的必要条件是开源或买断制，以下介绍一些我在电脑上必使用的软件。&lt;br>
 侧重点主要是些没学习成本的软件，力求小白也能用&lt;br>
 &lt;strong>点击标题跳转软件地址，右侧目录暂时无法使用&lt;/strong>&lt;/p>
 &lt;h2 id="everythinghttpswwwvoidtoolscomzh-cn">&lt;a class="link" href="https://www.voidtools.com/zh-cn/" target="_blank" rel="noopener"
@@ -963,7 +963,7 @@ Honeycam刚好小巧强大，可控性强，能制作高质量的gif/webp动画&
 &lt;/figure>
 &lt;h2 id="致谢">致谢
 &lt;/h2>&lt;p>&lt;strong>cover:&lt;/strong> &lt;a class="link" href="https://www.artstation.com/sukeart" target="_blank" rel="noopener"
->苏可&lt;/a>&lt;/p></description></item><item><title>解决Creative Cloud文件同步禁用</title><link>/post/creative-cloud-file-sync-disabled/</link><pubDate>Sat, 09 Mar 2024 05:47:19 +0800</pubDate><guid>/post/creative-cloud-file-sync-disabled/</guid><description>&lt;img src="/post/creative-cloud-file-sync-disabled/cover.webp" alt="Featured image of post 解决Creative Cloud文件同步禁用" />&lt;blockquote>
+>苏可&lt;/a>&lt;/p></description></item><item><title>解决Creative Cloud文件同步禁用</title><link>https://www.shirakii.com/post/creative-cloud-file-sync-disabled/</link><pubDate>Sat, 09 Mar 2024 05:47:19 +0800</pubDate><guid>https://www.shirakii.com/post/creative-cloud-file-sync-disabled/</guid><description>&lt;img src="https://www.shirakii.com/post/creative-cloud-file-sync-disabled/cover.webp" alt="Featured image of post 解决Creative Cloud文件同步禁用" />&lt;blockquote>
 &lt;p>记录一下折腾的过程。也纪念一下&lt;a class="link" href="https://twitter.com/DB_official_jp/status/1765935480234016917" target="_blank" rel="noopener"
 >鸟山明老师&lt;/a>，犹记得小时候我哥带我看龙珠的快乐时光，虽然只记得小悟空第一次在月光下变身那集，还有龟仙人一些搞笑桥段。据说是死于急性硬脑膜外出血。&lt;br>妇女节这天也发生了很惊悚的事情，我爸昨天刚好骑电瓶被车撞到了，头着地缝了好几针，还好CT没事，太吓人了。&lt;br>世事无常啊，找个挣钱又有时间陪家人的工作，希望大家都身体健康、快乐地过完一辈子&lt;/p>
 &lt;/blockquote>
@@ -997,7 +997,7 @@ Honeycam刚好小巧强大，可控性强，能制作高质量的gif/webp动画&
 &lt;/h2>&lt;p>如果只是有些文件未能同步，只需要暂时关闭一下代理软件即可&lt;/p>
 &lt;h2 id="致谢">致谢
 &lt;/h2>&lt;p>cover:&lt;a class="link" href="https://twitter.com/Anonamos_701/status/1765954663000818152/photo/1" target="_blank" rel="noopener"
->@Anonamos_701&lt;/a>&lt;/p></description></item><item><title>将萌萌计数器部署到 Cloudflare Workers</title><link>/post/moe-counter-cf/</link><pubDate>Tue, 05 Mar 2024 01:44:58 +0800</pubDate><guid>/post/moe-counter-cf/</guid><description>&lt;img src="/post/moe-counter-cf/cover.webp" alt="Featured image of post 将萌萌计数器部署到 Cloudflare Workers" />&lt;p>&lt;strong>本篇仅为&lt;a class="link" href="https://champhoon.xyz/note/moe-counter-cf/" target="_blank" rel="noopener"
+>@Anonamos_701&lt;/a>&lt;/p></description></item><item><title>将萌萌计数器部署到 Cloudflare Workers</title><link>https://www.shirakii.com/post/moe-counter-cf/</link><pubDate>Tue, 05 Mar 2024 01:44:58 +0800</pubDate><guid>https://www.shirakii.com/post/moe-counter-cf/</guid><description>&lt;img src="https://www.shirakii.com/post/moe-counter-cf/cover.webp" alt="Featured image of post 将萌萌计数器部署到 Cloudflare Workers" />&lt;p>&lt;strong>本篇仅为&lt;a class="link" href="https://champhoon.xyz/note/moe-counter-cf/" target="_blank" rel="noopener"
 >champhoon&lt;/a>大佬文章在实际部署过程中的补充&lt;/strong>&lt;/p>
 &lt;p>在安装&lt;code>Wrangler-CLI&lt;/code>过程中命令行提示v1版本已经不再维护，目前已经更新至v3，npm项目的地址为&lt;a class="link" href="https://www.npmjs.com/package/wrangler" target="_blank" rel="noopener"
 >wrangler&lt;/a>&lt;/p>
@@ -1071,7 +1071,7 @@ Your browser doesn't support HTML5 video. Here is a
 &lt;a class="link" href="https://github.com/dsrkafuu/moe-counter-cf" target="_blank" rel="noopener"
 >moe-counter-cf&lt;/a>&lt;br>
 &lt;a class="link" href="https://champhoon.xyz/note/moe-counter-cf/" target="_blank" rel="noopener"
->将萌萌计数器部署到 Cloudflare Workers&lt;/a>&lt;/p></description></item><item><title>如何在Substance Designer中设置Tessellation Factor的初始值</title><link>/post/sd-tessellation/</link><pubDate>Wed, 28 Feb 2024 19:54:52 +0800</pubDate><guid>/post/sd-tessellation/</guid><description>&lt;img src="/post/sd-tessellation/cover.webp" alt="Featured image of post 如何在Substance Designer中设置Tessellation Factor的初始值" />&lt;blockquote>
+>将萌萌计数器部署到 Cloudflare Workers&lt;/a>&lt;/p></description></item><item><title>如何在Substance Designer中设置Tessellation Factor的初始值</title><link>https://www.shirakii.com/post/sd-tessellation/</link><pubDate>Wed, 28 Feb 2024 19:54:52 +0800</pubDate><guid>https://www.shirakii.com/post/sd-tessellation/</guid><description>&lt;img src="https://www.shirakii.com/post/sd-tessellation/cover.webp" alt="Featured image of post 如何在Substance Designer中设置Tessellation Factor的初始值" />&lt;blockquote>
 &lt;p>我最初找到的官方答复是这个&lt;a class="link" href="https://community.adobe.com/t5/substance-3d-designer-discussions/tessellation-setting-for-project/td-p/12140575" target="_blank" rel="noopener"
 >Tessellation Setting for Project&lt;/a>，但是这个问题实在太影响使用体验了。&lt;/br> 比如你每次打开一个做到一半的项目，细分设置总会重置，都要多点那么几下回到以前的状态。其实我之前解决过一次，但忘记记录了，这次在家里的电脑上正好复刻一下。&lt;/p>
 &lt;/blockquote>
@@ -1114,7 +1114,7 @@ text-shadow:0px 0px 0px var(--card-text-color-main)
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>打开后看前几行基本就知道个大概了，&lt;code>Height Level&lt;/code>、&lt;code>Tessellation Factor&lt;/code>什么的基本都可以设置，所以我就改成&lt;code>default=&amp;quot;16&amp;quot;&lt;/code>这样了。效果如下图所示&lt;/p>
-&lt;p>&lt;img src="/post/sd-tessellation/images/1.webp"
+&lt;p>&lt;img src="https://www.shirakii.com/post/sd-tessellation/images/1.webp"
 width="698"
 height="626"
 loading="lazy"
@@ -1122,7 +1122,7 @@ alt="Factor=1"
 class="gallery-image"
 data-flex-grow="111"
 data-flex-basis="267px"
-> &lt;img src="/post/sd-tessellation/images/2.webp"
+> &lt;img src="https://www.shirakii.com/post/sd-tessellation/images/2.webp"
 width="698"
 height="626"
 loading="lazy"
@@ -1134,11 +1134,11 @@ data-flex-basis="267px"
 &lt;details>
 &lt;summary class="toggle-button">如果是放在C盘的可能会遇到这种无法保存的情况，只需右键文件夹-属性-安全-用户-编辑，给相应权限即可&lt;/summary>
 &lt;p>&lt;/p>
-&lt;img src="/post/sd-tessellation/images/error.webp#center"
+&lt;img src="https://www.shirakii.com/post/sd-tessellation/images/error.webp#center"
 loading="lazy"
 alt="Alt text"
 >
-&lt;img src="/post/sd-tessellation/images/solution.webp"
+&lt;img src="https://www.shirakii.com/post/sd-tessellation/images/solution.webp"
 loading="lazy"
 alt="Alt text"
 >
@@ -1146,7 +1146,7 @@ alt="Alt text"
 &lt;p>其实还是有痛点的，比如你调整好的height level再重新打开还是还原为默认值，不过做完之后影响不大，就是Adobe咋这么懒，这个材质的设置值就不能保存在项目文件中吗🤔&lt;/p>
 &lt;h2 id="致谢">致谢
 &lt;/h2>&lt;p>Cover: &lt;a class="link" href="https://twitter.com/MEINOSS/status/1762061242599174281" target="_blank" rel="noopener"
->MEInoss&lt;/a>&lt;/p></description></item><item><title>摄影小白入坑记录</title><link>/post/new-to-photography/</link><pubDate>Tue, 06 Feb 2024 14:38:59 +0800</pubDate><guid>/post/new-to-photography/</guid><description>&lt;img src="/post/new-to-photography/cover.webp" alt="Featured image of post 摄影小白入坑记录" />&lt;blockquote>
+>MEInoss&lt;/a>&lt;/p></description></item><item><title>摄影小白入坑记录</title><link>https://www.shirakii.com/post/new-to-photography/</link><pubDate>Tue, 06 Feb 2024 14:38:59 +0800</pubDate><guid>https://www.shirakii.com/post/new-to-photography/</guid><description>&lt;img src="https://www.shirakii.com/post/new-to-photography/cover.webp" alt="Featured image of post 摄影小白入坑记录" />&lt;blockquote>
 &lt;p>用了半年的G7X3，但是一英寸的卡片机甚至比不上新换的小米14了。&lt;br>
 为了更高的可玩性和记录生活，入手了α7C II 和适马28-70&lt;br>
 这个&lt;a class="link" href="#%e8%87%b4%e8%b0%a2" >封面&lt;/a>蛮青春洋溢的就选了，画得真好😭😭&lt;/p>
@@ -1256,7 +1256,7 @@ allowfullscreen="true"
 &lt;a class="link" href="https://helpguide.sony.net/ilc/2110/v1/zh-cn/contents/TP1000651009.html" target="_blank" rel="noopener"
 >Sony帮助指南&lt;/a>&lt;/br>
 &lt;a class="link" href="https://docs.qq.com/sheet/DYmdCUU1mdEt2Y1NX?tab=BB08J2" target="_blank" rel="noopener"
->Sony Alpha Blog镜头锐度测试&lt;/a>&lt;/p></description></item><item><title>SafeHouse Breakdown</title><link>/post/safehouse-breakdown/</link><pubDate>Sun, 07 Jan 2024 20:26:37 +0800</pubDate><guid>/post/safehouse-breakdown/</guid><description>&lt;img src="/post/safehouse-breakdown/cover.jpg" alt="Featured image of post SafeHouse Breakdown" />&lt;blockquote>
+>Sony Alpha Blog镜头锐度测试&lt;/a>&lt;/p></description></item><item><title>SafeHouse Breakdown</title><link>https://www.shirakii.com/post/safehouse-breakdown/</link><pubDate>Sun, 07 Jan 2024 20:26:37 +0800</pubDate><guid>https://www.shirakii.com/post/safehouse-breakdown/</guid><description>&lt;img src="https://www.shirakii.com/post/safehouse-breakdown/cover.jpg" alt="Featured image of post SafeHouse Breakdown" />&lt;blockquote>
 &lt;p>做些工程的Breakdown顺便积累些知识吧，主要记录下比较有学习价值的内容，刚开始还是先从基础点的着手&lt;/p>
 &lt;/blockquote>
 &lt;a1 href="https://www.artstation.com/artwork/g2an6Z" target="_blank">
@@ -1469,7 +1469,7 @@ Your browser doesn't support HTML5 video. Here is a
 &lt;img loading="lazy" src="images/M_plastic.webp" width="60%"/>
 &lt;/figure>
 &lt;h2 id="总结">总结
-&lt;/h2>&lt;p>其实作者最花时间的还是场景中各种小资产的制作，主材质也是相对简单的。从一个基础的构图开始，最后添加上了各种安全屋的小物件丰富场景&lt;/p></description></item><item><title>Cloudflare Dns 批量删除</title><link>/post/cloudflare-dns-delete/</link><pubDate>Thu, 19 Oct 2023 16:35:44 +0800</pubDate><guid>/post/cloudflare-dns-delete/</guid><description>&lt;img src="/post/cloudflare-dns-delete/cover.jpg" alt="Featured image of post Cloudflare Dns 批量删除" />&lt;blockquote>
+&lt;/h2>&lt;p>其实作者最花时间的还是场景中各种小资产的制作，主材质也是相对简单的。从一个基础的构图开始，最后添加上了各种安全屋的小物件丰富场景&lt;/p></description></item><item><title>Cloudflare Dns 批量删除</title><link>https://www.shirakii.com/post/cloudflare-dns-delete/</link><pubDate>Thu, 19 Oct 2023 16:35:44 +0800</pubDate><guid>https://www.shirakii.com/post/cloudflare-dns-delete/</guid><description>&lt;img src="https://www.shirakii.com/post/cloudflare-dns-delete/cover.jpg" alt="Featured image of post Cloudflare Dns 批量删除" />&lt;blockquote>
 &lt;p>由于之前博客为了输入方便一直放在根域名，现在需要将字体部署到子域名下，为了干净整洁些需要将之前的DNS删除。&lt;br>并且不再用vercel部署，采用cloudflare&lt;/p>
 &lt;/blockquote>
 &lt;p>进入&lt;a class="link" href="https://dash.cloudflare.com/profile/api-tokens" target="_blank" rel="noopener"
@@ -1540,7 +1540,7 @@ Your browser doesn't support HTML5 video. Here is a
 &lt;h2 id="参考">参考
 &lt;/h2>&lt;p>cover:&lt;a class="link" href="https://www.pixiv.net/artworks/92463499" target="_blank" rel="noopener"
 >@mocha&lt;/a>&lt;br>&lt;a class="link" href="https://community.cloudflare.com/t/bulk-delete-dns-records/421686" target="_blank" rel="noopener"
->Bulk delete DNS records&lt;/a>&lt;/p></description></item><item><title>几何节点入门纲要</title><link>/post/geometrynode-start/</link><pubDate>Thu, 05 Oct 2023 23:20:26 +0800</pubDate><guid>/post/geometrynode-start/</guid><description>&lt;img src="/post/geometrynode-start/cover.jpg" alt="Featured image of post 几何节点入门纲要" />&lt;h2 id="前言">前言
+>Bulk delete DNS records&lt;/a>&lt;/p></description></item><item><title>几何节点入门纲要</title><link>https://www.shirakii.com/post/geometrynode-start/</link><pubDate>Thu, 05 Oct 2023 23:20:26 +0800</pubDate><guid>https://www.shirakii.com/post/geometrynode-start/</guid><description>&lt;img src="https://www.shirakii.com/post/geometrynode-start/cover.jpg" alt="Featured image of post 几何节点入门纲要" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;p>我创建这个博客的初衷，有很大一部分是方便记录分享自己实现的一些几何节点效果，因此写一下这篇文章来分享一下我之前学习过程中的一些感悟和经验，希望对你有帮助。&lt;/p>
 &lt;p>感兴趣的话可以看下我的&lt;a class="link" href="https://www.artstation.com/siya_33" target="_blank" rel="noopener"
 >Artstation&lt;/a>或者&lt;a class="link" href="https://space.bilibili.com/333322096" target="_blank" rel="noopener"
@@ -1554,7 +1554,7 @@ Your browser doesn't support HTML5 video. Here is a
 &lt;img loading="lazy" src="images/2.gif" width="500px"/>
 &lt;/figure>
 -->
-&lt;p>&lt;img src="/post/geometrynode-start/images/1.gif"
+&lt;p>&lt;img src="https://www.shirakii.com/post/geometrynode-start/images/1.gif"
 width="600"
 height="600"
 loading="lazy"
@@ -1562,7 +1562,7 @@ alt="MG"
 class="gallery-image"
 data-flex-grow="100"
 data-flex-basis="240px"
-> &lt;img src="/post/geometrynode-start/images/2.gif"
+> &lt;img src="https://www.shirakii.com/post/geometrynode-start/images/2.gif"
 width="768"
 height="432"
 loading="lazy"
@@ -1645,7 +1645,7 @@ data-flex-basis="426px"
 &lt;/figure>
 &lt;h2 id="参考与鸣谢">参考与鸣谢
 &lt;/h2>&lt;p>&lt;strong>cover:&lt;/strong> &lt;a class="link" href="https://twitter.com/Dino_illus/status/1702099616081052049" target="_blank" rel="noopener"
->@Dino&lt;/a>&lt;/p></description></item><item><title>R3F蒙版&amp;绿幕推流</title><link>/post/r3f-streaming/</link><pubDate>Thu, 14 Sep 2023 17:18:38 +0800</pubDate><guid>/post/r3f-streaming/</guid><description>&lt;img src="/post/r3f-streaming/cover.jpg" alt="Featured image of post R3F蒙版&amp;绿幕推流" />&lt;h2 id="前言">前言
+>@Dino&lt;/a>&lt;/p></description></item><item><title>R3F蒙版&amp;绿幕推流</title><link>https://www.shirakii.com/post/r3f-streaming/</link><pubDate>Thu, 14 Sep 2023 17:18:38 +0800</pubDate><guid>https://www.shirakii.com/post/r3f-streaming/</guid><description>&lt;img src="https://www.shirakii.com/post/r3f-streaming/cover.jpg" alt="Featured image of post R3F蒙版&amp;绿幕推流" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;p>上个月从零开始直接上手&lt;code>react three fiber&lt;/code>，跟着同事写了一堆交互，总算弄得差不多了。不会&lt;code>React&lt;/code>，不会&lt;code>TS&lt;/code>，不会&lt;code>three&lt;/code>，真不知道自己怎么过来的。途中也了解到原子化&lt;code>css&lt;/code>，总之收获颇丰。目前是因为需要将渲染画面推流到场景中，故做点经验分享&lt;/p>
 &lt;h2 id="前期准备">前期准备
 &lt;/h2>&lt;p>首先得创建个场景然后播放视频吧，可以参考下面我做的这个案例&lt;/p>
@@ -1965,7 +1965,7 @@ title="YouTube Video"
 &lt;p>
 &lt;a href="https://twitter.com/Kerno_kr/status/1697538936015618120">和纱太好看了&lt;br>@Kerno_kr&lt;/a>&lt;/p>
 &lt;/figcaption>
-&lt;/figure></description></item><item><title>关于</title><link>/%E5%85%B3%E4%BA%8E/</link><pubDate>Sun, 27 Aug 2023 00:00:00 +0000</pubDate><guid>/%E5%85%B3%E4%BA%8E/</guid><description>&lt;img src="https://pic.imgdb.cn/item/659d902a871b83018aebaec2.webp" alt="Featured image of post 关于" />&lt;h2 id="关于我">关于我
+&lt;/figure></description></item><item><title>关于</title><link>https://www.shirakii.com/%E5%85%B3%E4%BA%8E/</link><pubDate>Sun, 27 Aug 2023 00:00:00 +0000</pubDate><guid>https://www.shirakii.com/%E5%85%B3%E4%BA%8E/</guid><description>&lt;img src="https://pic.imgdb.cn/item/659d902a871b83018aebaec2.webp" alt="Featured image of post 关于" />&lt;h2 id="关于我">关于我
 &lt;/h2>&lt;p>网名Shirakii，软件工程专业，大学AI相关的基础课程学得多一些，目前热衷CG行业，是一名Texture Artist&lt;br>
 目标是用美术更好地辅助游戏传达价值观，以及用程序化的方式节约美术迭代的成本&lt;/p>
 &lt;p>主要相关的网站:&lt;a class="link" href="https://linktr.ee/shirakii" target="_blank" rel="noopener"
@@ -1975,9 +1975,9 @@ title="YouTube Video"
 >Ko-fi&lt;/a>好点，我会在那分享一些琐碎的技巧&lt;/p>
 &lt;p>罗列下一些比较重要的技术栈，像speedtree，gaea，八猴这种比较细的就不放进去了。&lt;br>从比较熟悉、略懂、想学三种等级排序&lt;/p>
 &lt;ul>
-&lt;li>&lt;img width=32 src='/icon/blender.svg' /> &lt;img width=32 src='/icon/SD.svg' />&lt;/li>
-&lt;li>&lt;img width=32 src='/icon/ue.svg' /> &lt;img width=32 src='/icon/SP.svg' /> &lt;img width=32 src='/icon/zbrush.svg' /> &lt;img width=32 src='/icon/embergen.ico' /> &lt;img width=32 src='/icon/plasticity.ico' />&lt;/li>
-&lt;li>&lt;img width=32 src='/icon/godot.svg' /> &lt;img width=32 src='/icon/houdini.svg' />&lt;/li>
+&lt;li>&lt;img width=32 src='https://www.shirakii.com/icon/blender.svg' /> &lt;img width=32 src='https://www.shirakii.com/icon/SD.svg' />&lt;/li>
+&lt;li>&lt;img width=32 src='https://www.shirakii.com/icon/ue.svg' /> &lt;img width=32 src='https://www.shirakii.com/icon/SP.svg' /> &lt;img width=32 src='https://www.shirakii.com/icon/zbrush.svg' /> &lt;img width=32 src='https://www.shirakii.com/icon/embergen.ico' /> &lt;img width=32 src='https://www.shirakii.com/icon/plasticity.ico' />&lt;/li>
+&lt;li>&lt;img width=32 src='https://www.shirakii.com/icon/godot.svg' /> &lt;img width=32 src='https://www.shirakii.com/icon/houdini.svg' />&lt;/li>
 &lt;/ul>
 &lt;h3 id="主要技能">主要技能
 &lt;/h3>&lt;ul>
@@ -2066,7 +2066,7 @@ title="YouTube Video"
 &lt;li>设置卡片categories位置&lt;/li>
 &lt;li>live2d小人&lt;/li>
 &lt;li>鼠标指针及移动特效&lt;/li>
-&lt;/ul></description></item><item><title>Hugo中使用图片的一些心得</title><link>/post/hugo-image/</link><pubDate>Sun, 20 Aug 2023 23:03:03 +0800</pubDate><guid>/post/hugo-image/</guid><description>&lt;img src="/post/hugo-image/cover.jpg" alt="Featured image of post Hugo中使用图片的一些心得" />&lt;p>研究了一会儿hugo中怎样使用图片，顺便做个记录。&lt;/p>
+&lt;/ul></description></item><item><title>Hugo中使用图片的一些心得</title><link>https://www.shirakii.com/post/hugo-image/</link><pubDate>Sun, 20 Aug 2023 23:03:03 +0800</pubDate><guid>https://www.shirakii.com/post/hugo-image/</guid><description>&lt;img src="https://www.shirakii.com/post/hugo-image/cover.jpg" alt="Featured image of post Hugo中使用图片的一些心得" />&lt;p>研究了一会儿hugo中怎样使用图片，顺便做个记录。&lt;/p>
 &lt;p>最高效正确的方法应该就是使用&lt;a class="link" href="https://gohugo.io/getting-started/configuration-markup/#markdown-render-hooks" target="_blank" rel="noopener"
 >Markdown render hooks&lt;/a>，即可通过以下的markdown形式快速地调整图片大小&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -2208,7 +2208,7 @@ title="YouTube Video"
 &lt;p>
 &lt;a href="https://twitter.com/96yottea/status/1684885713232502786">突然想看排球了&lt;br>@96yottea&lt;/a>&lt;/p>
 &lt;/figcaption>
-&lt;/figure></description></item><item><title>年轻人的第一台主机</title><link>/post/my-first-post/</link><pubDate>Sun, 13 Aug 2023 22:19:17 +0800</pubDate><guid>/post/my-first-post/</guid><description>&lt;img src="/post/my-first-post/cover.jpg" alt="Featured image of post 年轻人的第一台主机" />&lt;p>其实很早就想搭一个技术博客了，但是一直感觉无从弄起而且耗费精力，直到我看到了&lt;a class="link" href="https://www.cyanilux.com/" target="_blank" rel="noopener"
+&lt;/figure></description></item><item><title>年轻人的第一台主机</title><link>https://www.shirakii.com/post/my-first-post/</link><pubDate>Sun, 13 Aug 2023 22:19:17 +0800</pubDate><guid>https://www.shirakii.com/post/my-first-post/</guid><description>&lt;img src="https://www.shirakii.com/post/my-first-post/cover.jpg" alt="Featured image of post 年轻人的第一台主机" />&lt;p>其实很早就想搭一个技术博客了，但是一直感觉无从弄起而且耗费精力，直到我看到了&lt;a class="link" href="https://www.cyanilux.com/" target="_blank" rel="noopener"
 >Cyanilux&lt;/a>这个网站，了解到了hugo，况且我也刚组了台主机，就将这作为纪念吧。&lt;/p>
 &lt;figure>
 &lt;img loading="lazy" src="images/1.png#center" width="40%"/>
@@ -2241,14 +2241,14 @@ title="YouTube Video"
 &lt;img loading="lazy" src="images/6.jpg" width="400"/>
 &lt;/figure>
 -->
-&lt;p>&lt;img src="/post/my-first-post/images/7.jpg"
+&lt;p>&lt;img src="https://www.shirakii.com/post/my-first-post/images/7.jpg"
 width="3648"
 height="2736"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="133"
 data-flex-basis="320px"
-> &lt;img src="/post/my-first-post/images/6.jpg"
+> &lt;img src="https://www.shirakii.com/post/my-first-post/images/6.jpg"
 width="2560"
 height="1440"
 loading="lazy"
@@ -2267,7 +2267,7 @@ data-flex-basis="426px"
 &lt;p>
 &lt;a href="https://twitter.com/Dino_illus/status/1675066447502929921">@Dino_illus&lt;/a>&lt;/p>
 &lt;/figcaption>
-&lt;/figure></description></item><item><title>归档</title><link>/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>/archives/</guid><description/></item><item><title/><link>/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/</guid><description>&lt;!-- ---
+&lt;/figure></description></item><item><title>归档</title><link>https://www.shirakii.com/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://www.shirakii.com/archives/</guid><description/></item><item><title/><link>https://www.shirakii.com/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.shirakii.com/</guid><description>&lt;!-- ---
 title: "作品"
 date: 2023-05-28
 # layout: "list"
@@ -2287,7 +2287,7 @@ weight: -50
 params:
 icon: link
 comments: false
---- --></description></item><item><title/><link>/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/</guid><description>&lt;!-- ---
+--- --></description></item><item><title/><link>https://www.shirakii.com/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.shirakii.com/</guid><description>&lt;!-- ---
 title: "画廊"
 layout: "photos"
---- --></description></item><item><title>Archives</title><link>/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/archives/</guid><description/></item><item><title>搜索</title><link>/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/search/</guid><description/></item></channel></rss>
+--- --></description></item><item><title>Archives</title><link>https://www.shirakii.com/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.shirakii.com/archives/</guid><description/></item><item><title>搜索</title><link>https://www.shirakii.com/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.shirakii.com/search/</guid><description/></item></channel></rss>
