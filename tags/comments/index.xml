@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Comments on Shirakii</title><link>https://www.shirakii.com/tags/comments/</link><description>Recent content in Comments on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><lastBuildDate>Tue, 24 Dec 2024 04:01:08 +0800</lastBuildDate><atom:link href="https://www.shirakii.com/tags/comments/index.xml" rel="self" type="application/rss+xml"/><item><title>在博客中集成 Bluesky 评论</title><link>https://www.shirakii.com/post/bluesky-comments/</link><pubDate>Mon, 23 Dec 2024 20:11:08 +0800</pubDate><guid>https://www.shirakii.com/post/bluesky-comments/</guid><description>&lt;img src="https://www.shirakii.com/post/bluesky-comments/cover.webp" alt="Featured image of post 在博客中集成 Bluesky 评论" />&lt;blockquote>
+&lt;p>有一天我看到了&lt;a class="link" href="https://passivestar.xyz/posts/hugo/" target="_blank" rel="noopener"
+>passivestar&lt;/a>的博客，发现他把 &lt;code>Bluesky&lt;/code> 的评论集成到了博客内，但是看到&lt;a class="link" href="https://github.com/czue/bluesky-comments" target="_blank" rel="noopener"
+>文末项目&lt;/a>的使用对我来说太过复杂和繁琐。&lt;br>因此我在&lt;a class="link" href="https://bsky.app/profile/did:plc:q7w52744vwysd6iobeqo5tni/post/3lbsizqjik22o" target="_blank" rel="noopener"
+>Lou&lt;/a>的启发下，想结合Hugo模板尽量方便地在网站内使用&lt;/p>
+&lt;/blockquote>
+&lt;p>接下来我以当前使用的 Stack 主题为例&lt;/p>
+&lt;p>首先我想向原先的评论系统一样在正文下方单开一个card，复制 &lt;code>single.html&lt;/code> 到 &lt;code>layouts\_default&lt;/code>，并在28至34行处插入代码&lt;/p>
+&lt;details>
+&lt;summary class="toggle-button">single.html&lt;/summary>
+&lt;p>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;span class="lnt">57
+&lt;/span>&lt;span class="lnt">58
+&lt;/span>&lt;span class="lnt">59
+&lt;/span>&lt;span class="lnt">60
+&lt;/span>&lt;span class="lnt">61
+&lt;/span>&lt;span class="lnt">62
+&lt;/span>&lt;span class="lnt">63
+&lt;/span>&lt;span class="lnt">64
+&lt;/span>&lt;span class="lnt">65
+&lt;/span>&lt;span class="lnt">66
+&lt;/span>&lt;span class="lnt">67
+&lt;/span>&lt;span class="lnt">68
+&lt;/span>&lt;span class="lnt">69
+&lt;/span>&lt;span class="lnt">70
+&lt;/span>&lt;span class="lnt">71
+&lt;/span>&lt;span class="lnt">72
+&lt;/span>&lt;span class="lnt">73
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">{{ define &amp;#34;body-class&amp;#34; }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> article-page
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{/*
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Enable the right sidebar if
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - Widget different from &amp;#39;TOC&amp;#39; is enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - TOC is enabled and not empty
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> */}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{- $HasWidgetNotTOC := false -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{- $TOCWidgetEnabled := false -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{- range .Site.Params.widgets.page -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{- if ne .type &amp;#34;toc&amp;#34; -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ $HasWidgetNotTOC = true -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{- else -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ $TOCWidgetEnabled = true -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{- end -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{- end -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{- $TOCManuallyDisabled := eq .Params.toc false -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{- $TOCEnabled := and (not $TOCManuallyDisabled) $TOCWidgetEnabled -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{- $hasTOC := ge (len .TableOfContents) 100 -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{- .Scratch.Set &amp;#34;TOCEnabled&amp;#34; (and $TOCEnabled $hasTOC) -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{- .Scratch.Set &amp;#34;hasWidget&amp;#34; (or $HasWidgetNotTOC (and $TOCEnabled $hasTOC)) -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{ end }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{ define &amp;#34;main&amp;#34; }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ partial &amp;#34;article/article.html&amp;#34; . }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!-- 在文章内容和页脚之间插入评论系统 --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ with .Params.bsky_post }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ if . }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ partial &amp;#34;comments/bsky-comments.html&amp;#34; . }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ end }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ end }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ if .Params.links }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ partial &amp;#34;article/components/links&amp;#34; . }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ end }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ partial &amp;#34;article/components/related-content&amp;#34; . }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ if not (eq .Params.comments false) }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ partial &amp;#34;comments/include&amp;#34; . }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ end }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ partialCached &amp;#34;footer/footer&amp;#34; . }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ partialCached &amp;#34;article/components/photoswipe&amp;#34; . }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{ end }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{ define &amp;#34;left-sidebar&amp;#34; }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{ if (.Scratch.Get &amp;#34;TOCEnabled&amp;#34;) }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;article-toolbar&amp;#34;&lt;/span> &lt;span class="na">style&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;position: sticky;top: 5px;z-index: 0;&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ .Site.BaseURL | relLangURL }}&amp;#34;&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;back-home&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ (resources.Get &amp;#34;icons/back.svg&amp;#34;).Content | safeHTML }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">span&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>{{ T &amp;#34;article.back&amp;#34; }}&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">span&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ else }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ partial &amp;#34;sidebar/left.html&amp;#34; . }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ end }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{ end }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{ define &amp;#34;right-sidebar&amp;#34; }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ if .Scratch.Get &amp;#34;hasWidget&amp;#34; }}{{ partial &amp;#34;sidebar/right.html&amp;#34; (dict &amp;#34;Context&amp;#34; . &amp;#34;Scope&amp;#34; &amp;#34;page&amp;#34;) }}{{ end}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!-- {{/* {{ $topImg := resources.Get (&amp;#34;img/cover.jpg&amp;#34;) }}
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> {{ $topImg := $topImg.Resize &amp;#34;40x&amp;#34; }}
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> &amp;lt;a id=&amp;#34;back-to-top&amp;#34; href=&amp;#34;#&amp;#34;&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> &amp;lt;img src=&amp;#34;{{ $topImg.RelPermalink }}&amp;#34; /&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> &amp;lt;/a&amp;gt; */}} --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{ end }}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+&lt;/details>
+&lt;p>在&lt;code>layouts\partial\comments&lt;/code>处创建文件 &lt;code>bsky-comments.html&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;module&amp;#34;&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://esm.sh/gh/loueed/bsky@v1.0.0/comments&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- &amp;lt;script type=&amp;#34;module&amp;#34; src=&amp;#34;https://cdn.jsdelivr.net/gh/Siya-33/static@1.2.6/js/bsky-comments.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">bsky-comments&lt;/span> &lt;span class="na">post&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ . }}&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">bsky-comments&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>第一行是原作者的js文件，第二行是我稍微修改之后的，你也可以下载后放到自己的仓库里去&lt;br>
+我主要调整了些style，以及给具体评论也添加了链接跳转&lt;/p>
+&lt;p>之后在文章开头的参数里加上一行&lt;code>bsky_post: &amp;lt;data-bluesky-uri&amp;gt;&lt;/code>&lt;br>
+这个uri地址你可以从帖子的嵌入代码里找&lt;/p>
+&lt;p>&lt;img src="https://www.shirakii.com/post/bluesky-comments/images/1.webp"
+width="639"
+height="240"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="266"
+data-flex-basis="639px"
+>&lt;/p>
+&lt;p>如果你只想修改js文件中的几个style参数的话，以下可以作为参考，具体html的类名建议自己F12查看
+&lt;details>
+&lt;summary class="toggle-button">bsky-comments.html&lt;/summary>
+&lt;p>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- &amp;lt;script type=&amp;#34;module&amp;#34; src=&amp;#34;https://esm.sh/gh/loueed/bsky@v1.0.0/comments&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;module&amp;#34;&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://cdn.jsdelivr.net/gh/Siya-33/static@1.2.7/js/bsky-comments.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">bsky-comments&lt;/span> &lt;span class="na">post&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ . }}&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">bsky-comments&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">style&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">bsky-comments&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">card&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">background&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--text-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">card&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="kc">text&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="kc">color&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">main&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--link-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">code&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="kc">text&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="kc">color&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--comment-meta-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#5E9595&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--error-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">red&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--reply-border-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">transparent&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--button-background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">code&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">background&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="kc">color&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--author-avatar-border-radius&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">style&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- custom style --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- &amp;lt;script&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> document.addEventListener(&amp;#39;DOMContentLoaded&amp;#39;, function() {
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> const bskyComments = document.querySelector(&amp;#39;bsky-comments&amp;#39;);
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> if (bskyComments) {
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> const style = document.createElement(&amp;#39;style&amp;#39;);
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> style.textContent = `
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> comments {
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> border-radius: var(--card-border-radius);
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> }
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> `;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> bskyComments.shadowRoot.appendChild(style);
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> }
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> });
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;/script&amp;gt; --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+&lt;/details>
+&lt;/p>
+&lt;p>目前还没将这个功能pull到原主题，因为和原来的评论系统有点割裂，需要单独加一个参数而不是放到provider里，暂时好像只能这样做。&lt;br>
+还有点可惜的是这个js现在不能显示该帖子的点赞数，过滤评论之类的功能都没有提及的那个项目完善，不过对我来说小巧易用就行。&lt;br>
+好处也有，以前的文章先不用管了哈哈&lt;/p>
+&lt;p>。。。第一次部署的时候把bluesky简写成bsky了🥲&lt;/p>
+&lt;h2 id="致谢">致谢
+&lt;/h2>&lt;p>Cover:&lt;a class="link" href="https://x.com/makeine_anime" target="_blank" rel="noopener"
+>負けヒロインが多すぎる！&lt;/a>&lt;br>
+&lt;a class="link" href="https://docs.bsky.app/" target="_blank" rel="noopener"
+>BlueSky API文档&lt;/a>&lt;br>
+&lt;a class="link" href="https://bsky.app/profile/did:plc:q7w52744vwysd6iobeqo5tni/post/3lbsizqjik22o" target="_blank" rel="noopener"
+>@Lou&lt;/a>&lt;br>
+&lt;a class="link" href="https://passivestar.xyz/posts/hugo/" target="_blank" rel="noopener"
+>@passivestar&lt;/a>&lt;br>
+&lt;a class="link" href="https://github.com/czue/bluesky-comments" target="_blank" rel="noopener"
+>@Cory Zue&lt;/a>&lt;/p></description></item></channel></rss>

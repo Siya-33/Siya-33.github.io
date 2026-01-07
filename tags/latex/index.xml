@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Latex on Shirakii</title><link>https://www.shirakii.com/tags/latex/</link><description>Recent content in Latex on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><lastBuildDate>Mon, 13 May 2024 06:27:04 +0800</lastBuildDate><atom:link href="https://www.shirakii.com/tags/latex/index.xml" rel="self" type="application/rss+xml"/><item><title>Latex中文写作踩坑记录</title><link>https://www.shirakii.com/post/latex-chinese-record/</link><pubDate>Mon, 13 May 2024 05:01:04 +0800</pubDate><guid>https://www.shirakii.com/post/latex-chinese-record/</guid><description>&lt;img src="https://www.shirakii.com/post/latex-chinese-record/cover.webp" alt="Featured image of post Latex中文写作踩坑记录" />&lt;blockquote>
+&lt;p>总结了一些使用中文字体的经验，踩在前辈们的肩膀上&lt;/p>
+&lt;/blockquote>
+&lt;p>使用环境为&lt;a class="link" href="https://www.overleaf.com/" target="_blank" rel="noopener"
+>Overleaf&lt;/a>，如果是本地的latex编译器的话应该不会出什么问题，本文选择循序渐进地解释，确保理解每条命令的作用&lt;/p>
+&lt;h2 id="中文">中文
+&lt;/h2>&lt;p>首先使用&lt;code>XeLaTex&lt;/code>编译，点进左上角Menu更改&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-latex" data-lang="latex">&lt;span class="line">&lt;span class="cl">&lt;span class="k">\usepackage&lt;/span>&lt;span class="nb">{&lt;/span>xeCJK&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\setCJKmainfont&lt;/span>&lt;span class="na">[AutoFakeBold={4}]&lt;/span>&lt;span class="nb">{&lt;/span>AR PL UKai CN&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Overleaf默认支持的字体见&lt;a class="link" href="https://www.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F#Chinese" target="_blank" rel="noopener"
+>手册&lt;/a>，但是可惜的是默认的字体大多都很丑很细，很多还缺失，好不容易有好看的但是标点符号不符合简体中文的习惯，譬如上面用的这个，标点符号都在中间&lt;/p>
+&lt;p>于是我们使用自己喜欢的字体，将自己下载好的ttf、otf文件拖拽至新建的fonts文件夹。&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="images/fonts.webp" width="30%"/>
+&lt;/figure>
+&lt;p>在&lt;code>\documentclass&lt;/code>类中添加&lt;code>cjk-font=none&lt;/code>，例子如下&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-latex" data-lang="latex">&lt;span class="line">&lt;span class="cl">&lt;span class="k">\documentclass&lt;/span>&lt;span class="na">[a4paper,11pt,cjk-font=none]&lt;/span>&lt;span class="nb">{&lt;/span>article&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>接下来设置字体路径和中文字体&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-latex" data-lang="latex">&lt;span class="line">&lt;span class="cl">&lt;span class="k">\defaultfontfeatures&lt;/span>&lt;span class="nb">{&lt;/span>Path=fonts/&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\setCJKmainfont&lt;/span>&lt;span class="na">[AutoFakeBold={4}]&lt;/span>&lt;span class="nb">{&lt;/span>LXGWWenKaiScreen.ttf&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\setCJKmonofont&lt;/span>&lt;span class="nb">{&lt;/span>simfang.ttf&lt;span class="nb">}&lt;/span> &lt;span class="c">% 设置等宽字体
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>AutoFakeBold&lt;/code>是为了实现伪粗体，自由调节想要的视觉效果。&lt;/p>
+&lt;p>但是这样有个问题，就是我们整篇文章都是一种字体，连衬线都没有。以下以我想让所有&lt;code>\section&lt;/code>显示衬线字体为例&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-latex" data-lang="latex">&lt;span class="line">&lt;span class="cl">&lt;span class="k">\setCJKfamilyfont&lt;/span>&lt;span class="nb">{&lt;/span>stkaiti&lt;span class="nb">}{&lt;/span>STKaiti-regular.ttf&lt;span class="nb">}&lt;/span>[AutoFakeBold=&lt;span class="nb">{&lt;/span>4&lt;span class="nb">}&lt;/span>]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">% Sections formatting
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="k">\titleformat&lt;/span>&lt;span class="nb">{&lt;/span>&lt;span class="k">\section&lt;/span>&lt;span class="nb">}{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\CJKfamily&lt;/span>&lt;span class="nb">{&lt;/span>stkaiti&lt;span class="nb">}&lt;/span>&lt;span class="k">\vspace&lt;/span>&lt;span class="nb">{&lt;/span>-4pt&lt;span class="nb">}&lt;/span>&lt;span class="k">\scshape\raggedright\large&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">}{}{&lt;/span>0em&lt;span class="nb">}{}&lt;/span>[&lt;span class="k">\color&lt;/span>&lt;span class="nb">{&lt;/span>black&lt;span class="nb">}&lt;/span>&lt;span class="k">\titlerule&lt;/span> &lt;span class="k">\vspace&lt;/span>&lt;span class="nb">{&lt;/span>-7pt&lt;span class="nb">}&lt;/span>]
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这样就和正文区分开来了，同理可以用在任何一段文字上&lt;code>\CJKfamily{stkaiti}\textbf{xxxx}&lt;/code>&lt;/p>
+&lt;h2 id="英文">英文
+&lt;/h2>&lt;p>另外如果你想精准控制英文的显示效果，可以在对应的段落前添加&lt;code>\fontfamily{lmss}\selectfont&lt;/code>&lt;/p>
+&lt;!-- &lt;figure>
+&lt;img loading="lazy" src="images/lmss.webp" width="20%"/>
+&lt;/figure>
+-->
+&lt;p>&lt;img src="https://www.shirakii.com/post/latex-chinese-record/images/lmss.webp"
+width="349"
+height="250"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="139"
+data-flex-basis="335px"
+> &lt;img src="https://www.shirakii.com/post/latex-chinese-record/images/cmr.webp"
+width="1261"
+height="303"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="416"
+data-flex-basis="998px"
+>&lt;/p>
+&lt;p>默认的有以下十几种&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-latex" data-lang="latex">&lt;span class="line">&lt;span class="cl">&lt;span class="k">\documentclass&lt;/span>&lt;span class="nb">{&lt;/span>article&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\begin&lt;/span>&lt;span class="nb">{&lt;/span>document&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\begin&lt;/span>&lt;span class="nb">{&lt;/span>enumerate&lt;span class="nb">}&lt;/span>&lt;span class="k">\fontencoding&lt;/span>&lt;span class="nb">{&lt;/span>T1&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\fontfamily&lt;/span>&lt;span class="nb">{&lt;/span>pag&lt;span class="nb">}&lt;/span>&lt;span class="k">\selectfont&lt;/span> &lt;span class="k">\item&lt;/span> Avant Garde
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\fontfamily&lt;/span>&lt;span class="nb">{&lt;/span>fvs&lt;span class="nb">}&lt;/span>&lt;span class="k">\selectfont&lt;/span> &lt;span class="k">\item&lt;/span> Bitstream Vera Sans
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\fontfamily&lt;/span>&lt;span class="nb">{&lt;/span>pbk&lt;span class="nb">}&lt;/span>&lt;span class="k">\selectfont&lt;/span> &lt;span class="k">\item&lt;/span> Bookman
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\fontfamily&lt;/span>&lt;span class="nb">{&lt;/span>bch&lt;span class="nb">}&lt;/span>&lt;span class="k">\selectfont&lt;/span> &lt;span class="k">\item&lt;/span> Charter
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\fontfamily&lt;/span>&lt;span class="nb">{&lt;/span>ccr&lt;span class="nb">}&lt;/span>&lt;span class="k">\selectfont&lt;/span> &lt;span class="k">\item&lt;/span> Computer Concrete
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\fontfamily&lt;/span>&lt;span class="nb">{&lt;/span>cmr&lt;span class="nb">}&lt;/span>&lt;span class="k">\selectfont&lt;/span> &lt;span class="k">\item&lt;/span> Computer Modern
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\fontfamily&lt;/span>&lt;span class="nb">{&lt;/span>pcr&lt;span class="nb">}&lt;/span>&lt;span class="k">\selectfont&lt;/span> &lt;span class="k">\item&lt;/span> Courier
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\fontfamily&lt;/span>&lt;span class="nb">{&lt;/span>phv&lt;span class="nb">}&lt;/span>&lt;span class="k">\selectfont&lt;/span> &lt;span class="k">\item&lt;/span> Helvetica
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\fontfamily&lt;/span>&lt;span class="nb">{&lt;/span>fi4&lt;span class="nb">}&lt;/span>&lt;span class="k">\selectfont&lt;/span> &lt;span class="k">\item&lt;/span> Inconsolata
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\fontfamily&lt;/span>&lt;span class="nb">{&lt;/span>lmr&lt;span class="nb">}&lt;/span>&lt;span class="k">\selectfont&lt;/span> &lt;span class="k">\item&lt;/span> Latin Modern
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\fontfamily&lt;/span>&lt;span class="nb">{&lt;/span>lmss&lt;span class="nb">}&lt;/span>&lt;span class="k">\selectfont\item&lt;/span> Latin Modern Sans
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\fontfamily&lt;/span>&lt;span class="nb">{&lt;/span>lmtt&lt;span class="nb">}&lt;/span>&lt;span class="k">\selectfont\item&lt;/span> Latin Modern Typewriter
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\fontfamily&lt;/span>&lt;span class="nb">{&lt;/span>pnc&lt;span class="nb">}&lt;/span>&lt;span class="k">\selectfont&lt;/span> &lt;span class="k">\item&lt;/span> New Century Schoolbook
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\fontfamily&lt;/span>&lt;span class="nb">{&lt;/span>ppl&lt;span class="nb">}&lt;/span>&lt;span class="k">\selectfont&lt;/span> &lt;span class="k">\item&lt;/span> Palatino
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\fontfamily&lt;/span>&lt;span class="nb">{&lt;/span>ptm&lt;span class="nb">}&lt;/span>&lt;span class="k">\selectfont&lt;/span> &lt;span class="k">\item&lt;/span> Times
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\fontfamily&lt;/span>&lt;span class="nb">{&lt;/span>uncl&lt;span class="nb">}&lt;/span>&lt;span class="k">\selectfont\item&lt;/span> Uncial
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\fontfamily&lt;/span>&lt;span class="nb">{&lt;/span>put&lt;span class="nb">}&lt;/span>&lt;span class="k">\selectfont&lt;/span> &lt;span class="k">\item&lt;/span> Utopia
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\fontfamily&lt;/span>&lt;span class="nb">{&lt;/span>pzc&lt;span class="nb">}&lt;/span>&lt;span class="k">\selectfont&lt;/span> &lt;span class="k">\item&lt;/span> Zapf Chancery
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\end&lt;/span>&lt;span class="nb">{&lt;/span>enumerate&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\end&lt;/span>&lt;span class="nb">{&lt;/span>document&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p style="text-align:center;font-size:2.4rem; ">效果如下&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="images/1.png" width="40%"/>
+&lt;/figure>
+&lt;p>但是XeLaTex下还有坑，如果没有效果需要用&lt;code>\fontencoding{T1}&lt;/code>显式指定字体编码&lt;/p>
+&lt;p>这样几乎所有的坑都踩完了，鬼知道我经历了多少折磨&lt;/p>
+&lt;p>&lt;strong>上述操作未考虑字体版权问题，如涉及出版请仔细辨认&lt;/strong>&lt;/p>
+&lt;hr>
+&lt;p>前几天出了个叫&lt;a class="link" href="https://store.steampowered.com/app/813230/ANIMAL_WELL/" target="_blank" rel="noopener"
+>ANIMAL WELL&lt;/a>的解谜神作，只有32MB！！！银河城的又一里程碑，没空玩啊&lt;br>好想去看邓紫棋、老织的演唱会┭┮﹏┭┮，但是这次应该没机会了&lt;br>
+至于我什么时候把春节广州和五一南京的游记补上，只能说有缘再见:)&lt;br>
+最近没怎么听歌，这首还不错&lt;br>
+&lt;link rel="stylesheet" href="https://cdn.staticfile.net/aplayer/1.10.1/APlayer.min.css">
+&lt;script src="https://cdn.staticfile.net/aplayer/1.10.1/APlayer.min.js">&lt;/script>
+&lt;script src="https://cdn.staticfile.net/meting/2.0.1/Meting.min.js">&lt;/script>&lt;meting-js auto="https://music.163.com/#/song?id=2116719045" theme="#2980b9" volume="0.15">&lt;/meting-js>&lt;/p>
+&lt;h2 id="致谢">致谢
+&lt;/h2>&lt;p>Cover:&lt;a class="link" href="https://twitter.com/liyuliyuzhou/status/1782053286725771733" target="_blank" rel="noopener"
+>@liyuliyuzhou&lt;/a>&lt;br>
+&lt;a class="link" href="https://stackoverflow.com/questions/71590026/package-fontspec-error-the-font-simsun-cant-be-found" target="_blank" rel="noopener"
+>Package fontspec Error: The Font SimSun can&amp;rsquo;t be found&lt;/a>&lt;br>
+&lt;a class="link" href="https://github.com/sjtug/SJTUThesis/wiki/%E5%9C%A8%E7%BA%BF%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E" target="_blank" rel="noopener"
+>SJTUThesis&lt;/a>&lt;br>
+&lt;a class="link" href="https://tex.stackexchange.com/questions/426279/fontfamily-selectfont-does-not-work-with-xelatex-engine" target="_blank" rel="noopener"
+>\fontfamily{&amp;hellip;}\selectfont does not work with XeLaTeX engine&lt;/a>&lt;br>
+&lt;a class="link" href="https://www.ituring.com.cn/article/904" target="_blank" rel="noopener"
+>开源书和开源技术-PDF中蛋疼的中文字体&lt;/a>&lt;/p></description></item></channel></rss>

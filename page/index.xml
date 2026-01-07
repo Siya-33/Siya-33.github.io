@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on Shirakii</title><link>https://www.shirakii.com/page/</link><description>Recent content in Pages on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><lastBuildDate>Mon, 27 May 2024 11:12:52 +0800</lastBuildDate><atom:link href="https://www.shirakii.com/page/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://www.shirakii.com/%E5%85%B3%E4%BA%8E/</link><pubDate>Sun, 27 Aug 2023 00:00:00 +0000</pubDate><guid>https://www.shirakii.com/%E5%85%B3%E4%BA%8E/</guid><description>&lt;img src="https://pic.imgdb.cn/item/659d902a871b83018aebaec2.webp" alt="Featured image of post 关于" />&lt;h2 id="关于我">关于我
+&lt;/h2>&lt;p>网名Shirakii，软件工程专业，大学AI相关的基础课程学得多一些，目前热衷CG行业，是一名Texture Artist&lt;br>
+目标是用美术更好地辅助游戏传达价值观，以及用程序化的方式节约美术迭代的成本&lt;/p>
+&lt;p>主要相关的网站:&lt;a class="link" href="https://linktr.ee/shirakii" target="_blank" rel="noopener"
+>Linktree&lt;/a>&lt;br>
+由于&lt;a class="link" href="https://www.patreon.com/Shirakii" target="_blank" rel="noopener"
+>Patreon&lt;/a>上可以在发表文章的时候附带文件，体验比&lt;a class="link" href="https://ko-fi.com/shirakii" target="_blank" rel="noopener"
+>Ko-fi&lt;/a>好点，我会在那分享一些琐碎的技巧&lt;/p>
+&lt;p>罗列下一些比较重要的技术栈，像speedtree，gaea，八猴这种比较细的就不放进去了。&lt;br>从比较熟悉、略懂、想学三种等级排序&lt;/p>
+&lt;ul>
+&lt;li>&lt;img width=32 src='https://www.shirakii.com/icon/blender.svg' /> &lt;img width=32 src='https://www.shirakii.com/icon/SD.svg' />&lt;/li>
+&lt;li>&lt;img width=32 src='https://www.shirakii.com/icon/ue.svg' /> &lt;img width=32 src='https://www.shirakii.com/icon/SP.svg' /> &lt;img width=32 src='https://www.shirakii.com/icon/zbrush.svg' /> &lt;img width=32 src='https://www.shirakii.com/icon/embergen.ico' /> &lt;img width=32 src='https://www.shirakii.com/icon/plasticity.ico' />&lt;/li>
+&lt;li>&lt;img width=32 src='https://www.shirakii.com/icon/godot.svg' /> &lt;img width=32 src='https://www.shirakii.com/icon/houdini.svg' />&lt;/li>
+&lt;/ul>
+&lt;h3 id="主要技能">主要技能
+&lt;/h3>&lt;ul>
+&lt;li>Blender中除绑定、蒙皮外的所有技能&lt;/li>
+&lt;li>使用Substance Designer、Substance Painter 和 &lt;a class="link" href="https://www.materialmaker.org/" target="_blank" rel="noopener"
+>Material Maker&lt;/a>创建材质&lt;/li>
+&lt;li>UE中的Niagara模块&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.plasticity.xyz/" target="_blank" rel="noopener"
+>Plasticy&lt;/a>曲线建模&lt;/li>
+&lt;li>&lt;a class="link" href="https://jangafx.com/software/embergen/" target="_blank" rel="noopener"
+>EmberGen&lt;/a>流体模拟&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.marvelousdesigner.com/" target="_blank" rel="noopener"
+>Marvelous Designer&lt;/a>中创建布料&lt;/li>
+&lt;/ul>
+&lt;p>联系我的最佳方式是通过Gmail——&lt;code>gs857474407@gmail.com&lt;/code>&lt;/p>
+&lt;p>平常的话程序化的东西研究的多一些，用节点式的工作流节约生命.其实爱好也蛮多的足球、音乐、画画等等，就是我的logic和电吉他都没什么时间练，还想玩玩3D打印。也会去打打轴，翻译下歌曲或者节目，可惜学会日语遥遥无期。总之希望某天我也能出现在一个知名游戏或者动画电影的片尾感谢名单上吧&lt;/p>
+&lt;h2 id="关于博客">关于博客
+&lt;/h2>&lt;p>写些有价值、能帮到人的文章，偶尔会自娱自乐吐槽一下。如果对你有帮助，我会很开心&lt;/p>
+&lt;p>其实我存的好看的画或者照片竖着的比较多，但不适合当文章封面，所以就看心情每篇文末放一张？&lt;/p>
+&lt;h2 id="博客统计">博客统计
+&lt;/h2>&lt;p>2023.9.14开始统计至6452&lt;br>
+已重新部署&lt;/p>
+&lt;img src="https://counter.shirakii.com/shirakii:home?theme=asoul" alt=":shirakii" />
+&lt;h2 id="建站日志">建站日志
+&lt;/h2>&lt;h3 id="很久以前">很久以前
+&lt;/h3>&lt;p>被&lt;a class="link" href="https://www.cyanilux.com/" target="_blank" rel="noopener"
+>Cyanilux&lt;/a>的优雅所折服，按下F12后发现了Hugo这块新天地&lt;/p>
+&lt;h3 id="2023">2023
+&lt;/h3>&lt;ul>
+&lt;li>
+&lt;p>2023.8&lt;/p>
+&lt;p>8.13 决心搭建博客，折腾一天成功使用papermod主题发布第一篇文章&lt;/p>
+&lt;p>8.25 发现Stack主题，迁移并熟悉架构，使用github pages托管，action配合Vercel自动部署&lt;/p>
+&lt;p>8.26 解决figure SC与stack的图片预览功能的冲突&lt;/p>
+&lt;p>8.30 购买个人域名 &lt;a class="link" href="https://shirakii.com" target="_blank" rel="noopener"
+>shirakii.com&lt;/a>，舒服了&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>2023.9&lt;/p>
+&lt;p>9.14 优化界面布局、滚动栏，添加返回按钮、&lt;a class="link" href="https://aplayer.js.org/#/zh-Hans/" target="_blank" rel="noopener"
+>aplayer&lt;/a>、&lt;a class="link" href="https://moe-counter.glitch.me/" target="_blank" rel="noopener"
+>Moe-counter&lt;/a>&lt;/p>
+&lt;p>9.15 引入在线字体，暂定站点名称&lt;code>Novecento&lt;/code>,左侧&lt;code>Ma Shan Zheng&lt;/code>，标题&lt;code>STKaiti&lt;/code>，正文&lt;code>Noto Sans CJK SC&lt;/code>，代码块&lt;code>Consolas&lt;/code>&lt;/p>
+&lt;p>9.19 部署&lt;a class="link" href="https://waline.js.org/" target="_blank" rel="noopener"
+>waline&lt;/a>评论系统&lt;/p>
+&lt;p>9.23 css整体调整&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>2023.10&lt;/p>
+&lt;p>10.1 字体裁剪完成，正文字体确定为&lt;a class="link" href="https://github.com/lxgw/LxgwWenKai" target="_blank" rel="noopener"
+>霞鹜文楷&lt;/a>&lt;/p>
+&lt;p>10.8 正文字体裁切艰难部署完成&lt;/p>
+&lt;p>10.20 使用&lt;a class="link" href="https://www.cloudflare.com/zh-cn/" target="_blank" rel="noopener"
+>Cloudflare&lt;/a>进行DNS解析&lt;/p>
+&lt;p>10.23 字体服务器&lt;a class="link" href="https://github.com/Siya-33/chinese-fonts-server" target="_blank" rel="noopener"
+>chinese-fonts-server&lt;/a>搭建完成&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>2023.12&lt;/p>
+&lt;p>12.7 主要静态资源使用&lt;a class="link" href="https://www.jsdelivr.com/" target="_blank" rel="noopener"
+>jsDelivr&lt;/a>进行CDN加速&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="2024">2024
+&lt;/h3>&lt;ul>
+&lt;li>
+&lt;p>2024.1&lt;/p>
+&lt;p>1.10 修复代码块bug，图片懒加载，优化国内加载速度&lt;a class="link" href="https://www.staticfile.net/" target="_blank" rel="noopener"
+>七牛云CDN&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>2024.3&lt;/p>
+&lt;p>3.5 部署&lt;a class="link" href="https://shirakii.com/post/moe-counter-cf" target="_blank" rel="noopener"
+>moe-counter-cf&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="todo">Todo
+&lt;/h2>&lt;ul>
+&lt;li>动态logo&lt;/li>
+&lt;li>分层画廊&lt;/li>
+&lt;li>fancybox图片浏览&lt;/li>
+&lt;li>合适的行内音乐播放器&lt;/li>
+&lt;li>代码块风格以及顶栏名称&lt;/li>
+&lt;li>右侧搜索框常驻&lt;/li>
+&lt;li>更加轻便优雅的访问统计&lt;/li>
+&lt;li>设置卡片categories位置&lt;/li>
+&lt;li>live2d小人&lt;/li>
+&lt;li>鼠标指针及移动特效&lt;/li>
+&lt;/ul></description></item><item><title>归档</title><link>https://www.shirakii.com/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://www.shirakii.com/archives/</guid><description/></item><item><title/><link>https://www.shirakii.com/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.shirakii.com/</guid><description>&lt;!-- ---
+title: "作品"
+date: 2023-05-28
+# layout: "list"
+# slug: "list"
+links:
+- title: GitHub
+description: GitHub is the world's largest software development platform.
+website: https://github.com
+image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+- title: TypeScript
+description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
+website: https://www.typescriptlang.org
+image: ts-logo-128.jpg
+menu:
+main:
+weight: -50
+params:
+icon: link
+comments: false
+--- --></description></item><item><title/><link>https://www.shirakii.com/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.shirakii.com/</guid><description>&lt;!-- ---
+title: "画廊"
+layout: "photos"
+--- --></description></item><item><title>搜索</title><link>https://www.shirakii.com/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.shirakii.com/search/</guid><description/></item></channel></rss>
