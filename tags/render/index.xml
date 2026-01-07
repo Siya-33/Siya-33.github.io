@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Render on Shirakii</title><link>https://www.shirakii.com/tags/render/</link><description>Recent content in Render on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><lastBuildDate>Wed, 31 Jul 2024 23:52:00 +0800</lastBuildDate><atom:link href="https://www.shirakii.com/tags/render/index.xml" rel="self" type="application/rss+xml"/><item><title>Zbrush渲染基本流程</title><link>https://www.shirakii.com/post/zbrush-render/</link><pubDate>Wed, 31 Jul 2024 21:45:00 +0800</pubDate><guid>https://www.shirakii.com/post/zbrush-render/</guid><description>&lt;img src="https://www.shirakii.com/post/zbrush-render/cover.webp" alt="Featured image of post Zbrush渲染基本流程" />&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Render on Shirakii</title><link>https://siya-33.github.io/tags/render/</link><description>Recent content in Render on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><lastBuildDate>Wed, 31 Jul 2024 23:52:00 +0800</lastBuildDate><atom:link href="https://siya-33.github.io/tags/render/index.xml" rel="self" type="application/rss+xml"/><item><title>Zbrush渲染基本流程</title><link>https://siya-33.github.io/post/zbrush-render/</link><pubDate>Wed, 31 Jul 2024 21:45:00 +0800</pubDate><guid>https://siya-33.github.io/post/zbrush-render/</guid><description>&lt;img src="https://siya-33.github.io/post/zbrush-render/cover.webp" alt="Featured image of post Zbrush渲染基本流程" />&lt;blockquote>
 &lt;p>封面有点欺诈是SP上了材质后的渲染图。姑且记录一下Zbrush渲染的过程，主要参考了&lt;a class="link" href="https://orb.gumroad.com/l/srZiJ" target="_blank" rel="noopener"
 >Orb的渲染教程&lt;/a>&lt;/p>
 &lt;/blockquote>
@@ -130,7 +130,7 @@ color: #9ca3af;
 &lt;h2 id="前期准备">前期准备
 &lt;/h2>&lt;p>Draw 选项卡下将焦距设置为85mm，视情况设置Align To Object&lt;/p>
 &lt;p>Render - Render Properties下激活AO&lt;/p>
-&lt;p>&lt;img src="https://www.shirakii.com/post/zbrush-render/images/AO.webp"
+&lt;p>&lt;img src="https://siya-33.github.io/post/zbrush-render/images/AO.webp"
 width="214"
 height="489"
 loading="lazy"
@@ -139,7 +139,7 @@ data-flex-grow="43"
 data-flex-basis="105px"
 >&lt;/p>
 &lt;p>调整Shadow&lt;/p>
-&lt;p>&lt;img src="https://www.shirakii.com/post/zbrush-render/images/Shadow.webp"
+&lt;p>&lt;img src="https://siya-33.github.io/post/zbrush-render/images/Shadow.webp"
 width="237"
 height="200"
 loading="lazy"
@@ -149,7 +149,7 @@ data-flex-basis="284px"
 >&lt;/p>
 &lt;p>调整灯光分别渲染 Keylight 和 RimLight&lt;/p>
 &lt;p>主光用 Orb Clay，补光用 Basic Material&lt;/p>
-&lt;p>&lt;img src="https://www.shirakii.com/post/zbrush-render/images/Key.webp"
+&lt;p>&lt;img src="https://siya-33.github.io/post/zbrush-render/images/Key.webp"
 width="2120"
 height="1252"
 loading="lazy"
@@ -157,7 +157,7 @@ alt="KeyLight"
 class="gallery-image"
 data-flex-grow="169"
 data-flex-basis="406px"
-> &lt;img src="https://www.shirakii.com/post/zbrush-render/images/Rim.webp"
+> &lt;img src="https://siya-33.github.io/post/zbrush-render/images/Rim.webp"
 width="2120"
 height="1252"
 loading="lazy"
@@ -173,7 +173,7 @@ data-flex-basis="406px"
 &lt;kbd>Ctrl+Shift+C&lt;/kbd>→隐藏Mask图层→&lt;kbd>Ctrl+V&lt;/kbd>，得到一张背景透明的渲染主体A&lt;/p>
 &lt;p>新建合适的背景图层并与A合并&lt;/p>
 &lt;p>将&lt;code>Depth&lt;/code>复制至新通道，以它为源对A做镜头模糊
-&lt;img src="https://www.shirakii.com/post/zbrush-render/images/Blur.webp"
+&lt;img src="https://siya-33.github.io/post/zbrush-render/images/Blur.webp"
 width="2538"
 height="1420"
 loading="lazy"
@@ -182,14 +182,14 @@ data-flex-grow="178"
 data-flex-basis="428px"
 >&lt;/p>
 &lt;p>放两张效果图&lt;/p>
-&lt;p>&lt;img src="https://www.shirakii.com/post/zbrush-render/images/rock1.webp"
+&lt;p>&lt;img src="https://siya-33.github.io/post/zbrush-render/images/rock1.webp"
 width="2120"
 height="1252"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="169"
 data-flex-basis="406px"
-> &lt;img src="https://www.shirakii.com/post/zbrush-render/images/rock2.webp"
+> &lt;img src="https://siya-33.github.io/post/zbrush-render/images/rock2.webp"
 width="2120"
 height="1279"
 loading="lazy"

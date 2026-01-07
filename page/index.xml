@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on Shirakii</title><link>https://www.shirakii.com/page/</link><description>Recent content in Pages on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><lastBuildDate>Mon, 27 May 2024 11:12:52 +0800</lastBuildDate><atom:link href="https://www.shirakii.com/page/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://www.shirakii.com/%E5%85%B3%E4%BA%8E/</link><pubDate>Sun, 27 Aug 2023 00:00:00 +0000</pubDate><guid>https://www.shirakii.com/%E5%85%B3%E4%BA%8E/</guid><description>&lt;img src="https://pic.imgdb.cn/item/659d902a871b83018aebaec2.webp" alt="Featured image of post 关于" />&lt;h2 id="关于我">关于我
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on Shirakii</title><link>https://siya-33.github.io/page/</link><description>Recent content in Pages on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><lastBuildDate>Mon, 27 May 2024 11:12:52 +0800</lastBuildDate><atom:link href="https://siya-33.github.io/page/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://siya-33.github.io/%E5%85%B3%E4%BA%8E/</link><pubDate>Sun, 27 Aug 2023 00:00:00 +0000</pubDate><guid>https://siya-33.github.io/%E5%85%B3%E4%BA%8E/</guid><description>&lt;img src="https://pic.imgdb.cn/item/659d902a871b83018aebaec2.webp" alt="Featured image of post 关于" />&lt;h2 id="关于我">关于我
 &lt;/h2>&lt;p>网名Shirakii，软件工程专业，大学AI相关的基础课程学得多一些，目前热衷CG行业，是一名Texture Artist&lt;br>
 目标是用美术更好地辅助游戏传达价值观，以及用程序化的方式节约美术迭代的成本&lt;/p>
 &lt;p>主要相关的网站:&lt;a class="link" href="https://linktr.ee/shirakii" target="_blank" rel="noopener"
@@ -8,9 +8,9 @@
 >Ko-fi&lt;/a>好点，我会在那分享一些琐碎的技巧&lt;/p>
 &lt;p>罗列下一些比较重要的技术栈，像speedtree，gaea，八猴这种比较细的就不放进去了。&lt;br>从比较熟悉、略懂、想学三种等级排序&lt;/p>
 &lt;ul>
-&lt;li>&lt;img width=32 src='https://www.shirakii.com/icon/blender.svg' /> &lt;img width=32 src='https://www.shirakii.com/icon/SD.svg' />&lt;/li>
-&lt;li>&lt;img width=32 src='https://www.shirakii.com/icon/ue.svg' /> &lt;img width=32 src='https://www.shirakii.com/icon/SP.svg' /> &lt;img width=32 src='https://www.shirakii.com/icon/zbrush.svg' /> &lt;img width=32 src='https://www.shirakii.com/icon/embergen.ico' /> &lt;img width=32 src='https://www.shirakii.com/icon/plasticity.ico' />&lt;/li>
-&lt;li>&lt;img width=32 src='https://www.shirakii.com/icon/godot.svg' /> &lt;img width=32 src='https://www.shirakii.com/icon/houdini.svg' />&lt;/li>
+&lt;li>&lt;img width=32 src='https://siya-33.github.io/icon/blender.svg' /> &lt;img width=32 src='https://siya-33.github.io/icon/SD.svg' />&lt;/li>
+&lt;li>&lt;img width=32 src='https://siya-33.github.io/icon/ue.svg' /> &lt;img width=32 src='https://siya-33.github.io/icon/SP.svg' /> &lt;img width=32 src='https://siya-33.github.io/icon/zbrush.svg' /> &lt;img width=32 src='https://siya-33.github.io/icon/embergen.ico' /> &lt;img width=32 src='https://siya-33.github.io/icon/plasticity.ico' />&lt;/li>
+&lt;li>&lt;img width=32 src='https://siya-33.github.io/icon/godot.svg' /> &lt;img width=32 src='https://siya-33.github.io/icon/houdini.svg' />&lt;/li>
 &lt;/ul>
 &lt;h3 id="主要技能">主要技能
 &lt;/h3>&lt;ul>
@@ -99,7 +99,7 @@
 &lt;li>设置卡片categories位置&lt;/li>
 &lt;li>live2d小人&lt;/li>
 &lt;li>鼠标指针及移动特效&lt;/li>
-&lt;/ul></description></item><item><title>归档</title><link>https://www.shirakii.com/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://www.shirakii.com/archives/</guid><description/></item><item><title/><link>https://www.shirakii.com/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.shirakii.com/</guid><description>&lt;!-- ---
+&lt;/ul></description></item><item><title>归档</title><link>https://siya-33.github.io/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://siya-33.github.io/archives/</guid><description/></item><item><title/><link>https://siya-33.github.io/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://siya-33.github.io/</guid><description>&lt;!-- ---
 title: "作品"
 date: 2023-05-28
 # layout: "list"
@@ -119,7 +119,7 @@ weight: -50
 params:
 icon: link
 comments: false
---- --></description></item><item><title/><link>https://www.shirakii.com/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.shirakii.com/</guid><description>&lt;!-- ---
+--- --></description></item><item><title/><link>https://siya-33.github.io/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://siya-33.github.io/</guid><description>&lt;!-- ---
 title: "画廊"
 layout: "photos"
---- --></description></item><item><title>搜索</title><link>https://www.shirakii.com/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.shirakii.com/search/</guid><description/></item></channel></rss>
+--- --></description></item><item><title>搜索</title><link>https://siya-33.github.io/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://siya-33.github.io/search/</guid><description/></item></channel></rss>

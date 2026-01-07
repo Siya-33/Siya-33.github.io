@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Comments on Shirakii</title><link>https://www.shirakii.com/tags/comments/</link><description>Recent content in Comments on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><lastBuildDate>Tue, 24 Dec 2024 04:01:08 +0800</lastBuildDate><atom:link href="https://www.shirakii.com/tags/comments/index.xml" rel="self" type="application/rss+xml"/><item><title>在博客中集成 Bluesky 评论</title><link>https://www.shirakii.com/post/bluesky-comments/</link><pubDate>Mon, 23 Dec 2024 20:11:08 +0800</pubDate><guid>https://www.shirakii.com/post/bluesky-comments/</guid><description>&lt;img src="https://www.shirakii.com/post/bluesky-comments/cover.webp" alt="Featured image of post 在博客中集成 Bluesky 评论" />&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Comments on Shirakii</title><link>https://siya-33.github.io/tags/comments/</link><description>Recent content in Comments on Shirakii</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Shirakii</copyright><lastBuildDate>Tue, 24 Dec 2024 04:01:08 +0800</lastBuildDate><atom:link href="https://siya-33.github.io/tags/comments/index.xml" rel="self" type="application/rss+xml"/><item><title>在博客中集成 Bluesky 评论</title><link>https://siya-33.github.io/post/bluesky-comments/</link><pubDate>Mon, 23 Dec 2024 20:11:08 +0800</pubDate><guid>https://siya-33.github.io/post/bluesky-comments/</guid><description>&lt;img src="https://siya-33.github.io/post/bluesky-comments/cover.webp" alt="Featured image of post 在博客中集成 Bluesky 评论" />&lt;blockquote>
 &lt;p>有一天我看到了&lt;a class="link" href="https://passivestar.xyz/posts/hugo/" target="_blank" rel="noopener"
 >passivestar&lt;/a>的博客，发现他把 &lt;code>Bluesky&lt;/code> 的评论集成到了博客内，但是看到&lt;a class="link" href="https://github.com/czue/bluesky-comments" target="_blank" rel="noopener"
 >文末项目&lt;/a>的使用对我来说太过复杂和繁琐。&lt;br>因此我在&lt;a class="link" href="https://bsky.app/profile/did:plc:q7w52744vwysd6iobeqo5tni/post/3lbsizqjik22o" target="_blank" rel="noopener"
@@ -180,7 +180,7 @@
 我主要调整了些style，以及给具体评论也添加了链接跳转&lt;/p>
 &lt;p>之后在文章开头的参数里加上一行&lt;code>bsky_post: &amp;lt;data-bluesky-uri&amp;gt;&lt;/code>&lt;br>
 这个uri地址你可以从帖子的嵌入代码里找&lt;/p>
-&lt;p>&lt;img src="https://www.shirakii.com/post/bluesky-comments/images/1.webp"
+&lt;p>&lt;img src="https://siya-33.github.io/post/bluesky-comments/images/1.webp"
 width="639"
 height="240"
 loading="lazy"
